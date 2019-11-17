@@ -1,0 +1,15 @@
+{
+  "entry": {
+    "app": "./src/index.jsx"
+  },
+  "output": {
+    "dir": "./dist"
+  },
+  "public": "public",
+  "favicons": {
+    "title": "Fit-s-marky",
+    "logo": "./favicon.png",
+    "background": "#fff",
+    "prefix": "favicons_[hash:8]/"
+  }
+}

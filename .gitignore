@@ -1,0 +1,51 @@
+# Dependency directories
+/vendor
+/node_modules
+/bower_components
+/jspm_packages
+
+# Build
+dist/
+build/
+
+# Logs
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cache
+.next
+
+# Project files
+.yarn-integrity
+.eslintcache
+.env
+behat.yml
+localhost.json
+
+# System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+.fseventsd
+
+
+# Editors
+/.idea
+modules.xml
+*.ipr
+*.iml
+nbproject
+*.sublime-project
+*.sublime-workspace
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+.vscode/*
+
+# Others
+/doc
