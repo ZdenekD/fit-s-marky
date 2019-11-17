@@ -1,0 +1,20 @@
+:root {
+    --color-black: #3f3f3f;
+    --color-white: #f7f7f7;
+    --color-gray: #2c383c;
+    --color-purple: #6b3157;
+    --color-cream: #f0f0cc;
+    --color-main: #fd6b6b;
+    --color-second: #d7ef08;
+    --color-text: #16142b;
+}
+
+@custom-media --min-xs (width >= 300px);
+@custom-media --min-sm (width >= 500px);
+@custom-media --min-md (width >= 700px);
+@custom-media --min-lg (width >= 900px);
+@custom-media --min-xl (width >= 1100px);
+@custom-media --max-sm (width < 500px);
+@custom-media --max-md (width < 700px);
+@custom-media --max-lg (width < 900px);
+@custom-media --max-xl (width < 1100px);

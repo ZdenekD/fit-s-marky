@@ -1,0 +1,17 @@
+@import './helpers/reset.css';
+@import './helpers/normalize.css';
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    background: var(--color-black) var(--image-background) repeat center;
+    color: var(--color-white);
+    font-family: 'Roboto', Tahoma, Nimbus Sans L, Free Sans, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 300;
+    -webkit-overflow-scrolling: touch;
+}
