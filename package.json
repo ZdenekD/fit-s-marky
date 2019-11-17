@@ -20,6 +20,10 @@
     "format": "yarn format:scripts && yarn format:styles && yarn format:prettier",
     "build": "yarn clean && yarn format && NODE_ENV=production webpack --mode production"
   },
+  "engines": {
+    "node": ">=11.7.0",
+    "npm": ">=6.5.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
