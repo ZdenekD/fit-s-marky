@@ -21,8 +21,8 @@
     "build": "yarn clean && yarn format && NODE_ENV=production webpack --mode production"
   },
   "engines": {
-    "node": ">=11.7.0",
-    "npm": ">=6.5.0"
+    "node": ">=10.13.0",
+    "npm": ">=6.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
