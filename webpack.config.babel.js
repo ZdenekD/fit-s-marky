@@ -122,9 +122,8 @@ module.exports = () => ({
                     {
                         loader: 'file-loader',
                         options: {
-                            hash: 'sha512',
                             digest: 'hex',
-                            name: '[name].[ext]',
+                            name: '[name].[hash].[ext]',
                         },
                     }, {
                         loader: 'image-webpack-loader',
@@ -150,9 +149,8 @@ module.exports = () => ({
                     {
                         loader: 'file-loader',
                         options: {
-                            hash: 'sha512',
                             digest: 'hex',
-                            name: '[name].[ext]',
+                            name: '[name].[hash].[ext]',
                         },
                     },
                 ],

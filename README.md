@@ -13,9 +13,9 @@ Instruction of the minimal setup
 Description how to set project on local machine
 
 ```
-    git clone git@github.com:ZdenekD/fit-s-marky.git
-    cd fit-s-marky/
-    yarn
+git clone git@github.com:ZdenekD/fit-s-marky.git
+cd fit-s-marky/
+yarn
 ```
 
 ### Building
