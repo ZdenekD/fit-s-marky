@@ -1,0 +1,64 @@
+{
+  "pages": [
+    {
+      "id": "about",
+      "slug": "o-mne",
+      "title": "O mně",
+      "icon": "about"
+    },
+    {
+      "id": "body",
+      "slug": "chci-znat-slozeni-sveho-tela",
+      "title": "Chci znát složení svého těla",
+      "icon": "body"
+    },
+    {
+      "id": "calories",
+      "slug": "chci-zhubnout",
+      "title": "Chci zhubnout",
+      "icon": "calories"
+    },
+    {
+      "id": "individual",
+      "slug": "individualni-lekce-pilates",
+      "title": "Individuální lekce pilates",
+      "icon": "individual"
+    },
+    {
+      "id": "internet",
+      "slug": "osobni-jidelnicek-po-internetu",
+      "title": "Osobní jídelníček po internetu",
+      "icon": "internet"
+    },
+    {
+      "id": "calendar",
+      "slug": "rozvrh",
+      "title": "Rozvrh",
+      "icon": "calendar"
+    },
+    {
+      "id": "diploma",
+      "slug": "certifikaty",
+      "title": "Certifikáty",
+      "icon": "diploma"
+    },
+    {
+      "id": "gallery",
+      "slug": "fotogalerie",
+      "title": "Fotogalerie",
+      "icon": "gallery"
+    },
+    {
+      "id": "pricelist",
+      "slug": "cenik",
+      "title": "Ceník",
+      "icon": "pricelist"
+    },
+    {
+      "id": "contact",
+      "slug": "kontakt",
+      "title": "Kontakt",
+      "icon": "contact"
+    }
+  ]
+}
