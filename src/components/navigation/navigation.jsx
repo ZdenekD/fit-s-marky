@@ -1,6 +1,27 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 import styles from './navigation.css';
+import data from '../../pages/data.json';
 
-const Navigation = () => <nav className={styles.default}>Navigation</nav>;
+const Navigation = () => {
+    const menu = data.pages.map(item => (
+        <li key={item.id} className={styles.item}>
+            <NavLink
+                to={item.slug}
+                className={`${styles.link} ${styles[item.icon]}`}
+            >
+                {item.title}
+            </NavLink>
+        </li>
+    ));
+
+    return (
+        <nav className={styles.default}>
+            <ul className={styles.list}>
+                {menu}
+            </ul>
+        </nav>
+    );
+};
 
 export default Navigation;

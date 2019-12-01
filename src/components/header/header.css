@@ -1,0 +1,8 @@
+.link {
+    display: block;
+    line-height: 0;
+}
+
+.linkDisabled {
+    pointer-events: none;
+}

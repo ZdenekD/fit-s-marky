@@ -1,0 +1,100 @@
+.item {
+    height: 60px;
+}
+
+.link {
+    width: 100%;
+    height: 60px;
+    padding-right: 56px;
+    display: block;
+    position: relative;
+    background-color: var(--color-gray);
+    color: var(--color-white);
+    font-size: 16px;
+    line-height: 60px;
+    text-align: right;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+    border-bottom: 1px solid #283336;
+
+    &::before {
+        width: 24px;
+        height: 24px;
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 16px;
+        content: '';
+        background-size: cover;
+    }
+}
+
+.about {
+
+    &::before {
+        background: url('../../images/icon_about.png') no-repeat center / contain;
+    }
+}
+
+.body {
+
+    &::before {
+        background: url('../../images/icon_body.png') no-repeat center / contain;
+    }
+}
+
+.calendar {
+
+    &::before {
+        background: url('../../images/icon_calendar.png') no-repeat center / contain;
+    }
+}
+
+.calories {
+
+    &::before {
+        background: url('../../images/icon_calories.png') no-repeat center / contain;
+    }
+}
+
+.contact {
+
+    &::before {
+        background: url('../../images/icon_contact.png') no-repeat center / contain;
+    }
+}
+
+.diploma {
+
+    &::before {
+        background: url('../../images/icon_diploma.png') no-repeat center / contain;
+    }
+}
+
+.gallery {
+
+    &::before {
+        background: url('../../images/icon_gallery.png') no-repeat center / contain;
+    }
+}
+
+.individual {
+
+    &::before {
+        background: url('../../images/icon_individual.png') no-repeat center / contain;
+    }
+}
+
+.internet {
+
+    &::before {
+        background: url('../../images/icon_internet.png') no-repeat center / contain;
+    }
+}
+
+.pricelist {
+
+    &::before {
+        background: url('../../images/icon_pricelist.png') no-repeat center / contain;
+    }
+}
+
