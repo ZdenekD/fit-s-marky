@@ -10,23 +10,23 @@
 
 ## Content
 
-- [CHECKLIST](#checklist)
-  - [Priorities](#priorities)
-  - [Content](#content)
-  - [Project](#project)
-  - [Head](#head)
-  - [HTML](#html)
-  - [Styles](#styles)
-  - [Scripts](#scripts)
-  - [Fonts](#fonts)
-  - [Images](#images)
-  - [Server](#server)
-  - [Security](#security)
-  - [Performance](#performance)
-  - [Accessibility](#accessibility)
-  - [SEO](#seo)
-  - [Test](#test)
-  - [Others](#others)
+-   [CHECKLIST](#checklist)
+    -   [Priorities](#priorities)
+    -   [Content](#content)
+    -   [Project](#project)
+    -   [Head](#head)
+    -   [HTML](#html)
+    -   [Styles](#styles)
+    -   [Scripts](#scripts)
+    -   [Fonts](#fonts)
+    -   [Images](#images)
+    -   [Server](#server)
+    -   [Security](#security)
+    -   [Performance](#performance)
+    -   [Accessibility](#accessibility)
+    -   [SEO](#seo)
+    -   [Test](#test)
+    -   [Others](#others)
 
 ## Project
 
@@ -65,10 +65,7 @@
 [ ] **Viewport:** ![High][high] The viewport is declared correctly.
 
 ```html
-<meta
-    name="viewport"
-    content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no"
-/>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no" />
 ```
 
 [ ] **Title:** ![High][high] A title is used on all pages (SEO: Google calculates the pixel width of the characters used in the title, and it cuts off between 472 and 482 pixels. The average character limit would be around 55-characters).
@@ -92,121 +89,32 @@
 ```html
 <link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon" />
 <link rel="icon" href="https://example.com/favicon.png" type="image/png" />
-<link
-    rel="apple-touch-icon"
-    sizes="57x57"
-    href="https://example.com/apple-touch-icon-57x57.png"
-/>
-<link
-    rel="apple-touch-icon"
-    sizes="60x60"
-    href="https://example.com/apple-touch-icon-60x60.png"
-/>
-<link
-    rel="apple-touch-icon"
-    sizes="72x72"
-    href="https://example.com/apple-touch-icon-72x72.png"
-/>
-<link
-    rel="apple-touch-icon"
-    sizes="76x76"
-    href="https://example.com/apple-touch-icon-76x76.png"
-/>
-<link
-    rel="apple-touch-icon"
-    sizes="114x114"
-    href="https://example.com/apple-touch-icon-114x114.png"
-/>
-<link
-    rel="apple-touch-icon"
-    sizes="120x120"
-    href="https://example.com/apple-touch-icon-120x120.png"
-/>
-<link
-    rel="apple-touch-icon"
-    sizes="144x144"
-    href="https://example.com/apple-touch-icon-144x144.png"
-/>
-<link
-    rel="apple-touch-icon"
-    sizes="152x152"
-    href="https://example.com/apple-touch-icon-152x152.png"
-/>
-<link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="https://example.com/apple-touch-icon-180x180.png"
-/>
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/android-chrome-36x36.png"
-    sizes="36x36"
-/>
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/android-chrome-48x48.png"
-    sizes="48x48"
-/>
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/android-chrome-72x72.png"
-    sizes="72x72"
-/>
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/android-chrome-96x96.png"
-    sizes="96x96"
-/>
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/android-chrome-144x144.png"
-    sizes="144x144"
-/>
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/android-chrome-192x192.png"
-    sizes="192x192"
-/>
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/android-chrome-256x256.png"
-    sizes="256x256"
-/>
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/favicon-16x16.png"
-    sizes="16x16"
-/>
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/favicon-32x32.png"
-    sizes="32x32"
-/>
-<link
-    rel="icon"
-    type="image/png"
-    href="https://example.com/favicon-194x194.png"
-    sizes="194x194"
-/>
+<link rel="apple-touch-icon" sizes="57x57" href="https://example.com/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="https://example.com/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="https://example.com/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="https://example.com/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="https://example.com/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="https://example.com/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="https://example.com/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="https://example.com/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="https://example.com/apple-touch-icon-180x180.png" />
+<link rel="icon" type="image/png" href="https://example.com/android-chrome-36x36.png" sizes="36x36" />
+<link rel="icon" type="image/png" href="https://example.com/android-chrome-48x48.png" sizes="48x48" />
+<link rel="icon" type="image/png" href="https://example.com/android-chrome-72x72.png" sizes="72x72" />
+<link rel="icon" type="image/png" href="https://example.com/android-chrome-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="https://example.com/android-chrome-144x144.png" sizes="144x144" />
+<link rel="icon" type="image/png" href="https://example.com/android-chrome-192x192.png" sizes="192x192" />
+<link rel="icon" type="image/png" href="https://example.com/android-chrome-256x256.png" sizes="256x256" />
+<link rel="icon" type="image/png" href="https://example.com/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="https://example.com/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://example.com/favicon-194x194.png" sizes="194x194" />
 <link rel="mask-icon" href="https://example.com/safari-pinned-tab.svg" />
 ```
 
 [ ] **Canonical:** ![Medium][medium] Use `rel="canonical"` to avoid duplicate content.
 
 ```html
-<link
-    rel="canonical"
-    href="http://example.com/2017/09/a-new-article-to-read.html"
-/>
+<link rel="canonical" href="http://example.com/2017/09/a-new-article-to-read.html" />
 ```
 
 [ ] **CSS Critical:** ![Medium][medium] The CSS critical (or "above the fold") collects all the CSS used to render the visible portion of the page. It is embedded before your principal CSS call and between `<style></style>` in a single line (minified).
@@ -214,8 +122,7 @@
 [ ] **Apple Web App Meta:** ![Low][low] Apple meta-tags are present.
 
 ```html
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-capable" content="yes" /> <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 ```
 
 [ ] **Windows Tiles:** ![Low][low] Windows tiles are present and linked.
@@ -266,10 +173,7 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 <meta name="twitter:creator" content="@individual_account" />
 <meta name="twitter:url" content="https://example.com/page.html" />
 <meta name="twitter:title" content="Content Title" />
-<meta
-    name="twitter:description"
-    content="Content description less than 200 characters"
-/>
+<meta name="twitter:description" content="Content description less than 200 characters" />
 <meta name="twitter:image" content="https://example.com/image.jpg" />
 ```
 
