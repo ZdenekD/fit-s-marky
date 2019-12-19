@@ -19,6 +19,10 @@ cd fit-s-marky/
 yarn
 ```
 
+### Development
+
+## AWS
+
 ### Building
 
 Build project before deploy
