@@ -1,6 +1,6 @@
 # Fit-s-marky
 
-[![aws](https://codebuild.eu-central-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiUHMvWE1xeitFRmdRaFZMeHBCOUtFNWUzazBOWGsvaUJTWmVZY0JZbnJoTmtzSG9YTm1QeTRrMVlzYmhkeFBjNHJTMnJPU3Z2bVpuZVR4S21ib2txdW5nPSIsIml2UGFyYW1ldGVyU3BlYyI6IkNodGp0ZGM1VFo2Umx5cDUiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)](https://aws.amazon.com/codebuild/)
+![aws](https://codebuild.eu-central-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiUHMvWE1xeitFRmdRaFZMeHBCOUtFNWUzazBOWGsvaUJTWmVZY0JZbnJoTmtzSG9YTm1QeTRrMVlzYmhkeFBjNHJTMnJPU3Z2bVpuZVR4S21ib2txdW5nPSIsIml2UGFyYW1ldGVyU3BlYyI6IkNodGp0ZGM1VFo2Umx5cDUiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
 [![code style: eslint](https://img.shields.io/badge/code%20style-eslint-%23463fd4)](https://eslint.org) [![code style: stylelint](https://img.shields.io/badge/code%20style-stylelint-success)](https://stylelint.io) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 ## Installing / Getting started
