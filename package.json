@@ -11,14 +11,14 @@
     "url": "git@github.com:ZdenekD/fit-s-marky.git"
   },
   "scripts": {
-    "clean": "rm -rf ./public/*",
+    "clean": "rm -rf ./dist/*",
     "reinstall": "rm -rf 'yarn.lock' 'package-lock.json' 'node_modules' && yarn",
     "start": "NODE_ENV=development webpack-dev-server --mode development --color --compress --open",
     "format:scripts": "eslint --cache --ext .js,.jsx --fix ./",
     "format:styles": "stylelint \"**/*.css\" --fix --color --formatter verbose",
     "format:prettier": "prettier --write '**/*.{json,md,yml,html}'",
     "format": "yarn format:scripts && yarn format:styles && yarn format:prettier",
-    "build": "yarn clean && yarn format && NODE_ENV=production webpack --mode production"
+    "build": "yarn clean && NODE_ENV=production webpack --mode production"
   },
   "engines": {
     "node": ">=10.13.0",
@@ -71,9 +71,13 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "@sentry/browser": "^5.9.1",
+    "prop-types": "^15.7.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
-    "react-router-dom": "^5.0.1"
+    "react-modal": "^3.11.1",
+    "react-router-dom": "^5.0.1",
+    "react-router-prop-types": "^1.0.4"
   }
 }
