@@ -18,7 +18,8 @@
     "format:styles": "stylelint \"**/*.css\" --fix --color --formatter verbose",
     "format:prettier": "prettier --write '**/*.{json,md,yml,html}'",
     "format": "yarn format:scripts && yarn format:styles && yarn format:prettier",
-    "build": "yarn clean && NODE_ENV=production webpack --mode production"
+    "build": "yarn clean && NODE_ENV=production webpack --mode production",
+    "test:snyk": "snyk monitor"
   },
   "engines": {
     "node": ">=10.13.0",
@@ -42,6 +43,7 @@
     "dotenv": "^8.1.0",
     "eslint": "^5.12.1",
     "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jest": "^23.0.4",
