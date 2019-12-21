@@ -62,6 +62,7 @@ module.exports = () => ({
         },
     },
     devServer: {
+        http2: true,
         contentBase: path.resolve(__dirname, config.output.dir),
         historyApiFallback: true,
         noInfo: true,

@@ -26,7 +26,7 @@ AWS development
 - create CloudFront distribution
 - create CodeBuild with S3 bucket access role
 
-[url](http://d9wkmslvwir33.cloudfront.net)
+[url](https://d9wkmslvwir33.cloudfront.net)
 
 ### Building
 
