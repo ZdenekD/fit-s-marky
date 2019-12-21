@@ -41,6 +41,7 @@ module.exports = () => ({
     output: {
         filename: '[name].[hash].js',
         path: path.resolve(__dirname, config.output.dir),
+        publicPath: path.resolve(__dirname, config.output.dir),
     },
     optimization: {
         splitChunks: {
@@ -62,7 +63,6 @@ module.exports = () => ({
         },
     },
     devServer: {
-        http2: true,
         contentBase: path.resolve(__dirname, config.output.dir),
         historyApiFallback: true,
         noInfo: true,
