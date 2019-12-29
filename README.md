@@ -25,6 +25,7 @@ AWS development
 - create S3 bucket with `dev` prefix
 - create CloudFront distribution
 - create CodeBuild with S3 bucket access role
+- create SNS and Lambda to Slack messages for build info
 
 [url](https://d9wkmslvwir33.cloudfront.net)
 
