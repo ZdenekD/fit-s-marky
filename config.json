@@ -3,7 +3,7 @@
     "app": "./src/index.jsx"
   },
   "output": {
-    "dir": "./dist"
+    "dir": "./public"
   },
   "favicons": {
     "title": "Fit-s-marky",
