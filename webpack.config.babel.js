@@ -101,11 +101,7 @@ module.exports = () => ({
         port: process.env.WEBPACK_PORT || 3010,
         stats: 'errors-only',
         hot: true,
-        http2: true,
-        https: {
-            key: fs.readFileSync(path.resolve(__dirname, 'certificates/server.key')),
-            cert: fs.readFileSync(path.resolve(__dirname, 'certificates/server.crt'))
-        }
+        http2: true
     },
     devtool: !isProduction ? 'cheap-module-eval-source-map' : '',
     context: __dirname,
