@@ -1,6 +1,8 @@
+import fs from 'fs';
 import path from 'path';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ImageminPlugin from 'imagemin-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 require('dotenv').config();
@@ -30,10 +32,41 @@ const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
     filename: '[name].[hash].css',
     chunkFilename: '[id].[hash].css',
 });
+const ImageminPluginConfig = new ImageminPlugin({
+    disable: !isProduction,
+    context: 'src',
+    destination: path.resolve(__dirname, config.output.dir),
+    gifsicle: {
+        optimizationLevel: 3,
+        interlaced: true,
+        colors: 10,
+    },
+    mozjpeg: {
+        progressive: true,
+        quality: 90,
+    },
+    pngquant: {
+        speed: 1,
+        quality: 90,
+    },
+    svgo: {
+        plugins: [
+            {
+                removeViewBox: false,
+            }, {
+                cleanupIDs: true,
+            },
+        ],
+    },
+    webp: {
+        quality: 90,
+    },
+});
 const plugins = [
     MiniCssExtractPluginConfig,
     HtmlWebpackPluginConfig,
     FaviconsWebpackPluginConfig,
+    ImageminPluginConfig,
 ];
 
 module.exports = () => ({
@@ -41,7 +74,6 @@ module.exports = () => ({
     output: {
         filename: '[name].[hash].js',
         path: path.resolve(__dirname, config.output.dir),
-        publicPath: path.resolve(__dirname, config.output.dir),
     },
     optimization: {
         splitChunks: {
@@ -66,9 +98,14 @@ module.exports = () => ({
         contentBase: path.resolve(__dirname, config.output.dir),
         historyApiFallback: true,
         noInfo: true,
-        port: 3000,
+        port: process.env.WEBPACK_PORT || 3010,
         stats: 'errors-only',
         hot: true,
+        http2: true,
+        https: {
+            key: fs.readFileSync(path.resolve(__dirname, 'certificates/server.key')),
+            cert: fs.readFileSync(path.resolve(__dirname, 'certificates/server.crt'))
+        }
     },
     devtool: !isProduction ? 'cheap-module-eval-source-map' : '',
     context: __dirname,
@@ -123,24 +160,9 @@ module.exports = () => ({
                     {
                         loader: 'file-loader',
                         options: {
-                            digest: 'hex',
-                            name: '[name].[hash].[ext]',
+                            name: '[name].[hash:base64:8].[ext]',
                         },
-                    }, {
-                        loader: 'image-webpack-loader',
-                        options: {
-                            mozjpeg: {
-                                progressive: true,
-                                quality: 90,
-                            },
-                            optipng: {
-                                optimizationLevel: 7,
-                            },
-                            webp: {
-                                quality: 90,
-                            },
-                        },
-                    },
+                    }
                 ],
             },
             {
@@ -150,8 +172,7 @@ module.exports = () => ({
                     {
                         loader: 'file-loader',
                         options: {
-                            digest: 'hex',
-                            name: '[name].[hash].[ext]',
+                            name: '[name].[hash:base64:8].[ext]',
                         },
                     },
                 ],

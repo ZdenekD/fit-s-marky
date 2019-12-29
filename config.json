@@ -9,6 +9,6 @@
     "title": "Fit-s-marky",
     "logo": "./favicon.png",
     "background": "#fff",
-    "prefix": "favicons_[hash:8]/"
+    "prefix": "favicons_[hash:base64:8]/"
   }
 }
