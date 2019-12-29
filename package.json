@@ -19,7 +19,8 @@
     "format:prettier": "prettier --write '**/*.{json,md,yml,html}'",
     "format": "yarn format:scripts && yarn format:styles && yarn format:prettier",
     "build": "yarn clean && NODE_ENV=production webpack --mode production",
-    "test:snyk": "snyk monitor"
+    "test:snyk": "snyk monitor",
+    "test:webhint": "hint http://fit-s-marky.src"
   },
   "engines": {
     "node": ">=10.13.0",
