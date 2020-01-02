@@ -28,6 +28,9 @@
           ".jsx"
         ]
       }
+    },
+    "react": {
+      "version": "detect"
     }
   },
   "rules": {

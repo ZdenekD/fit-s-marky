@@ -1,4 +1,4 @@
-DirectoryIndex dist/index.html
+DirectoryIndex public/index.html
 
 php_flag opcache.enable Off
 
@@ -8,11 +8,11 @@ php_flag opcache.enable Off
 
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule !\.(css|gif|ico|jpe?g|js|json|mp4|pdf|png|svgz?|txt|web[mp]|woff2?|xml)$ dist/index.html [L]
+    RewriteRule !\.(css|gif|ico|jpe?g|js|json|mp4|pdf|png|svgz?|txt|web[mp]|woff2?|xml)$ public/index.html [L]
 
     RewriteCond %{REQUEST_URI} \.(css|gif|ico|jpe?g|js|json|mp4|pdf|png|svgz?|txt|web[mp]|woff2?|xml)$
-    RewriteCond %{REQUEST_URI} !^/dist
-    RewriteRule ^(.*) dist/$1 [L]
+    RewriteCond %{REQUEST_URI} !^/public
+    RewriteRule ^(.*) public/$1 [L]
 </ifModule>
 
 <ifModule mod_mime.c>
@@ -27,10 +27,11 @@ php_flag opcache.enable Off
     AddType video/webm webm
     AddType image/svg+xml svgz
     AddType image/webp webp
+    AddType image/x-icon ico
     AddType font/woff woff
     AddType font/woff2 woff2
 
-    AddCharset utf-8 .appcache .css .js .json .xml
+    AddCharset utf-8 .appcache .css .js .json .xml .html
 </ifModule>
 
 <ifModule mod_deflate.c>
