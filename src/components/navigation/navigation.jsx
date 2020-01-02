@@ -10,6 +10,7 @@ const Navigation = () => {
                 to={item.slug}
                 className={`${styles.link} ${styles[item.icon]}`}
                 activeClassName={styles.active}
+                aria-label={item.title}
             >
                 <span className={styles.title}>{item.title}</span>
             </NavLink>

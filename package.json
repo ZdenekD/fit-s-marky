@@ -11,7 +11,7 @@
     "url": "git@github.com:ZdenekD/fit-s-marky.git"
   },
   "scripts": {
-    "clean": "rm -rf ./dist/*",
+    "clean": "rm -rf ./public/*",
     "reinstall": "rm -rf 'yarn.lock' 'package-lock.json' 'node_modules' && yarn",
     "start": "NODE_ENV=development webpack-dev-server --mode development --color --compress --open",
     "format:scripts": "eslint --cache --ext .js,.jsx --fix ./",

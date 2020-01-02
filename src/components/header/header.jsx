@@ -12,6 +12,7 @@ const Header = () => {
             <Link
                 to={'/'}
                 className={`${styles.link} ${isHomepage ? styles.disabled : ''}`}
+                aria-label="Logo Fit s Marky"
             >
                 <picture className={styles.picture}>
                     <source srcSet={png} type="image/png" />
