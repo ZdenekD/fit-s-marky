@@ -1,0 +1,8 @@
+:root {
+    --image-background: url('../../images/background.png');
+    --image-close: url('../../images/icon_close.png');
+    --image-checkbox: url('../../images/icon_checkbox.png');
+    --image-arrow-up: url('../../images/icon_arrow-up.png');
+    --image-social: url('../../images/icon_social.png');
+    --image-content: url('../../images/icon_content.png');
+}

@@ -11,11 +11,11 @@ const Header = () => {
         <header className={styles.default}>
             <Link
                 to={'/'}
-                className={`${styles.link} ${isHomepage ? styles.linkDisabled : ''}`}
+                className={`${styles.link} ${isHomepage ? styles.disabled : ''}`}
             >
-                <picture>
-                    <source srcSet={png} type="image/webp" className={styles.logo} />
-                    <source srcSet={webp} type="image/png" className={styles.logo} />
+                <picture className={styles.picture}>
+                    <source srcSet={png} type="image/png" />
+                    <source srcSet={webp} type="image/webp" />
                     <img src={png} alt="" className={styles.logo} />
                 </picture>
             </Link>

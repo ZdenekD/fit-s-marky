@@ -27,6 +27,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
         removeScriptTypeAttributes: true,
         removeStyleLinkTypeAttributes: true,
     },
+    robots: isProduction ? 'index, follow' : 'noindex, nofollow',
 });
 const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
     filename: '[name].[hash].css',
@@ -74,18 +75,7 @@ module.exports = () => ({
     output: {
         filename: '[name].[hash].js',
         path: path.resolve(__dirname, config.output.dir),
-    },
-    optimization: {
-        splitChunks: {
-            cacheGroups: {
-                vendor: {
-                    test: /[\\/]node_modules[\\/]/,
-                    chunks: 'all',
-                    name: 'vendor',
-                    enforce: true,
-                },
-            },
-        },
+        chunkFilename: '[name].[hash].js',
     },
     plugins,
     resolve: {
@@ -156,7 +146,7 @@ module.exports = () => ({
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[name].[hash:base64:8].[ext]',
+                            name: '[hash:base64:8].[ext]',
                         },
                     }
                 ],
@@ -168,7 +158,7 @@ module.exports = () => ({
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[name].[hash:base64:8].[ext]',
+                            name: '[hash:base64:8].[ext]',
                         },
                     },
                 ],

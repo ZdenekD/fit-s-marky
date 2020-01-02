@@ -1,0 +1,130 @@
+.default {
+    padding: calc(2 * var(--gutter));
+    flex: 1 1 auto;
+    flex-direction: column;
+    font-size: .9em;
+
+    &:focus,
+    &:hover {
+
+        h3::before {
+            transform: translateX(10px);
+        }
+    }
+
+    h2,
+    h3 {
+        padding-bottom: var(--gutter);
+        position: relative;
+
+        &::before {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: '';
+            background-color: var(--color-main);
+            transition: transform var(--transition-in) var(--transition-timing);
+            border-radius: 2px;
+        }
+    }
+
+    h2 {
+        margin-bottom: calc(2 * var(--gutter));
+
+        &::before {
+            width: 100px;
+            height: 2px;
+        }
+    }
+
+    h3 {
+        margin-bottom: var(--gutter);
+
+        &::before {
+            width: 80px;
+            height: 3px;
+        }
+    }
+
+    p {
+        margin-bottom: calc(1.5 * var(--gutter));
+    }
+
+    ul,
+    ol {
+        margin-bottom: var(--gutter);
+        margin-left: 1em;
+        padding-left: 1em;
+    }
+
+    ul {
+        list-style-type: square;
+    }
+
+    ol {
+        list-style-type: decimal;
+
+        ol {
+            list-style-type: square;
+        }
+    }
+
+    table {
+        width: 100%;
+        margin-bottom: var(--gutter);
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    tr {
+
+        &:hover,
+        &:focus {
+
+            td {
+                background-color: var(--color-main);
+                color: var(--color-white);
+            }
+        }
+    }
+
+    td {
+        padding: var(--gutter);
+        border-bottom: 1px solid var(--color-cream);
+
+        &:first-child {
+            width: 70%;
+        }
+
+        &:last-child {
+            width: 30%;
+            text-align: right;
+        }
+    }
+
+    :global .icon {
+        display: inline-flex;
+        align-items: center;
+        color: var(--color-text);
+
+        &::before {
+            width: 16px;
+            height: 16px;
+            margin-right: calc(.5 * var(--gutter));
+            display: inline-flex;
+            content: '';
+            background-color: transparent;
+            background-image: url('../../images/icon_content.png');
+            background-repeat: no-repeat;
+        }
+    }
+
+    :global .icon-mail::before {
+        background-position: -16px 0;
+    }
+
+    :global .icon-phone::before {
+        background-position: -32px 0;
+    }
+}
