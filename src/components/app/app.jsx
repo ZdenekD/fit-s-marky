@@ -7,10 +7,14 @@ import Footer from '../footer';
 
 const App = () => (
     <section className={styles.default}>
-        <Header />
-        <Navigation />
-        <Content />
-        <Footer />
+        <aside className={styles.sidebar}>
+            <Header />
+            <Navigation />
+        </aside>
+        <div className={styles.content}>
+            <Content />
+            <Footer />
+        </div>
     </section>
 );
 

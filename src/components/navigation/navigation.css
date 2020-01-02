@@ -1,5 +1,12 @@
 .item {
     height: 60px;
+
+    &:last-child {
+
+        .link {
+            border-bottom-left-radius: var(--border-radius);
+        }
+    }
 }
 
 .link {
@@ -12,7 +19,9 @@
     color: var(--color-white);
     font-size: 16px;
     line-height: 60px;
+    font-weight: 400;
     text-align: right;
+    text-decoration: none;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
     border-bottom: 1px solid #283336;
 

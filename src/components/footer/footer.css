@@ -1,0 +1,33 @@
+.default {
+    min-height: 60px;
+    max-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-black);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.link a {
+    color: var(--color-black);
+}
+
+.link,
+.rights {
+    margin: 0 var(--gutter);
+}
+
+.social {
+    width: 32px;
+    height: 32px;
+    text-indent: 100%;
+    overflow: hidden;
+    background: var(--image-social) no-repeat 0 0;
+    transition: background-position var(--transition-out) var(--transition-timing);
+
+    &:focus,
+    &:hover {
+        background-position: 0 -32px;
+    }
+}
