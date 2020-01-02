@@ -1,5 +1,6 @@
 @import './styles/base/reset.css';
 @import './styles/base/normalize.css';
+@import './styles/utilities/media.css';
 
 html {
     height: 100%;
@@ -8,14 +9,27 @@ html {
 body {
     width: 100%;
     background: var(--color-white) var(--image-background) repeat center;
+    background-attachment: fixed;
     color: var(--color-text);
     font-family: Ubuntu, Tahoma, Nimbus Sans L, Free Sans, sans-serif;
-    font-size: 16px;
+    font-size: var(--font-size, 13px);
     line-height: 1.4;
     font-weight: 400;
+
+    @media (--min-md) {
+        --font-size: 14px;
+    }
+
+    @media (--min-lg) {
+        --font-size: 15px;
+    }
+
+    @media (--min-xl) {
+        --font-size: 16px;
+    }
 }
 
-:global main {
+:global .main {
     width: 100%;
     min-height: 100vh;
     padding: 10vh 0 5vh;

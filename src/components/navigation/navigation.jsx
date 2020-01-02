@@ -9,8 +9,9 @@ const Navigation = () => {
             <NavLink
                 to={item.slug}
                 className={`${styles.link} ${styles[item.icon]}`}
+                activeClassName={styles.active}
             >
-                {item.title}
+                <span className={styles.title}>{item.title}</span>
             </NavLink>
         </li>
     ));

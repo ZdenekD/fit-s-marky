@@ -1,11 +1,13 @@
 .default {
     min-height: 60px;
-    max-height: 80px;
+    max-height: 120px;
+    padding: calc(2 * var(--gutter)) var(--gutter);
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
     color: var(--color-black);
-    font-size: 12px;
+    font-size: .8em;
     line-height: 1.4;
 }
 
@@ -15,7 +17,7 @@
 
 .link,
 .rights {
-    margin: 0 var(--gutter);
+    margin: var(--gutter);
 }
 
 .social {
