@@ -27,6 +27,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
         removeScriptTypeAttributes: true,
         removeStyleLinkTypeAttributes: true,
     },
+    robots: isProduction ? 'index, follow' : 'noindex, nofollow',
 });
 const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
     filename: '[name].[hash].css',
