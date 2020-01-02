@@ -1,0 +1,67 @@
+{
+  "pages": [
+    {
+      "id": "about",
+      "slug": "o-mne",
+      "title": "O mně",
+      "description": "Jmenuji se Markéta Dítětová a nabízím komplexní výživové poradenství, individuální lekce pilates a powerjógy.",
+      "icon": "about"
+    },
+    {
+      "id": "body",
+      "slug": "chci-znat-slozeni-sveho-tela",
+      "title": "Chci znát složení svého těla",
+      "description": "Pomocí diagnostické váhy získám analýzu složení Vašeho těla. Poznání složení svého těla je stěžejní.",
+      "icon": "body"
+    },
+    {
+      "id": "calories",
+      "slug": "chci-zhubnout",
+      "title": "Chci zhubnout",
+      "description": "Chci zhubnout, vytvořit si vlastní vyvážený jídelníček a zdravě jíst. Chci získat správné stravovací návyky.",
+      "icon": "calories"
+    },
+    {
+      "id": "individual",
+      "slug": "individualni-lekce-pilates",
+      "title": "Individuální lekce pilates",
+      "description": "Soukromé lekce pilates přímo u Vás doma. Po celou dobu individuální lekce pilates se věnuji pouze Vám. Cvičební program je plně přizpůsoben Vašim potřebám a požadavkům.",
+      "icon": "individual"
+    },
+    {
+      "id": "internet",
+      "slug": "osobni-jidelnicek-po-internetu",
+      "title": "Osobní jídelníček po internetu",
+      "description": "Sestavení osobního jídelníčku po internetu. Jídelníček je sestaven na základně podrobného dotazníku.",
+      "icon": "internet"
+    },
+    {
+      "id": "diploma",
+      "slug": "certifikaty",
+      "title": "Certifikáty",
+      "description": "Získala jsem certifikáty instruktorky pilates, bosu, jógy, poradce pro zdravou výživu ...",
+      "icon": "diploma"
+    },
+    {
+      "id": "gallery",
+      "slug": "fotogalerie",
+      "title": "Fotogalerie",
+      "description": "",
+      "icon": "gallery"
+    },
+    {
+      "id": "pricelist",
+      "slug": "cenik",
+      "title": "Ceník",
+      "description": "Kompletní ceník nabízených služeb od tvorby správného jídelníčku přes komplexní program redukce váhy až k individuálním lekcím pilates, jógy i powerjógy přímo u Vás doma.",
+      "icon": "pricelist"
+    },
+    {
+      "id": "contact",
+      "slug": "kontakt",
+      "title": "Kontakt",
+      "description": "Kontaktní e-mail: fitsmarky@seznam.cz | Kontaktní telefon: 728 778 023",
+      "icon": "contact"
+    }
+  ]
+}

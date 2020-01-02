@@ -7,23 +7,20 @@ html {
 
 body {
     width: 100%;
-    background: var(--color-black) var(--image-background) repeat center;
-    color: var(--color-white);
-    font-family: 'Roboto', Tahoma, Nimbus Sans L, Free Sans, sans-serif;
+    background: var(--color-white) var(--image-background) repeat center;
+    color: var(--color-text);
+    font-family: Ubuntu, Tahoma, Nimbus Sans L, Free Sans, sans-serif;
     font-size: 16px;
     line-height: 1.4;
-    font-weight: 300;
-}
-
-strong {
-    font-weight: 900;
+    font-weight: 400;
 }
 
 :global main {
     width: 100%;
     min-height: 100vh;
+    padding: 10vh 0 5vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }

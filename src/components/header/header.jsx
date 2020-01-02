@@ -14,8 +14,8 @@ const Header = () => {
                 className={`${styles.link} ${isHomepage ? styles.linkDisabled : ''}`}
             >
                 <picture>
-                    <source srcSet={png} type="image/webp" className={styles.logo} />
-                    <source srcSet={webp} type="image/png" className={styles.logo} />
+                    <source srcSet={png} type="image/png" className={styles.logo} />
+                    <source srcSet={webp} type="image/webp" className={styles.logo} />
                     <img src={png} alt="" className={styles.logo} />
                 </picture>
             </Link>

@@ -1,0 +1,11 @@
+:global ._pull-right {
+    float: right !important;
+}
+
+:global ._pull-left {
+    float: left !important;
+}
+
+:global ._italic {
+    font-style: italic;
+}

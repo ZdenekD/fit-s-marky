@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styles from './navigation.css';
-import data from '../../pages/data.json';
+import data from '../../data/pages.json';
 
 const Navigation = () => {
     const menu = data.pages.map(item => (

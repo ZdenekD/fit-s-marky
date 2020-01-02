@@ -1,4 +1,6 @@
 @import '../../styles/utilities/media.css';
+@import '../../styles/utilities/typography.css';
+@import '../../styles/utilities/helpers.css';
 
 .default {
     width: 100%;
@@ -15,15 +17,15 @@
     @media (--min-sm) {
         max-width: 480px;
     }
-    
+
     @media (--min-md) {
         max-width: 640px;
     }
-    
+
     @media (--min-lg) {
         max-width: 800px;
     }
-    
+
     @media (--min-xl) {
         max-width: 1024px;
     }
