@@ -9,7 +9,7 @@ module.exports = () => ({
         'postcss-preset-env': {
             stage: 1,
         },
-        'postcss-combine-media-query': {},
+        'postcss-custom-media': {},
         'postcss-reporter': {
             clearReportedMessages: true,
         },
