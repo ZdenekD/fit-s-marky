@@ -1,12 +1,12 @@
 {
+  "index": {
+    "id": "about",
+    "slug": "o-mne",
+    "title": "O mně",
+    "description": "Jmenuji se Markéta Dítětová a nabízím komplexní výživové poradenství, individuální lekce pilates a powerjógy.",
+    "icon": "about"
+  },
   "pages": [
-    {
-      "id": "about",
-      "slug": "o-mne",
-      "title": "O mně",
-      "description": "Jmenuji se Markéta Dítětová a nabízím komplexní výživové poradenství, individuální lekce pilates a powerjógy.",
-      "icon": "about"
-    },
     {
       "id": "body",
       "slug": "chci-znat-slozeni-sveho-tela",
