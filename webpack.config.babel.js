@@ -1,4 +1,3 @@
-import fs from 'fs';
 import path from 'path';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -11,6 +10,7 @@ const config = require('./config.json');
 
 const isProduction = process.env.NODE_ENV === 'production';
 const favicons = {
+    cache: true,
     logo: './favicon.png',
     ...config.favicons,
 };
