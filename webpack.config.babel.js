@@ -1,4 +1,3 @@
-import fs from 'fs';
 import path from 'path';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
@@ -11,6 +10,7 @@ const config = require('./config.json');
 
 const isProduction = process.env.NODE_ENV === 'production';
 const favicons = {
+    cache: true,
     logo: './favicon.png',
     ...config.favicons,
 };
@@ -74,8 +74,9 @@ module.exports = () => ({
     entry: config.entry,
     output: {
         filename: '[name].[hash].js',
-        path: path.resolve(__dirname, config.output.dir),
         chunkFilename: '[name].[hash].js',
+        path: path.resolve(__dirname, config.output.dir),
+        publicPath: '/',
     },
     plugins,
     resolve: {
@@ -91,7 +92,6 @@ module.exports = () => ({
         port: process.env.WEBPACK_PORT || 3010,
         stats: 'errors-only',
         hot: true,
-        http2: true
     },
     devtool: !isProduction ? 'cheap-module-eval-source-map' : '',
     context: __dirname,

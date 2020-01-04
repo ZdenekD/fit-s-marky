@@ -6,9 +6,24 @@
     "dir": "./public"
   },
   "favicons": {
-    "title": "Fit-s-marky",
     "logo": "./favicon.png",
-    "background": "#fff",
-    "prefix": "[hash:base64:8]/"
+    "prefix": "[hash:base64:8]",
+    "favicons": {
+      "appName": "Fit-s-marky",
+      "appDescription": "Jmenuji se Markéta Dítětová a nabízím komplexní výživové poradenství, individuální lekce pilates a powerjógy.",
+      "developerName": "zdenekd",
+      "developerURL": "https://zdenekd.cz",
+      "background": "#fff",
+      "icons": {
+        "android": true,
+        "appleIcon": true,
+        "appleStartup": false,
+        "coast": false,
+        "favicons": true,
+        "firefox": false,
+        "windows": false,
+        "yandex": false
+      }
+    }
   }
 }
