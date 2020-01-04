@@ -148,7 +148,7 @@ module.exports = () => ({
                         options: {
                             name: '[hash:base64:8].[ext]',
                         },
-                    }
+                    },
                 ],
             },
             {
