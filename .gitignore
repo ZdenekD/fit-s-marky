@@ -24,6 +24,7 @@ hint-report
 # Project files
 .yarn-integrity
 .eslintcache
+.stylelintcache
 .env
 behat.yml
 localhost.json
