@@ -68,6 +68,7 @@ php_flag opcache.enable Off
     Header add Access-Control-Allow-Methods "GET"
     Header set x-xss-protection "1; mode=block"
     Header set Connection keep-alive
+    Header merge Cache-Control immutable
     <filesMatch "\.(woff2?)$">
         Header set Cache-Control "public, max-age=31536000, immutable"
     </filesMatch>
@@ -83,7 +84,7 @@ php_flag opcache.enable Off
         Header set Cache-Control "private, max-age=31536000, immutable"
     </filesMatch>
     <filesMatch "\.(x?html?|php)$">
-        Header set Cache-Control "private, max-age=360"
+        Header set Cache-Control "private, max-age=180"
     </filesMatch>
     <filesMatch "\.(css|gif|ico|jpe?g|js|json|mp4|pdf|png|svgz?|txt|web[mp]|woff2?|xml)$">
         Header unset Content-Security-Policy
@@ -92,5 +93,8 @@ php_flag opcache.enable Off
         Header unset X-UA-Compatible
         Header unset X-WebKit-CSP
         Header unset X-XSS-Protection
+    </filesMatch>
+    <filesMatch "\.(appcache|cur|geojson|ico|json(ld)?|x?html?|topojson|xml)$">
+          Header edit Cache-Control immutable ""
     </filesMatch>
 </ifModule>

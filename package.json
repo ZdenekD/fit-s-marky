@@ -14,10 +14,6 @@
     "clean": "rm -rf ./public/*",
     "reinstall": "rm -rf 'yarn.lock' 'package-lock.json' 'node_modules' && yarn",
     "start": "NODE_ENV=development webpack-dev-server --mode development --color --compress --open",
-    "format:scripts": "eslint --ext .js,.jsx --fix ./",
-    "format:styles": "stylelint \"**/*.css\" --fix --color --formatter verbose",
-    "format:prettier": "prettier --write '**/*.{json,md,yml,html}'",
-    "format": "yarn format:scripts && yarn format:styles && yarn format:prettier",
     "build": "yarn clean && NODE_ENV=production webpack --mode production",
     "test:snyk": "snyk monitor",
     "test:webhint": "hint http://fit-s-marky.src",
@@ -30,11 +26,11 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "eslint --fix",
+      "eslint --cache --fix",
       "git add"
     ],
     "*.css": [
-      "stylelint --fix --color --formatter verbose",
+      "stylelint --cache --fix --color --formatter verbose",
       "git add"
     ],
     "*.{json,md,yml,html}": [
