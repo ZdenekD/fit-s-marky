@@ -14,14 +14,33 @@
     "clean": "rm -rf ./public/*",
     "reinstall": "rm -rf 'yarn.lock' 'package-lock.json' 'node_modules' && yarn",
     "start": "NODE_ENV=development webpack-dev-server --mode development --color --compress --open",
-    "format:scripts": "eslint --cache --ext .js,.jsx --fix ./",
-    "format:styles": "stylelint --cache \"**/*.css\" --fix --color --formatter verbose",
+    "format:scripts": "eslint --ext .js,.jsx --fix ./",
+    "format:styles": "stylelint \"**/*.css\" --fix --color --formatter verbose",
     "format:prettier": "prettier --write '**/*.{json,md,yml,html}'",
     "format": "yarn format:scripts && yarn format:styles && yarn format:prettier",
     "build": "yarn clean && NODE_ENV=production webpack --mode production",
     "test:snyk": "snyk monitor",
     "test:webhint": "hint http://fit-s-marky.src",
     "test:packages": "yarn outdated"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.css": [
+      "stylelint --fix --color --formatter verbose",
+      "git add"
+    ],
+    "*.{json,md,yml,html}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "engines": {
     "node": ">=10.13.0",
@@ -58,7 +77,9 @@
     "file-loader": "^5.0.2",
     "hint": "^6.0.3",
     "html-webpack-plugin": "^4.0.0-beta.11",
+    "husky": "^3.1.0",
     "imagemin-webpack-plugin": "^2.4.2",
+    "lint-staged": "^9.5.0",
     "mini-css-extract-plugin": "^0.9.0",
     "postcss-combine-media-query": "^1.0.0",
     "postcss-custom-media": "^7.0.8",
