@@ -26,11 +26,11 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "eslint --fix",
+      "eslint --cache --fix",
       "git add"
     ],
     "*.css": [
-      "stylelint --fix --color --formatter verbose",
+      "stylelint --cache --fix --color --formatter verbose",
       "git add"
     ],
     "*.{json,md,yml,html}": [
