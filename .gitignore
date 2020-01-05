@@ -49,11 +49,7 @@ nbproject
 *.tmlanguage.cache
 *.tmPreferences.cache
 *.stTheme.cache
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+.vscode
 
 # Others
 /doc
