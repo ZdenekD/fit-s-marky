@@ -23,7 +23,7 @@
             bottom: 0;
             left: 0;
             content: '';
-            background-color: var(--color-main);
+            background-color: var(--color-primary);
             transition: transform var(--transition-in) var(--transition-timing);
             border-radius: 2px;
         }
@@ -83,7 +83,7 @@
         &:focus {
 
             td {
-                background-color: var(--color-main);
+                background-color: var(--color-primary);
                 color: var(--color-white);
             }
         }

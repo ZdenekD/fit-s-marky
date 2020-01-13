@@ -10,12 +10,12 @@ import data from '../../data/pages.json';
 import getMeta from '../../helpers/meta';
 import styles from './app.css';
 
-const Page = loadable(props => import(`../pages/${props.page}`));
+const Page = loadable(props => import(`../pages/${props.content}`));
 const App = () => {
     const routes = data.pages.map(item => (
         <Route path={`/${item.slug}`} key={item.id}>
             <Head title={item.title} meta={getMeta(item)} />
-            <Content content={<Page page={item.id} />} />
+            <Content content={<Page id={item.id} content={item.content} title={item.title} />} />
         </Route>
     ));
 
@@ -29,11 +29,11 @@ const App = () => {
                 <Switch>
                     <Route exact path="/">
                         <Head title={data.index.title} meta={getMeta(data.index)} />
-                        <Content content={<Page page={data.index.id} />} />
+                        <Content content={<Page content={data.index.content} />} />
                     </Route>
                     {routes}
                     <Route>
-                        <Content content={<Page page="notfound" />} />
+                        <Content content={<Page content="notfound" />} />
                     </Route>
                 </Switch>
                 <Footer />

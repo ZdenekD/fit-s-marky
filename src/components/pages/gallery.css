@@ -1,0 +1,60 @@
+.gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    flex-basis: 45%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    line-height: 0;
+    border: 3px solid var(--color-cream);
+
+    &:focus,
+    &:hover {
+
+        .image {
+            opacity: .6;
+            transform: scale3d(1.1, 1.1, 1);
+        }
+
+        .title {
+            bottom: 20px;
+            font-size: 1.1em;
+        }
+    }
+}
+
+.figure {
+    background: var(--color-primary);
+}
+
+.image {
+    max-width: 100%;
+    opacity: .8;
+    will-change: transform;
+    transition: opacity var(--transition-out) var(--transition-timing), transform var(--transition-out) var(--transition-timing);
+}
+
+.caption {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+
+.title {
+    width: 100%;
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    color: var(--color-secondary);
+    font-size: 1.3em;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    transition: bottom var(--transition-out) var(--transition-timing), font-size var(--transition-out) var(--transition-timing);
+}
