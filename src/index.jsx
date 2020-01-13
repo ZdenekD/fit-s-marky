@@ -1,6 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
+import * as Sentry from '@sentry/browser';
 import loadable from '@loadable/component';
 import './styles/variables/variables.css';
 import './styles/utilities/images.css';
@@ -10,8 +11,6 @@ const app = document.getElementById('js_main');
 
 if (process.env.NODE_ENV === 'production') {
     try {
-        const Sentry = loadable(() => import('@sentry/browser'));
-
         Sentry.init({dsn: 'https://eaaee4e90cf4449fbe33f6b176be32d7@sentry.io/1840666'});
     } catch (error) {
         console.log(error);
