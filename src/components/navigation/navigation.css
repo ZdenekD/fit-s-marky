@@ -24,7 +24,7 @@
         &:hover,
         &.active {
             opacity: 1;
-            background-color: var(--color-main);
+            background-color: var(--color-primary);
             color: var(--color-white);
 
             &::before {
@@ -34,7 +34,7 @@
             @media (--min-lg) {
                 padding-right: 64px;
                 text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
-                border-bottom-color: var(--color-main);
+                border-bottom-color: var(--color-primary);
             }
         }
     }
@@ -51,7 +51,7 @@
 }
 
 .active {
-    background-color: var(--color-main);
+    background-color: var(--color-primary);
 }
 
 .item {

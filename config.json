@@ -5,6 +5,9 @@
   "output": {
     "dir": "./public"
   },
+  "public": {
+    "images": "src/images/gallery"
+  },
   "favicons": {
     "logo": "./favicon.png",
     "prefix": "[hash:base64:8]",

@@ -21,7 +21,7 @@
     min-width: 40vw;
     max-width: var(--max-container);
     margin-bottom: 40px;
-    padding: calc(4 * var(--gutter));
+    padding: calc(2 * var(--gutter));
     position: absolute;
     top: 5vh;
     left: 50%;
@@ -29,7 +29,7 @@
     background-color: rgba(255, 255, 255, .1);
     transform: translateX(-50%);
     animation: fade-in .4s ease-in-out forwards;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 40px rgba(253, 107, 107, .25);
     border-radius: var(--border-radius);
 }
 
@@ -39,19 +39,15 @@
 }
 
 .overlay {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     z-index: var(--zindex-modal);
     opacity: 0;
     overflow-y: auto;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(253, 107, 107, .25);
     animation: fade-in .4s ease-in-out forwards;
 }
 
@@ -59,8 +55,8 @@
     width: 30px;
     height: 30px;
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 0;
+    right: -30px;
     cursor: pointer;
     color: var(--color-white);
     font-size: 30px;

@@ -5,16 +5,17 @@ import data from '../../data/pages.json';
 
 const Navigation = () => {
     const menu = data.pages.map(page => (
-        <li key={page.id} className={styles.item}>
-            <NavLink
-                to={`/${page.slug}`}
-                className={`${styles.link} ${styles[page.icon]}`}
-                activeClassName={styles.active}
-                aria-label={page.title}
-            >
-                <span className={styles.title}>{page.title}</span>
-            </NavLink>
-        </li>
+        !page.secondary
+            ? <li key={page.id} className={styles.item}>
+                <NavLink
+                    to={`/${page.slug}`}
+                    className={`${styles.link} ${styles[page.icon]}`}
+                    activeClassName={styles.active}
+                    aria-label={page.title}
+                >
+                    <span className={styles.title}>{page.title}</span>
+                </NavLink>
+            </li> : null
     ));
 
     return (
