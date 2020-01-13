@@ -1,6 +1,7 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 import loadable from '@loadable/component';
+import Error from '../error';
 import Head from '../head';
 import Header from '../header';
 import Loader from '../loader';
@@ -29,16 +30,18 @@ const App = () => {
                 <Navigation />
             </aside>
             <div className={styles.content}>
-                <Switch>
-                    <Route exact path="/">
-                        <Head title={data.index.title} meta={getMeta(data.index)} />
-                        <Content content={<Page content={data.index.content} />} />
-                    </Route>
-                    {routes}
-                    <Route>
-                        <Content content={<Page content="notfound" />} />
-                    </Route>
-                </Switch>
+                <Error>
+                    <Switch>
+                        <Route exact path="/">
+                            <Head title={data.index.title} meta={getMeta(data.index)} />
+                            <Content content={<Page content={data.index.content} />} />
+                        </Route>
+                        {routes}
+                        <Route>
+                            <Content content={<Page content="notfound" />} />
+                        </Route>
+                    </Switch>
+                </Error>
                 <Footer />
             </div>
         </section>
