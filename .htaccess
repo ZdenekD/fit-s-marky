@@ -73,7 +73,7 @@ php_flag opcache.enable Off
         Header set Cache-Control "public, max-age=31536000, immutable"
     </filesMatch>
     <filesMatch "\.(gif|ico|jpe?g|mp4|png|web[mp])$">
-        Header set Cache-Control "public, max-age=31536000"
+        Header set Cache-Control "public, max-age=31536000, immutable"
     </filesMatch>
     <filesMatch "\.(css)$">
         SetOutputFilter DEFLATE
@@ -98,3 +98,13 @@ php_flag opcache.enable Off
           Header edit Cache-Control immutable ""
     </filesMatch>
 </ifModule>
+
+<IfModule mod_headers.c>
+    Header unset Public-Key-Pins
+    Header unset Public-Key-Pins-Report-Only
+    Header unset X-AspNet-Version
+    Header unset X-AspNetMvc-version
+    Header unset X-Powered-By`
+    Header unset X-Runtime
+    Header unset X-Version
+</IfModule>
