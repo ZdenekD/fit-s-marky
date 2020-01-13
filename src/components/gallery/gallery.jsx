@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import {NavLink} from 'react-router-dom';
 import Image from '../image';
 import Modal from '../modal';
 import data from '../../data/gallery.json';
@@ -40,7 +41,18 @@ const Gallery = ({id, title}) => {
     return (
         <>
             <header>
-                <h2>Fotogalerie</h2>
+                <div className={styles.navigation}>
+                    <NavLink
+                        to={'/fotogalerie'}
+                        className={styles.heading}
+                        aria-label="Zpět na výber fotogalerie"
+                    ><h2>Fotogalerie</h2></NavLink>
+                    <NavLink
+                        to={'/fotogalerie'}
+                        className={styles.link}
+                        aria-label="Zpět na výber fotogalerie"
+                    >&lt; Zpět</NavLink>
+                </div>
                 <h3>{title}</h3>
             </header>
             <section className={styles.gallery}>

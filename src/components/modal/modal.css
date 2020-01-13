@@ -21,7 +21,7 @@
     min-width: 40vw;
     max-width: var(--max-container);
     margin-bottom: 40px;
-    padding: calc(4 * var(--gutter));
+    padding: calc(2 * var(--gutter));
     position: absolute;
     top: 5vh;
     left: 50%;
@@ -55,8 +55,8 @@
     width: 30px;
     height: 30px;
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 0;
+    right: 0;
     cursor: pointer;
     color: var(--color-white);
     font-size: 30px;
