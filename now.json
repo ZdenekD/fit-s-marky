@@ -23,10 +23,6 @@
           "value": "SAMEORIGIN"
         },
         {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        },
-        {
           "key": "Access-Control-Allow-Origin",
           "value": "*"
         },
@@ -45,7 +41,7 @@
       ]
     },
     {
-      "source": "/.(woff2?|gif|ico|jpe?g|mp4|png|web[mp]|css|js)$",
+      "source": "/(.woff|.woff2|.gif|.ico|.jpg|.jpeg|.mp4|.png|.webm|.webp|.css|.js)$",
       "headers": [
         {
           "key": "Cache-Control",
