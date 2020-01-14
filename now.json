@@ -24,7 +24,7 @@
         },
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "*"
+          "value": "http://www.googletagmanager.com"
         },
         {
           "key": "Access-Control-Allow-Headers",
@@ -37,12 +37,7 @@
         {
           "key": "Connection",
           "value": "keep-alive"
-        }
-      ]
-    },
-    {
-      "source": "/(.woff|.woff2|.gif|.ico|.jpg|.jpeg|.mp4|.png|.webm|.webp|.css|.js)",
-      "headers": [
+        },
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
