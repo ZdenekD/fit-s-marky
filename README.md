@@ -1,6 +1,5 @@
 # Fit-s-marky
 
-![aws](https://codebuild.eu-central-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiUHMvWE1xeitFRmdRaFZMeHBCOUtFNWUzazBOWGsvaUJTWmVZY0JZbnJoTmtzSG9YTm1QeTRrMVlzYmhkeFBjNHJTMnJPU3Z2bVpuZVR4S21ib2txdW5nPSIsIml2UGFyYW1ldGVyU3BlYyI6IkNodGp0ZGM1VFo2Umx5cDUiLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=develop)
 [![code style: eslint](https://img.shields.io/badge/code%20style-eslint-%23463fd4)](https://eslint.org) [![code style: stylelint](https://img.shields.io/badge/code%20style-stylelint-success)](https://stylelint.io) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
 ## Installing / Getting started
@@ -21,18 +20,17 @@ yarn
 
 ### Development
 
-AWS development
+It's automatically pushed to [Zeit.co](https://zeit.co/dashboard). Production branch is **master**, other branches for development (every pushed branch is build)
 
--   create S3 bucket with `dev` prefix
--   create CloudFront distribution
--   create CodeBuild with S3 bucket access role
--   create SNS and Lambda to Slack messages for build info
-
-[url](https://d9wkmslvwir33.cloudfront.net)
+```
+master branch - production
+develop branch - stage/development preview
+```
 
 ### Building
 
-Build project before deploy
+Project is automatically build on [Zeit.co](https://zeit.co/dashboard).
+Build task:
 
 ```
 yarn build
@@ -41,11 +39,16 @@ yarn build
 ## Tests
 
 How to run and write tests
+[Snyk](https://snyk.io) - check packages for vulnerabilities
+[Webhint](https://webhint.io) - complete website tests
+[Yarn Outdated](https://yarnpkg.com/lang/en/docs/cli/outdated/) - check for outdated project packages
 
-```shell
-yarn test
+```
+yarn test:snyk
+yarn test:webhint
+yarn test:packages
 ```
 
 ## Deploying
 
-How to build and publish on production
+Push to **master** branch
