@@ -11,8 +11,6 @@
 ## Content
 
 -   [CHECKLIST](#checklist)
-    -   [Priorities](#priorities)
-    -   [Content](#content)
     -   [Project](#project)
     -   [Head](#head)
     -   [HTML](#html)
@@ -30,59 +28,57 @@
 
 ## Project
 
-[ ] **Git repository:** ![High][high] Repository is created with all hooks and settings
+[x] **Git repository:** ![High][high] Repository is created with all hooks and settings
 
-[ ] **README.md:** ![High][high] Project contains README.md file with project descriptions and specifications
+[x] **README.md:** ![High][high] Project contains README.md file with project descriptions and specifications
 
-[ ] **Sentry.io:** ![High][high] Project is created in sentry to get future errors
+[x] **Sentry.io:** ![High][high] Project is created in sentry to get future errors
 
 -   [sentry.io](https://sentry.io/organizations/zdenekd/projects/)
 
-[ ] **Upsource:** ![Medium][medium] If it's necessary (we don't use code review with stash), project is created in Upsource
+[x] **Snyk.io** ![Medium][medium] Project is added to Snyk to catch some vulnerabilities
 
-[ ] **Clean up comments:** ![Low][low] Unnecessary code needs to be removed before sending the page to production.
+-   [snyk.io](https://app.snyk.io/org/zdenekd)
 
-[ ] **Add humans.txt** ![Low][low] We are people, not machines :]
-
--   [humans.txt](http://humanstxt.org/)
+[x] **Clean up comments:** ![Low][low] Unnecessary code needs to be removed before sending the page to production.
 
 ---
 
 ## Head
 
-[ ] **Doctype:** ![High][high] The Doctype is HTML5 and is at the top of all your HTML pages.
+[x] **Doctype:** ![High][high] The Doctype is HTML5 and is at the top of all your HTML pages.
 
 ```html
 <!DOCTYPE html>
 ```
 
-[ ] **Charset:** ![High][high] The charset (UTF-8) is declared correctly.
+[x] **Charset:** ![High][high] The charset (UTF-8) is declared correctly.
 
 ```html
 <meta charset="utf-8" />
 ```
 
-[ ] **Viewport:** ![High][high] The viewport is declared correctly.
+[x] **Viewport:** ![High][high] The viewport is declared correctly.
 
 ```html
-<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
 ```
 
-[ ] **Title:** ![High][high] A title is used on all pages (SEO: Google calculates the pixel width of the characters used in the title, and it cuts off between 472 and 482 pixels. The average character limit would be around 55-characters).
+[x] **Title:** ![High][high] A title is used on all pages (SEO: Google calculates the pixel width of the characters used in the title, and it cuts off between 472 and 482 pixels. The average character limit would be around 55-characters).
 
 ```html
 <title>Title</title>
 ```
 
-[ ] **Description:** ![High][high] A meta description is provided, it is unique and doesn't possess more than 150 characters.
+[x] **Description:** ![High][high] A meta description is provided, it is unique and doesn't possess more than 150 characters.
 
 ```html
 <meta name="description" content="Description" />
 ```
 
-[ ] **Place CSS tags always before JavaScript tags:** ![High][high] Ensure that your CSS is always loaded before having JavaScript code.
+[x] **Place CSS tags always before JavaScript tags:** ![High][high] Ensure that your CSS is always loaded before having JavaScript code.
 
-[ ] **Favicons:** ![High][high] Each favicon has been created and displays correctly. If you have only a `favicon.ico`, put it at the root of your site. Normally you won't need to use any markup. However, it's still good practice to link to it using the example below. Today, **PNG format is recommended** over `.ico` format. You can use builder task or online tool.
+[x] **Favicons:** ![High][high] Each favicon has been created and displays correctly. If you have only a `favicon.ico`, put it at the root of your site. Normally you won't need to use any markup. However, it's still good practice to link to it using the example below. Today, **PNG format is recommended** over `.ico` format. You can use builder task or online tool.
 
 -   [FaviconGenerator](https://realfavicongenerator.net/)
 
@@ -119,7 +115,7 @@
 
 [ ] **CSS Critical:** ![Medium][medium] The CSS critical (or "above the fold") collects all the CSS used to render the visible portion of the page. It is embedded before your principal CSS call and between `<style></style>` in a single line (minified).
 
-[ ] **Apple Web App Meta:** ![Low][low] Apple meta-tags are present.
+[x] **Apple Web App Meta:** ![Low][low] Apple meta-tags are present.
 
 ```html
 <meta name="apple-mobile-web-app-capable" content="yes" /> <meta name="apple-mobile-web-app-status-bar-style" content="black" />
@@ -147,7 +143,7 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 </browserconfig>
 ```
 
-[ ] **Facebook Open Graph:** ![Low][low] All Facebook Open Graph (OG) are tested and no one is missing or with a false information. Images need to be at least 600 x 315 pixels, although 1200 x 630 pixels is recommended.
+[x] **Facebook Open Graph:** ![Low][low] All Facebook Open Graph (OG) are tested and no one is missing or with a false information. Images need to be at least 600 x 315 pixels, although 1200 x 630 pixels is recommended.
 
 -   [OpenGraph](http://ogp.me/)
 
@@ -163,7 +159,7 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 <meta property="og:locale" content="en_US" />
 ```
 
-[ ] **Twitter Card:** ![Low][low]
+[x] **Twitter Card:** ![Low][low]
 
 -   [TwitterCards](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards)
 
@@ -181,25 +177,25 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 
 ## HTML
 
-[ ] **Validate HTML:** ![High][high] All pages need to be validated with validate builder task or with online tool.
+[x] **Validate HTML:** ![High][high] All pages need to be validated with validate builder task or with online tool.
 
 -   [HTML5 Validator](https://html5.validator.nu/)
 
-[ ] **HTML5 Semantic Elements:** ![High][high] HTML5 Semantic Elements are used appropriately (header, section, footer, main...).
+[x] **HTML5 Semantic Elements:** ![High][high] HTML5 Semantic Elements are used appropriately (header, section, footer, main...).
 
-[ ] **Language attribute:** ![High][high] The `lang` attribute of your website is specified and related to the language of the current page.
+[x] **Language attribute:** ![High][high] The `lang` attribute of your website is specified and related to the language of the current page.
 
 ```html
 <html lang="en"></html>
 ```
 
-[ ] **Error pages:** ![High][high] Error 404 page and 5xx exist. Remember that the 5xx error pages need to have their CSS integrated (no external call on the current server).
+[x] **Error pages:** ![High][high] Error 404 page and 5xx exist. Remember that the 5xx error pages need to have their CSS integrated (no external call on the current server).
 
-[ ] **Link check:** ![High][high] There are no broken links in the page, verify that you don't have any 404 error.
+[x] **Link check:** ![High][high] There are no broken links in the page, verify that you don't have any 404 error.
 
-[ ] **Noopener:** ![Medium][medium] In case you are using external links with `target="_blank"`, your link should have a `rel="noopener"` attribute to prevent tab nabbing.
+[x] **Noopener:** ![High][high] In case you are using external links with `target="_blank"`, your link should have a `rel="noopener noreferrer"` attribute to prevent tab nabbing.
 
-[ ] **Remove unnecessary attributes:** ![Low][low] Type attributes like type="text/javascript" or type="text/css" are not required anymore and should be removed.
+[x] **Remove unnecessary attributes:** ![Medium][medium] Type attributes like type="text/javascript" or type="text/css" are not required anymore and should be removed.
 
 ```html
 <script>
@@ -207,29 +203,28 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 </script>
 ```
 
-[ ] **Adblockers test:** ![Low][low] Your website shows your content correctly with adblockers enabled (You can provide a message encouraging people to disable their adblocker).
+[x] **Adblockers test:** ![Low][low] Your website shows your content correctly with adblockers enabled (You can provide a message encouraging people to disable their adblocker).
 
 ---
 
 ## Styles
 
-[ ] **Stylelint:** ![High][high] All CSS files are without any errors.
+[x] **Stylelint:** ![High][high] All CSS files are without any errors.
 
-[ ] **Reset CSS:** ![High][high] A CSS reset and normalize ([reset.css](https://meyerweb.com/eric/tools/css/reset/) and [normalize.css](https://necolas.github.io/normalize.css/)) is used and up to date.
+[x] **Reset CSS:** ![High][high] A CSS reset and normalize ([reset.css](https://meyerweb.com/eric/tools/css/reset/) and [normalize.css](https://necolas.github.io/normalize.css/)) is used and up to date.
 
 -   [reset.css](https://meyerweb.com/eric/tools/css/reset/)
 -   [normalize.css](https://necolas.github.io/normalize.css/)
 
-[ ] **Concatenation:** ![High][high] CSS files are concatenated in a single file.
+[x] **Concatenation:** ![High][high] CSS files are concatenated in a single file.
 
-[ ] **Minification:** ![High][high] All CSS files are minified.
+[x] **Minification:** ![High][high] All CSS files are minified.
 
-[ ] **Embedded or inline CSS:** ![High][high] Avoid at all cost embedding CSS in `<style>` tags or using inline CSS: only use for valid reasons (e.g. background-image for slider, critical CSS).
+[x] **Embedded or inline CSS:** ![High][high] Avoid at all cost embedding CSS in `<style>` tags or using inline CSS: only use for valid reasons (e.g. background-image for slider, critical CSS).
 
 [ ] **Analyse stylesheets complexity:** ![Medium][medium] Analyzing your stylesheets can help you to flag issues, redundancies and duplicate CSS selectors.
 
 -   [CSSstats](https://cssstats.com)
--   [Analyze CSS](https://github.com/macbre/analyze-css)
 
 [ ] **CSS Print:** ![Medium][medium] A print stylesheet is provided and is correct on each page.
 
@@ -239,19 +234,19 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 
 ## Scripts
 
-[ ] **ESLint:** ![High][high] No errors are flagged by ESLint.
+[x] **ESLint:** ![High][high] No errors are flagged by ESLint.
 
-[ ] **JavaScript Inline:** ![High][high] You don't have any JavaScript code inline (mixed with your HTML code).
+[x] **JavaScript Inline:** ![High][high] You don't have any JavaScript code inline (mixed with your HTML code).
 
-[ ] **Concatenation:** ![High][high] JavaScript files are concatenated.
+[x] **Concatenation:** ![High][high] JavaScript files are concatenated.
 
-[ ] **Minification:** ![High][high] JavaScript files are minified (you can add the `.min` suffix).
+[x] **Minification:** ![High][high] JavaScript files are minified (you can add the `.min` suffix).
 
 [ ] **JavaScript security:** ![High][high]
 
--   [Guidelines for Developing Secure Applications Utilizing JavaScript](https://www.owasp.org/index.php/DOM_based_XSS_Prevention_Cheat_Sheet#Guidelines_for_Developing_Secure_Applications_Utilizing_JavaScript)
+-   [Guidelines for Developing Secure Applications Utilizing JavaScript](https://cheatsheetseries.owasp.org)
 
-[ ] **Noscript tag:** ![Medium][medium] Use `<noscript>` tag in the HTML body if a script type on the page is unsupported or if scripting is currently turned off in the browser.
+[x] **Noscript tag:** ![Medium][medium] Use `<noscript>` tag in the HTML body if a script type on the page is unsupported or if scripting is currently turned off in the browser.
 
 ```html
 <noscript>
@@ -263,7 +258,7 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 
 -   [JS defer loading](https://varvy.com/pagespeed/defer-loading-javascript.html)
 
-[ ] **Optimized and updated JS libraries:** ![Medium][medium] All JavaScript libraries used in your project are necessary (prefer Vanilla Javascript for simple functionalities), updated to their latest version and don't overwhelm your JavaScript with unnecessary methods.
+[x] **Optimized and updated JS libraries:** ![Medium][medium] All JavaScript libraries used in your project are necessary (prefer Vanilla Javascript for simple functionalities), updated to their latest version and don't overwhelm your JavaScript with unnecessary methods.
 
 [ ] **JavaScript Profiling:** ![Medium][medium] Check for performance problems in your JavaScript files.
 
@@ -278,11 +273,11 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 
 ## Fonts
 
-[ ] **Webfont size:** ![High][high] Webfont sizes don't exceed 300kb (all variants included).
+[x] **Webfont size:** ![High][high] Webfont sizes don't exceed 300kb (all variants included).
 
-[ ] **Webfont formats:** ![Medium][medium] You are using WOFF2 on your web project or application. It's then good to use WOFF 2.0, WOFF 1.0 as a fallback.
+[x] **Webfont formats:** ![Medium][medium] You are using WOFF2 on your web project or application. It's then good to use WOFF 2.0, WOFF 1.0 as a fallback.
 
-[ ] **Use preconnect to load your fonts faster:** ![Medium][medium]
+[x] **Use preconnect to load your fonts faster:** ![Medium][medium]
 
 ```html
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -297,14 +292,14 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 
 ## Images
 
-[ ] **Optimization:** ![High][high] All images are optimized to be rendered in the browser (png, jpg, svg etc.). Use loseless image optimization (it's a part of builder task for assets images)
+[x] **Optimization:** ![High][high] All images are optimized to be rendered in the browser (png, jpg, svg etc.). Use loseless image optimization (it's a part of builder task for assets images)
 
 -   [Imagemin](https://github.com/imagemin/imagemin)
 -   [SVGO](https://github.com/svg/svgo)
 
-[ ] **Alternative text:** ![High][high] All `<img>` have an alternative text which describe the image visually.
+[x] **Alternative text:** ![High][high] All `<img>` have an alternative text which describe the image visually.
 
-[ ] **Lazy loading:** ![High][high] Images are lazyloaded (A noscript fallback is always provided).
+[x] **Lazy loading:** ![High][high] Images are lazyloaded (A noscript fallback is always provided).
 
 -   [Lazysizes](https://github.com/aFarkas/lazysizes)
 -   [Lazyload](https://github.com/verlok/lazyload)
@@ -315,25 +310,23 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 
 [ ] **Images dimensions:** ![Medium][medium] Set width and height attributes on <img> if the final rendered image size is known.
 
-[ ] **Sprite:** ![Medium][medium] Small images are in a sprite file (in the case of icons, they can be in an SVG sprite image).
-
 [ ] **Retina:** ![Low][low] You provide layout images 2x or 3x, support retina display.
 
 ---
 
 ## Server
 
-[ ] **Website is using HTTPS:** ![High][high]
+[x] **Website is using HTTPS:** ![High][high]
 
-[ ] **Serve files from the same protocol:** ![High][high] Avoid having your website serving files coming from source using HTTP on your website which is using HTTPS for example. If your website is using HTTPS, external files should come from the same protocol.
+[x] **Serve files from the same protocol:** ![High][high] Avoid having your website serving files coming from source using HTTP on your website which is using HTTPS for example. If your website is using HTTPS, external files should come from the same protocol.
 
-[ ] **Set HTTP cache headers properly:** ![High][high] Set HTTP headers to avoid expensive number of roundtrips between your browser and the server.
+[x] **Set HTTP cache headers properly:** ![High][high] Set HTTP headers to avoid expensive number of roundtrips between your browser and the server.
 
 -   [HTTP caching](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching)
 
-[ ] **GZIP / Brotli compression is enabled:** ![High][high] Use a compression method such as Gzip or Brotli to reduce the size of your JavaScript files. With a smaller sizes file, users will be able to download the asset faster, resulting in improved performance.
+[x] **GZIP / Brotli compression is enabled:** ![High][high] Use a compression method such as Gzip or Brotli to reduce the size of your JavaScript files. With a smaller sizes file, users will be able to download the asset faster, resulting in improved performance.
 
-[ ] **Time To First Byte < 1.3 seconds:** ![High][high] Reduce as much as you can the time your browser waits before receiving data.
+[x] **Time To First Byte < 1.3 seconds:** ![High][high] Reduce as much as you can the time your browser waits before receiving data.
 
 ---
 
@@ -342,47 +335,47 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 -   [securityheaders.io](https://securityheaders.io/)
 -   [Observatory by Mozilla](https://observatory.mozilla.org/)
 
-[ ] **Cross Site Request Forgery (CSRF):** ![High][high] You ensure that requests made to your server-side are legitimate and originate from your website / app to prevent CSRF attacks.
+[x] **Cross Site Request Forgery (CSRF):** ![High][high] You ensure that requests made to your server-side are legitimate and originate from your website / app to prevent CSRF attacks.
 
-[ ] **Cross Site Scripting (XSS):** ![High][high] Your page or website is free from XSS possible issues.
+[x] **Cross Site Scripting (XSS):** ![High][high] Your page or website is free from XSS possible issues.
 
-[ ] **HTTP Strict Transport Security (HSTS):** ![Medium][medium] The HTTP header is set to 'Strict-Transport-Security'.
+[x] **HTTP Strict Transport Security (HSTS):** ![Medium][medium] The HTTP header is set to 'Strict-Transport-Security'.
 
-[ ] **Content Type Options:** ![Medium][medium] Prevents Google Chrome and Internet Explorer from trying to mime-sniff the content-type of a response away from the one being declared by the server.
+[x] **Content Type Options:** ![Medium][medium] Prevents Google Chrome and Internet Explorer from trying to mime-sniff the content-type of a response away from the one being declared by the server.
 
-[ ] **X-Frame-Options (XFO):** ![Medium][medium] Protects your visitors against clickjacking attacks.
+[x] **X-Frame-Options (XFO):** ![Medium][medium] Protects your visitors against clickjacking attacks.
 
-[ ] **Content Security Policy:** ![Medium][medium] Defines how content is loaded on your site and from where it is permitted to be loaded. Can also be used to protect against clickjacking attacks.
+[x] **Content Security Policy:** ![Medium][medium] Defines how content is loaded on your site and from where it is permitted to be loaded. Can also be used to protect against clickjacking attacks.
 
 ---
 
 ## Performance
 
-[ ] **PageSpeed:** ![High][high] All your pages were tested (not only the homepage) and have a score of at least 90/100 (you can use Audits in google chrome)).
+[x] **PageSpeed:** ![High][high] All your pages were tested (not only the homepage) and have a score of at least 90/100 (you can use Audits in google chrome)).
 
 -   [Google PageSpeed](https://developers.google.com/speed/pagespeed/insights/)
 -   [Test your mobile speed with Google](https://testmysite.withgoogle.com)
 -   [WebPageTest - Website Performance and Optimization Test](https://www.webpagetest.org/)
 -   [GTmetrix - Website speed and performance optimization](https://gtmetrix.com/)
 
-[ ] **Page load times < 3 seconds:** ![High][high] Reduce as much as possible your page load times to quickly deliver your content to your users.
+[x] **Page load times < 3 seconds:** ![High][high] Reduce as much as possible your page load times to quickly deliver your content to your users.
 
 -   [Website Page Analysis](https://tools.pingdom.com)
 -   [WebPageTest](https://www.webpagetest.org/)
 
-[ ] **Minimizing HTTP requests:** ![High][high] Always ensure that every file requested are essential for your website or application.
+[x] **Minimizing HTTP requests:** ![High][high] Always ensure that every file requested are essential for your website or application.
 
-[ ] **Minified HTML:** ![Medium][medium] Your HTML is minified.
+[x] **Minified HTML:** ![Medium][medium] Your HTML is minified.
 
 [ ] **Cookie size:** ![Medium][medium] If you are using cookies be sure each cookie doesn't exceed 4096 bytes and your domain name doesn't have more than 20 cookies.
 
-[ ] **DNS resolution:** ![Low][low] DNS of third-party services that may be needed are resolved in advance during idle time using `dns-prefetch`.
+[x] **DNS resolution:** ![Low][low] DNS of third-party services that may be needed are resolved in advance during idle time using `dns-prefetch`.
 
 ```html
 <link rel="dns-prefetch" href="https://example.com" />
 ```
 
-[ ] **Preconnection:** ![Low][low] DNS lookup, TCP handshake and TLS negotiation with services that will be needed soon is done in advance during idle time using `preconnect`.
+[x] **Preconnection:** ![Low][low] DNS lookup, TCP handshake and TLS negotiation with services that will be needed soon is done in advance during idle time using `preconnect`.
 
 ```html
 <link rel="preconnect" href="https://example.com" />
@@ -406,15 +399,15 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 
 ## Accessibility
 
-[ ] **H1:** ![High][high] All pages have an H1 which is not the title of the website.
+[x] **H1:** ![High][high] All pages have an H1 which is not the title of the website.
 
-[ ] **Headings:** ![High][high] Headings should be used properly and in the right order (H1 to H6).
+[x] **Headings:** ![High][high] Headings should be used properly and in the right order (H1 to H6).
 
 [ ] **Label:** ![High][high] A label is associated with each input form element. In case a label can't be displayed, use `aria-label` instead.
 
-[ ] **Focus style:** ![High][high] If the focus is disabled, it is replaced by visible state in CSS.
+[x] **Focus style:** ![High][high] If the focus is disabled, it is replaced by visible state in CSS.
 
-[ ] **Accessibility standards testing:** ![High][high] Use the WAVE tool to test if your page respects the accessibility standards.
+[x] **Accessibility standards testing:** ![High][high] Use the WAVE tool to test if your page respects the accessibility standards.
 
 -   [Wave](http://wave.webaim.org/)
 
@@ -434,11 +427,11 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 
 -   [SEO checklist](https://docs.google.com/document/d/18XiX5GMufiEnHKBezUvpGX6i7QZ04xWggGLlXEm9aXI/mobilebasic)
 
-[ ] **Google Analytics:** ![High][high] Google Analytics is installed and correctly configured.
+[x] **Google Analytics:** ![High][high] Google Analytics is installed and correctly configured.
 
 [ ] **sitemap.xml:** ![High][high] A sitemap.xml exists and was submitted to Google Search Console (previously Google Webmaster Tools).
 
-[ ] **robots.txt:** ![High][high] The robots.txt is not blocking webpages.
+[x] **robots.txt:** ![High][high] The robots.txt is not blocking webpages.
 
 [ ] **Structured Data:** ![High][high] Pages using structured data are tested and are without errors. Structured data helps crawlers understand the content in the current page.
 
@@ -449,7 +442,7 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 -   Test your page with the [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/)
 -   Complete list of vocabularies that can be used as structured data. [Schema.org Full Hierarchy](http://schema.org/docs/full.html)
 
-[ ] **Headings logic:** ![Medium][medium] Heading text helps to understand the content in the current page.
+[x] **Headings logic:** ![Medium][medium] Heading text helps to understand the content in the current page.
 
 [ ] **Pagination link tags:** ![Medium][medium] Provide `rel="prev"` and `rel="next"` to indicate paginated content.
 
@@ -473,6 +466,6 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 
 -   [awwwards guideline](https://www.awwwards.com/mobile-excellence-guidelines.pdf)
 
-[low]: https://front-end-checklist.now.sh/low.svg
-[medium]: https://front-end-checklist.now.sh/medium.svg
-[high]: https://front-end-checklist.now.sh/high.svg
+[low]: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAARVBMVEUAAAA0mNo0mNszmNo0l9s0mNs1mNs0mNs0mNs0mNs0mNs0mNs1mNs0mNs0mNs0mNs0mNwzl9ozmNs0mNs1mNs2mdv////c175KAAAAEXRSTlMAISEiIiIiZWZnhYaGh5+goI5OdJoAAABLSURBVHjaTYyDAcAwEEV/3dj7jxrrnYnMS5QiDyrCVcTMTTYO3LUdintA3OSHWoXeC4l/FR+eEnwtjvba2uwoMiwnNa9cv5LfCSABYYkHvkO2qcwAAAAASUVORK5CYII=
+[medium]: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAAXVBMVEUAAADwwxDwxRDwxBDxxA/xxBDxxRDxxA7xxA/xxA/xxBDxxA/yxA/xxA/xxBDxww/xxA/xww/xxA/yxA/xxA/xxA/xwgnxww7xxA7xxA/xxBDxxBHxxRPxxxv///864uuLAAAAFnRSTlMAISEiIiIiZWVmZmdnhYWGhoeHh5+gz4Lo1gAAAFVJREFUeNpFjQMCxDAQRf8adWPd/5odFC8ZC8Srd657QViTsLBvyPGB1Ew9ks6sHujSyR9ObGXlNCiSsfhdbR+82TQJbnomRlIDiEmbRgjPn7PfOzkbIFgKMPrkKmsAAAAASUVORK5CYII=
+[high]: data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAMAAABhq6zVAAAAUVBMVEUAAADnTDznTD3mSzznTDznTTznTT3oTDznTDvnTDznTDznTTznTDznTDzmTDznTDznTDznTDvoTDznTDznTD3mSjrnSzvnTDznTD3nTT3////+8uz5AAAAFXRSTlMAISEiIiIiImVlZmZnhYaGh5+foKBsjPqCAAAATUlEQVR42kWMAwIAIRAA52yz/z80186aWLr5uuYaz/559pQ/rtqg/TI1sxQTl4/KucsViZPRhd8XA41MyvD6fa1bsKw28bmnGu+jLwAD5NMJaWsfl5MAAAAASUVORK5CYII=
