@@ -38,7 +38,7 @@ const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
 const CopyWebpackPluginConfig = new CopyWebpackPlugin([
     {
         from: config.public.images,
-        to: '',
+        to: 'images',
     }, {
         from: './robots.txt',
         to: '',
@@ -47,7 +47,7 @@ const CopyWebpackPluginConfig = new CopyWebpackPlugin([
 const HtmlReplaceWebpackPluginConfig = new HtmlReplaceWebpackPlugin([
     {
         pattern: config.public.images,
-        replacement: '',
+        replacement: 'images',
     },
 ]);
 const ImageminPluginConfig = new ImageminPlugin({
@@ -165,7 +165,7 @@ module.exports = () => ({
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[hash:base64:8].[ext]',
+                            name: 'images/[hash:base64:8].[ext]',
                         },
                     },
                 ],
@@ -177,7 +177,7 @@ module.exports = () => ({
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[hash:base64:8].[ext]',
+                            name: 'fonts/[hash:base64:8].[ext]',
                         },
                     },
                 ],
