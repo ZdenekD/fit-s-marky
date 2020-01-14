@@ -1,0 +1,12 @@
+.editorconfig
+.eslintignore
+.eslintrc
+.hintrc
+.htaccess
+.prettierignore
+.prettierrc
+.stylelintignore
+.stylelintrc
+CHECKLIST.md
+README.md
+buildspec.yml
