@@ -10,7 +10,7 @@
   },
   "favicons": {
     "logo": "./favicon.png",
-    "prefix": "[hash:base64:8]",
+    "prefix": "favicons",
     "favicons": {
       "appName": "Fit-s-marky",
       "appDescription": "Jmenuji se Markéta Dítětová a nabízím komplexní výživové poradenství, individuální lekce pilates a powerjógy.",

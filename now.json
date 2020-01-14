@@ -1,5 +1,6 @@
 {
   "name": "Fit s Marky",
+  "regions": ["cdg1", "bru1"],
   "rewrites": [
     {
       "source": "/(.*)",
@@ -41,11 +42,29 @@
       ]
     },
     {
-      "source": "((.*).woff2|(.*).woff|(.*).gif|(.*).ico|(.*).jpe?g|(.*).mp4|(.*).png|(.*).web[mp]|(.*).css|(.*).js)",
+      "source": "/",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "private, max-age=180"
+        }
+      ]
+    },
+    {
+      "source": "((.*).woff2|(.*).woff|(.*).gif|(.*).jpe?g|(.*).mp4|(.*).png|(.*).web[mp]|(.*).css|(.*).json|(.*).ico)",
       "headers": [
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "((.*).js)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "private, max-age=31536000, immutable"
         }
       ]
     }

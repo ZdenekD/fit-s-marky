@@ -26,7 +26,7 @@ const Gallery = ({id, title}) => {
     const content = gallery.images.length > 0
         ? gallery.images.map(item => (
             <li key={item} className={styles.item}>
-                <button type="button" onClick={() => handleOpen(item)} className={styles.button}>
+                <button type="button" onClick={() => handleOpen(item)} className={styles.button} aria-label="Obrázek galerie">
                     <Image
                         path="/images"
                         name={item}
