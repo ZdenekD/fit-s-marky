@@ -36,10 +36,6 @@
           "value": "GET"
         },
         {
-          "key": "Content-Encoding",
-          "value": "gzip"
-        },
-        {
           "key": "Connection",
           "value": "keep-alive"
         }
