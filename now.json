@@ -25,7 +25,7 @@
         },
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "*, http://www.googletagmanager.com"
+          "value": "*"
         },
         {
           "key": "Access-Control-Allow-Headers",
