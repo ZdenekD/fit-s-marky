@@ -9,7 +9,7 @@ const Modal = ({
     className,
     isOpen,
     handleClose,
-}) => (
+}) => ((
     <ReactModal
         isOpen={isOpen}
         contentLabel={contentLabel}
@@ -19,9 +19,9 @@ const Modal = ({
         overlayClassName={styles.overlay}
     >
         {content}
-        <button type="button" className={styles.close} onClick={handleClose}>&times;</button>
+        <button type="button" className={styles.close} onClick={handleClose} aria-label="Zavřít modální okno">&times;</button>
     </ReactModal>
-);
+));
 
 ReactModal.setAppElement('#js_main');
 
