@@ -39,6 +39,9 @@ const CopyWebpackPluginConfig = new CopyWebpackPlugin([
     {
         from: config.public.images,
         to: 'images',
+    }, {
+        from: './robots.txt',
+        to: '',
     },
 ]);
 const HtmlReplaceWebpackPluginConfig = new HtmlReplaceWebpackPlugin([
