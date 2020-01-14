@@ -3,7 +3,18 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/",
+      "dest": "/"
+    },
+    {
+      "src": "/.(woff2?|gif|ico|jpe?g|mp4|png|web[mp]|css|js)$",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
       "headers": [
         {
           "key": "X-Content-Type-Options",
@@ -22,12 +33,6 @@
           "value": "1; mode=block"
         }
       ]
-    },
-    {
-      "src": "/.(woff2?|gif|ico|jpe?g|mp4|png|web[mp]|css|js)$",
-      "headers": {
-        "Cache-Control": "public, max-age=31536000, immutable"
-      }
     }
   ]
 }
