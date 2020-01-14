@@ -1,0 +1,76 @@
+.gallery {
+
+    .list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.heading {
+    color: var(--color-font);
+    text-decoration: none;
+}
+
+.link {
+    color: var(--color-font);
+    text-decoration: none;
+    transition: border var(--transition-in) var(--transition-timing);
+    border-bottom: 1px solid;
+
+    &:focus,
+    &:hover {
+        transition: border var(--transition-out) var(--transition-timing);
+        border-bottom-color: transparent;
+    }
+}
+
+.item {
+    flex-basis: calc(50% - var(--gutter));
+    margin-bottom: calc(2 * var(--gutter));
+    display: flex;
+    line-height: 0;
+
+    &:focus,
+    &:hover {
+
+        .image {
+            opacity: .6;
+            transform: scale3d(1.1, 1.1, 1);
+        }
+    }
+}
+
+.button {
+    cursor: pointer;
+}
+
+.picture {
+    display: block;
+    overflow: hidden;
+    background-color: var(--color-primary);
+    border-radius: 4px;
+}
+
+.image {
+    max-width: 100%;
+    opacity: .8;
+    transition: transform var(--transition-out) var(--transition-timing), opacity var(--transition-out) var(--transition-timing);
+    border-radius: 4px;
+}
+
+.modalPicture,
+.modalImage {
+    width: 75vw;
+    max-width: 1024px;
+    border-radius: var(--border-radius);
+}

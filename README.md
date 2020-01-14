@@ -13,14 +13,24 @@ Instruction of the minimal setup
 Description how to set project on local machine
 
 ```
-    git clone git@github.com:ZdenekD/fit-s-marky.git
-    cd fit-s-marky/
-    yarn
+git clone git@github.com:ZdenekD/fit-s-marky.git
+cd fit-s-marky/
+yarn
+```
+
+### Development
+
+It's automatically pushed to [Zeit.co](https://zeit.co/dashboard). Production branch is **master**, other branches for development (every pushed branch is build)
+
+```
+master branch - production
+develop branch - stage/development preview
 ```
 
 ### Building
 
-Build project before deploy
+Project is automatically build on [Zeit.co](https://zeit.co/dashboard).
+Build task:
 
 ```
 yarn build
@@ -29,11 +39,16 @@ yarn build
 ## Tests
 
 How to run and write tests
+[Snyk](https://snyk.io) - check packages for vulnerabilities
+[Webhint](https://webhint.io) - complete website tests
+[Yarn Outdated](https://yarnpkg.com/lang/en/docs/cli/outdated/) - check for outdated project packages
 
-```shell
-yarn test
+```
+yarn test:snyk
+yarn test:webhint
+yarn test:packages
 ```
 
 ## Deploying
 
-How to build and publish on production
+Push to **master** branch

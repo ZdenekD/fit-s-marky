@@ -1,0 +1,15 @@
+:root {
+    --color-primary: #fd6b6b;
+    --color-secondary: #d7ef08;
+    --color-text: #16142b;
+    --color-black: #3f3f3f;
+    --color-white: #fff;
+    --color-gray: #2c383c;
+    --color-purple: #6b3157;
+    --color-cream: #f0f0cc;
+    --gutter: 10px;
+    --transition-in: .2s;
+    --transition-out: .4s;
+    --transition-timing: ease-in-out;
+    --border-radius: 8px;
+}

@@ -9,9 +9,7 @@ module.exports = () => ({
         'postcss-preset-env': {
             stage: 1,
         },
-        'css-mqpacker': {
-            sort: true,
-        },
+        'postcss-custom-media': {},
         'postcss-reporter': {
             clearReportedMessages: true,
         },

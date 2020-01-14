@@ -1,0 +1,37 @@
+.default {
+    min-height: 60px;
+    max-height: 120px;
+    padding: calc(2 * var(--gutter)) var(--gutter);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-black);
+    font-size: .8em;
+    line-height: 1.4;
+}
+
+.link a {
+    color: var(--color-black);
+}
+
+.link,
+.rights {
+    margin: var(--gutter);
+}
+
+.social {
+    width: 32px;
+    height: 32px;
+    margin-right: var(--gutter);
+    margin-left: auto;
+    overflow: hidden;
+    background: var(--image-social) no-repeat 0 0;
+    text-indent: 100%;
+    transition: background-position var(--transition-out) var(--transition-timing);
+
+    &:focus,
+    &:hover {
+        background-position: 0 -32px;
+    }
+}

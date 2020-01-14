@@ -1,0 +1,64 @@
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.opened {
+    padding-right: 1em;
+    overflow: hidden;
+}
+
+.opened :global .main {
+    filter: blur(4px);
+    transition: filter .4s ease-in-out;
+}
+
+.default {
+    min-width: 40vw;
+    max-width: var(--max-container);
+    margin-bottom: 40px;
+    padding: calc(2 * var(--gutter));
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, .1);
+    transform: translateX(-50%);
+    animation: fade-in .4s ease-in-out forwards;
+    box-shadow: 0 0 40px rgba(253, 107, 107, .25);
+    border-radius: var(--border-radius);
+}
+
+.default img {
+    max-height: 75vh;
+    border-radius: var(--border-radius);
+}
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--zindex-modal);
+    opacity: 0;
+    overflow-y: auto;
+    background-color: rgba(253, 107, 107, .25);
+    animation: fade-in .4s ease-in-out forwards;
+}
+
+.close {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: -30px;
+    cursor: pointer;
+    color: var(--color-white);
+    font-size: 30px;
+    line-height: 30px;
+}

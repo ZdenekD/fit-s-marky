@@ -15,12 +15,16 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Reports
+hint-report
+
 # Cache
 .next
 
 # Project files
 .yarn-integrity
 .eslintcache
+.stylelintcache
 .env
 behat.yml
 localhost.json
@@ -34,7 +38,6 @@ Desktop.ini
 $RECYCLE.BIN/
 .fseventsd
 
-
 # Editors
 /.idea
 modules.xml
@@ -46,7 +49,7 @@ nbproject
 *.tmlanguage.cache
 *.tmPreferences.cache
 *.stTheme.cache
-.vscode/*
+.vscode
 
 # Others
 /doc

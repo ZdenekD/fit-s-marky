@@ -3,4 +3,6 @@ bower_components/*
 vendor/*
 doc/*
 **/dist/*
+**/public/*
 test/*
+hint-report/*

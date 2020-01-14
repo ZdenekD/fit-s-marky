@@ -1,6 +1,9 @@
 import path from 'path';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
+import HtmlReplaceWebpackPlugin from 'html-replace-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ImageminPlugin from 'imagemin-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 require('dotenv').config();
@@ -9,6 +12,7 @@ const config = require('./config.json');
 
 const isProduction = process.env.NODE_ENV === 'production';
 const favicons = {
+    cache: true,
     logo: './favicon.png',
     ...config.favicons,
 };
@@ -25,34 +29,73 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
         removeScriptTypeAttributes: true,
         removeStyleLinkTypeAttributes: true,
     },
+    robots: isProduction ? 'index, follow' : 'noindex, nofollow',
 });
 const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
     filename: '[name].[hash].css',
     chunkFilename: '[id].[hash].css',
 });
+const CopyWebpackPluginConfig = new CopyWebpackPlugin([
+    {
+        from: config.public.images,
+        to: 'images',
+    }, {
+        from: './robots.txt',
+        to: '',
+    },
+]);
+const HtmlReplaceWebpackPluginConfig = new HtmlReplaceWebpackPlugin([
+    {
+        pattern: config.public.images,
+        replacement: 'images',
+    },
+]);
+const ImageminPluginConfig = new ImageminPlugin({
+    disable: !isProduction,
+    context: 'src',
+    destination: path.resolve(__dirname, config.output.dir),
+    gifsicle: {
+        optimizationLevel: 3,
+        interlaced: true,
+        colors: 10,
+    },
+    mozjpeg: {
+        progressive: true,
+        quality: 90,
+    },
+    pngquant: {
+        speed: 1,
+        quality: 90,
+    },
+    svgo: {
+        plugins: [
+            {
+                removeViewBox: false,
+            }, {
+                cleanupIDs: true,
+            },
+        ],
+    },
+    webp: {
+        quality: 90,
+    },
+});
 const plugins = [
     MiniCssExtractPluginConfig,
     HtmlWebpackPluginConfig,
     FaviconsWebpackPluginConfig,
+    CopyWebpackPluginConfig,
+    HtmlReplaceWebpackPluginConfig,
+    ImageminPluginConfig,
 ];
 
 module.exports = () => ({
     entry: config.entry,
     output: {
         filename: '[name].[hash].js',
+        chunkFilename: '[name].[hash].js',
         path: path.resolve(__dirname, config.output.dir),
-    },
-    optimization: {
-        splitChunks: {
-            cacheGroups: {
-                vendor: {
-                    test: /[\\/]node_modules[\\/]/,
-                    chunks: 'all',
-                    name: 'vendor',
-                    enforce: true,
-                },
-            },
-        },
+        publicPath: '/',
     },
     plugins,
     resolve: {
@@ -65,7 +108,7 @@ module.exports = () => ({
         contentBase: path.resolve(__dirname, config.output.dir),
         historyApiFallback: true,
         noInfo: true,
-        port: 3000,
+        port: process.env.WEBPACK_PORT || 3010,
         stats: 'errors-only',
         hot: true,
     },
@@ -122,23 +165,7 @@ module.exports = () => ({
                     {
                         loader: 'file-loader',
                         options: {
-                            hash: 'sha512',
-                            digest: 'hex',
-                            name: '[name].[ext]',
-                        },
-                    }, {
-                        loader: 'image-webpack-loader',
-                        options: {
-                            mozjpeg: {
-                                progressive: true,
-                                quality: 90,
-                            },
-                            optipng: {
-                                optimizationLevel: 7,
-                            },
-                            webp: {
-                                quality: 90,
-                            },
+                            name: 'images/[hash:base64:8].[ext]',
                         },
                     },
                 ],
@@ -150,9 +177,7 @@ module.exports = () => ({
                     {
                         loader: 'file-loader',
                         options: {
-                            hash: 'sha512',
-                            digest: 'hex',
-                            name: '[name].[ext]',
+                            name: 'fonts/[hash:base64:8].[ext]',
                         },
                     },
                 ],
