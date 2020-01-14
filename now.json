@@ -8,15 +8,6 @@
   ],
   "headers": [
     {
-      "source": "(*)",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        }
-      ]
-    },
-    {
       "source": "/(.*)",
       "headers": [
         {
@@ -46,7 +37,7 @@
       ]
     },
     {
-      "source": "(.woff|.woff2|.gif|.ico|.jpg|.jpeg|.mp4|.png|.webm|.webp|.css|.js)",
+      "source": "(woff2?|gif|ico|jpe?g|mp4|png|web[mp]|css|js)",
       "headers": [
         {
           "key": "Cache-Control",
