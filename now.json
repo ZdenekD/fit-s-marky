@@ -38,12 +38,7 @@
         {
           "key": "Connection",
           "value": "keep-alive"
-        }
-      ]
-    },
-    {
-      "source": "/",
-      "headers": [
+        },
         {
           "key": "Cache-Control",
           "value": "private, max-age=180"
