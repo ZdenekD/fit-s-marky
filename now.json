@@ -1,6 +1,5 @@
 {
   "name": "Fit s Marky",
-  "regions": ["cdg1", "bru1"],
   "rewrites": [
     {
       "source": "/(.*)",
