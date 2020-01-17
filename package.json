@@ -14,7 +14,8 @@
     "clean": "rm -rf ./public/*",
     "reinstall": "rm -rf 'yarn.lock' 'node_modules' && yarn",
     "start": "NODE_ENV=development webpack-dev-server --mode development --color --compress --open",
-    "build": "yarn clean && NODE_ENV=production webpack --mode production",
+    "build": "yarn clean && NODE_ENV=production webpack --mode production && yarn sitemap",
+    "sitemap": "node ./node_scripts/sitemap.js",
     "test:snyk": "snyk monitor",
     "test:webhint": "hint http://fit-s-marky.src",
     "test:packages": "yarn outdated"
@@ -88,6 +89,7 @@
     "postcss-preset-env": "^6.7.0",
     "postcss-reporter": "^6.0.1",
     "prettier": "^1.19.1",
+    "sitemap": "^5.1.0",
     "style-loader": "^1.1.2",
     "stylelint": "^13.0.0",
     "stylelint-a11y": "^1.2.2",

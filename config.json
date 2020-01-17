@@ -8,6 +8,7 @@
   "public": {
     "images": "src/images/gallery"
   },
+  "production": "https://fit-s-marky.cz",
   "favicons": {
     "logo": "./favicon.png",
     "prefix": "favicons",
