@@ -6,16 +6,15 @@
   "keywords": [],
   "license": "ISC",
   "homepage": "git@github.com:ZdenekD/fit-s-marky.git#readme",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:ZdenekD/fit-s-marky.git"
-  },
+  "repository": "git@github.com:ZdenekD/fit-s-marky.git",
   "scripts": {
     "clean": "rm -rf ./public/*",
     "reinstall": "rm -rf 'yarn.lock' 'node_modules' && yarn",
     "start": "NODE_ENV=development webpack-dev-server --mode development --color --compress --open",
     "build": "yarn clean && NODE_ENV=production webpack --mode production && yarn sitemap",
     "sitemap": "node ./node_scripts/sitemap.js",
+    "test:security": "yarn test:audit && yarn test:snyk",
+    "test:audit": "yarn audit",
     "test:snyk": "snyk monitor",
     "test:webhint": "hint http://fit-s-marky.src",
     "test:packages": "yarn outdated"
