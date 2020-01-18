@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     background-color: var(--color-white);
-    box-shadow: 0 0 40px rgba(0, 0, 0, .25);
+    box-shadow: 0 1.8px 3.4px rgba(0, 0, 0, .001), 0 4.1px 9.7px rgba(0, 0, 0, .002), 0 7.1px 19px rgba(0, 0, 0, .004), 0 11.3px 31.8px rgba(0, 0, 0, .007), 0 17.4px 48.9px rgba(0, 0, 0, .012), 0 27.1px 72.3px rgba(0, 0, 0, .018), 0 45px 107px rgba(0, 0, 0, .027), 0 90px 180px rgba(0, 0, 0, .04);
     border-radius: var(--border-radius);
 
     @media (--min-xs) {

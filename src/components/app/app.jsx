@@ -1,6 +1,7 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 import loadable from '@loadable/component';
+import pMinDelay from 'p-min-delay';
 import Error from '../error';
 import Head from '../head';
 import Header from '../header';
@@ -12,7 +13,7 @@ import data from '../../data/pages.json';
 import getMeta from '../../helpers/meta';
 import styles from './app.css';
 
-const Page = loadable(props => import(`../pages/${props.content}`), {
+const Page = loadable(props => pMinDelay(import(`../pages/${props.content}`), 200), {
     fallback: <Loader />,
 });
 const App = () => {
