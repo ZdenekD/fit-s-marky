@@ -10,15 +10,6 @@
     }
 }
 
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 .loader {
     width: 20vw;
     max-width: 80px;

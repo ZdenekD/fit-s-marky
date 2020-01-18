@@ -1,3 +1,12 @@
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .default {
     padding: calc(2 * var(--gutter));
     flex: 1 1 auto;
@@ -127,4 +136,8 @@
     :global .icon-phone::before {
         background-position: -32px 0;
     }
+}
+
+.mounted *:not(div) {
+    animation: fade-in var(--transition-in) ease-in-out;
 }
