@@ -1,0 +1,10 @@
+{
+  "projectId": "nh8uhu",
+  "port": 8010,
+  "pluginsFile": false,
+  "supportFile": false,
+  "integrationFolder": "__tests__/cypress/integration",
+  "fixturesFolder": "__tests__/cypress/fixtures",
+  "screenshostsFolder": "__tests__/cypress/screenshots",
+  "videosFolder": "__tests__/cypress/videos"
+}
