@@ -3,8 +3,8 @@
   "port": 8010,
   "pluginsFile": false,
   "supportFile": false,
-  "integrationFolder": "__tests__/cypress/integration",
-  "fixturesFolder": "__tests__/cypress/fixtures",
-  "screenshostsFolder": "__tests__/cypress/screenshots",
-  "videosFolder": "__tests__/cypress/videos"
+  "integrationFolder": "__test__/cypress/integration",
+  "fixturesFolder": "__test__/cypress/fixtures",
+  "screenshostsFolder": "__test__/cypress/screenshots",
+  "videosFolder": "__test__/cypress/videos"
 }
