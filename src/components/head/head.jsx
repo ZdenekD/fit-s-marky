@@ -4,7 +4,7 @@ import {Helmet} from 'react-helmet';
 
 const Head = ({title, meta}) => (
     <Helmet>
-        <title>{title}</title>
+        <title data-test="component-title">{title}</title>
         {meta}
     </Helmet>
 );

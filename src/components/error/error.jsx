@@ -23,7 +23,7 @@ class Error extends Component {
             <>
                 {message
                     ? (
-                        <article className={styles.default}>
+                        <article className={styles.default} data-test="component-error">
                             <header>
                                 <h2>Ooops</h2>
                             </header>
@@ -38,7 +38,12 @@ class Error extends Component {
 }
 
 Error.propTypes = {
-    children: PropTypes.element.isRequired,
+    children: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.element,
+        PropTypes.node,
+        PropTypes.number,
+    ]).isRequired,
 };
 
 export default Error;
