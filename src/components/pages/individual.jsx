@@ -16,7 +16,7 @@ const individual = () => (
         </ul>
         <p>Využijte možnosti individuální lekce.</p>
         <p>Po celou dobu&nbsp;<strong>individuální lekce</strong>&nbsp;se věnuji pouze Vám –
-        Vaší kondici, zdravotnímu stavu&nbsp;i&nbsp;přáním přizpůsobuji nejen dlouhodobý cvičební program, ale také každou jednotlivou hodinu.</p>
+            Vaší kondici, zdravotnímu stavu&nbsp;i&nbsp;přáním přizpůsobuji nejen dlouhodobý cvičební program, ale také každou jednotlivou hodinu.</p>
         <h3>Další výhody individuální lekce:</h3>
         <ul>
             <li>Cvičební program je sestaven na základě zdravotního stavu, potřeb&nbsp;a&nbsp;přání klienta.</li>
