@@ -2,7 +2,7 @@ import {factory, findComponent} from '../../__test__/utils/helpers';
 import Error from './index';
 
 describe('Error', () => {
-    it('render without error', () => {
+    it('renders without error', () => {
         const text = 'No error';
         const defaultProps = {children: text};
         const wrapper = factory(Error, defaultProps);

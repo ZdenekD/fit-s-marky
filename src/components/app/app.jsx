@@ -18,14 +18,14 @@ const Page = loadable(props => pMinDelay(import(`../pages/${props.content}`), 20
 });
 const App = () => {
     const routes = data.pages.map(item => (
-        <Route path={`/${item.slug}`} key={item.id}>
+        <Route path={`/${item.slug}`} key={item.id} data-test="component-route">
             <Head title={item.title} meta={getMeta(item)} />
             <Content content={<Page id={item.id} content={item.content} title={item.title} />} />
         </Route>
     ));
 
     return (
-        <section className={styles.default}>
+        <section className={styles.default} data-test="component-app">
             <aside className={styles.sidebar}>
                 <Header />
                 <Navigation />
