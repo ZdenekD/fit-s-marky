@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Image = ({
     path, name, fallback, alt, className, pictureClassName,
 }) => ((
-    <picture className={pictureClassName}>
+    <picture className={pictureClassName} data-test="component-picture">
         <source srcSet={`${path}/${name}.webp`} type="image/webp" />
         <source srcSet={`${path}/${name}.${fallback}`} type={`image/${fallback}`} />
         <img
