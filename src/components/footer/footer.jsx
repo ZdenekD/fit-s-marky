@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './footer.css';
 
 const Footer = () => (
-    <footer className={styles.default}>
+    <footer className={styles.default} data-test="component-footer">
         <span className={styles.rights}>&copy; Fit s Marky | All Rights Reserved</span>
         <span className={styles.link}>
             Telefon: <a href="tel:728618337" title="Telefon">728 618 337</a>

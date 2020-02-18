@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Body page match snapshot 1`] = `
+<header>
+  <h2>
+    Chci znát složení svého těla
+  </h2>
+</header>
+<p>
+  Díky své moderní diagnostické váze získám rychlou a přesnou analýzu složení Vašeho těla
+</p>
+<picture>
+  <source srcset="image_vaha.jpg"
+          type="image/jpg"
+  >
+  <source srcset="image_vaha.webp"
+          type="image/webp"
+  >
+  <img src="image_vaha.jpg"
+       alt="Váha Tanita BC-601 pro zjištění složení svého těla, měření metabolického věku, ideální váhy atd."
+       class="_pull-right"
+  >
+</picture>
+<h3>
+  Tanita BC-601 poskytuje přesné výsledky
+</h3>
+<ul>
+  <li>
+    Jaké je % složení (svaloviny, tuku, kostí a úroveň hydratace ve Vašem těle).
+  </li>
+  <li>
+    Jaký je Váš metabolický věk, množství vnitřního (viscerálního) tuku.
+  </li>
+  <li>
+    Jaká by měla být Vaše ideální váha a o kolik kg byste měli svoji váhu upravit.
+  </li>
+</ul>
+<h3>
+  Průběh měření:
+</h3>
+<ul>
+  <li>
+    Měření trvá cca 30 vteřin.
+  </li>
+  <li>
+    Není nutné se svlékat, pouze si sundáte všechny kovové předměty (pásky, řetízky, náramky, prstýnky …).
+  </li>
+  <li>
+    Měření se provádí naboso a ve stoje.
+  </li>
+</ul>
+<h3>
+  Před samotným měřením je nezbytné:
+</h3>
+<ul>
+  <li>
+    Nejíst a nepít alespoň 2-3 hodiny před diagnostikou.
+  </li>
+  <li>
+    Necvičit těsně před měřením a den předtím se raději vyhnout náročnějším sportovním aktivitám a fyzické námaze.
+  </li>
+  <li>
+    Být uklidněný.
+  </li>
+  <li>
+    U žen je vhodné měřit mimo období menstruace.
+  </li>
+</ul>
+<h3>
+  Měření se neprovádí:
+</h3>
+<ul>
+  <li>
+    Osobám s kardiostimulátorem.
+  </li>
+  <li>
+    Těhotným ženám.
+  </li>
+</ul>
+`;

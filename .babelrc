@@ -17,5 +17,19 @@
     "@babel/plugin-proposal-optional-chaining",
     "@babel/plugin-syntax-dynamic-import",
     "@loadable/babel-plugin"
-  ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        [
+          "react-remove-properties",
+          {
+            "properties": [
+              "data-test"
+            ]
+          }
+        ]
+      ]
+    }
+  },
 }

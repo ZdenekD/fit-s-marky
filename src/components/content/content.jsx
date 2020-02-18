@@ -9,16 +9,20 @@ const Content = ({content}) => {
         setMount(true);
     }, []);
 
-
     return (
-        <article className={`${styles.default} ${isMount ? styles.mounted : ''}`}>
+        <article className={`${styles.default} ${isMount ? styles.mounted : ''}`} data-test="component-content">
             {content}
         </article>
     );
 };
 
 Content.propTypes = {
-    content: PropTypes.object.isRequired,
+    content: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.element,
+        PropTypes.node,
+        PropTypes.number,
+    ]).isRequired,
 };
 
 export default Content;

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About page match snapshot 1`] = `
+<header>
+  <h2>
+    O mně
+  </h2>
+</header>
+<p aria-disabled="true">
+  Jmenuji se Markéta Dítětová a pocházím z Prahy. Již v rámci studia vysoké školy jsem se zajímala o zdravou výživu a zdravý životní styl, až se tato záliba stala nejen mým koníčkem, ale i zaměstnáním.
+</p>
+<p>
+  Při práci pro různá fitcentra, kde jsem se z klientky stala instruktorkou, jsem si více a více všímala nevhodných návyků lidí ve stravování i ve způsobech cvičení.
+</p>
+<p>
+  Proto jsem se rozhodla vydat se cestou osvěty a v roce 2014 si splnila sen absolvováním kurzu výživové poradkyně.
+</p>
+<p>
+  … a nyní jsem tu pro Vás. Pro Vás, kteří tápete v nepřeberném množství bio, natur, celozrnných, vícezrnných, bezlepkových, paleo, light, veganských a dalších potravin a rádi byste se konečně dozvěděli, co je pro Vaše tělo nejlepší a jak mu dopřát, co opravdu potřebuje zároveň se zdravým pohybem s dlouhodobým účinkem.
+</p>
+`;

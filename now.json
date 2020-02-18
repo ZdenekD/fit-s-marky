@@ -35,17 +35,13 @@
           "value": "GET"
         },
         {
-          "key": "Connection",
-          "value": "keep-alive"
-        },
-        {
           "key": "Cache-Control",
           "value": "private, max-age=180"
         }
       ]
     },
     {
-      "source": "((.*).woff2|(.*).woff|(.*).gif|(.*).jpe?g|(.*).mp4|(.*).png|(.*).web[mp]|(.*).css|(.*).json|(.*).ico)",
+      "source": "(.*).woff2|(.*).woff|(.*).gif|(.*).jpg|(.*).jpeg|(.*).mp4|(.*).png|(.*).webp|(.*).webm|(.*).css|(.*).json|(.*).ico",
       "headers": [
         {
           "key": "Cache-Control",
@@ -54,7 +50,7 @@
       ]
     },
     {
-      "source": "((.*).js)",
+      "source": "(.*).js",
       "headers": [
         {
           "key": "Cache-Control",

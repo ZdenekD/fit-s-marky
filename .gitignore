@@ -3,11 +3,16 @@
 /node_modules
 /bower_components
 /jspm_packages
+/.pnp
+.pnp.js
 
 # Build
 dist/
 build/
 public/
+
+# Database
+/db
 
 # Logs
 logs
@@ -26,8 +31,15 @@ hint-report
 .eslintcache
 .stylelintcache
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 behat.yml
 localhost.json
+
+# Test
+/__test__/coverage
 
 # System files
 .DS_Store

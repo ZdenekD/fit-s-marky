@@ -19,7 +19,7 @@ const Navigation = () => {
     ));
 
     return (
-        <nav className={styles.default}>
+        <nav className={styles.default} data-test="component-navigation">
             <ul className={styles.list}>
                 <li className={styles.item}>
                     <NavLink
