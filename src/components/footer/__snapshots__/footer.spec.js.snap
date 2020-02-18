@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer match snapshot 1`] = `
+<footer data-test="component-footer">
+  <span>
+    © Fit s Marky | All Rights Reserved
+  </span>
+  <span>
+    Telefon:
+    <a href="tel:728618337"
+       title="Telefon"
+    >
+      728 618 337
+    </a>
+  </span>
+  <span>
+    E-mail:
+    <a href="mailto:fitsmarky@seznam.cz"
+       title="E-mail: fitsmarky@seznam.cz"
+    >
+      fitsmarky@seznam.cz
+    </a>
+  </span>
+  <a href="https://www.facebook.com/fitsmarky"
+     title="Facebook"
+     target="_blank"
+     rel="noreferrer noopener"
+  >
+    Facebook
+  </a>
+</footer>
+`;

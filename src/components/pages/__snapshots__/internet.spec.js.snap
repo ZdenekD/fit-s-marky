@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Internet page match snapshot 1`] = `
+<header>
+  <h2>
+    Osobní jídelníček po internetu
+  </h2>
+</header>
+<h3>
+  Jídelníček je určen pro Vás, kteří chcete:
+</h3>
+<ul>
+  <li>
+    sestavit jídelníček výživovým poradcem po internetu
+  </li>
+  <li>
+    chcete si nechat zkontrolovat současný jídelníček odborníkem
+  </li>
+  <li>
+    chcete dostat několik užitečných nápadů, jak lze jídelníček rozšířit, zpestřit či doplnit
+  </li>
+</ul>
+<h3>
+  Jak vypadá jídelníček?
+</h3>
+<p>
+  Jídelníček sestavuji na základě podrobného dotazníku. Dotazník zahrnuje otázky týkající se Vašeho současného jídelníčku, zdravotního stavu, pohybového režimu a dalších detailů. Dotazník vyplníte on-line, odešlete a na Vaši e-mailovou adresu obdržíte hotový jídelníček, který má několik částí:
+</p>
+<ul>
+  <li>
+    analýzu a zhodnocení Vašich současných stravovacích návyků, které je nutné změnit a také ty, které si můžete ponechat
+  </li>
+  <li>
+    plán a doporučení pro Vaši redukci či udržení váhy
+  </li>
+  <li>
+    potraviny, které nejsou do jídelníčku vhodné zařazovat a proč
+  </li>
+  <li>
+    seznam pravidel a doporučení pro dosažení Vašeho cíle
+  </li>
+  <li>
+    úprava a doporučení týkající se pitného režimu
+  </li>
+  <li>
+    příklad vhodných jídel – několik tipů na zdravý oběd, snídani …
+  </li>
+</ul>
+<p>
+  <strong>
+    Jídelníček neobsahuje přesný popis každodenních jídel (např. ráno 200g jogurtu a müsli …), ale jde o praktický návod jak nahradit nevhodné potraviny zdravějšími, jakou volit úpravu jídel, jak jíst v případě vytíženosti v zaměstnání …
+  </strong>
+</p>
+`;
