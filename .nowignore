@@ -10,6 +10,7 @@
 CHECKLIST.md
 README.md
 buildspec.yml
+cypress.json
 jest.config.js
 jsconfig.json
 __test__
