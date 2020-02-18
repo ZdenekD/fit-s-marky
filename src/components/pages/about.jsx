@@ -5,7 +5,7 @@ const about = () => (
         <header>
             <h2>O mně</h2>
         </header>
-        <p>
+        <p aria-disabled>
             Jmenuji se Markéta Dítětová&nbsp;a pocházím&nbsp;z&nbsp;Prahy. Již&nbsp;v&nbsp;rámci studia vysoké školy
             jsem se zajímala&nbsp;o&nbsp;zdravou výživu&nbsp;a&nbsp;zdravý životní styl,
             až se tato záliba stala nejen mým koníčkem, ale&nbsp;i&nbsp;zaměstnáním.

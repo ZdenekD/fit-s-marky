@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calories page match snapshot 1`] = `
+<header>
+  <h2>
+    Chci zhubnout
+  </h2>
+</header>
+<p>
+  Chci zhubnout, umět si vytvořit vlastní vyvážený jídelníček a zdravě jíst.
+</p>
+<h3>
+  Program je určen klientům, kteří:
+</h3>
+<ul>
+  <li>
+    se chtějí začít stravovat zdravě a bezpečně upravit váhu
+  </li>
+  <li>
+    potřebují podpořit zdravotní stav a kondici
+  </li>
+  <li>
+    chtějí získat informace o správné výživě
+  </li>
+  <li>
+    potřebují poradit a zorientovat se v nepřeberném množství potravin, jež jsou na trhu
+  </li>
+  <li>
+    chtějí znát potravinářské výrobky hlouběji s ohledem na jejich složení
+  </li>
+  <li>
+    ke svému hubnutí potřebují podporu a motivaci
+  </li>
+  <li>
+    již mají za sebou mnoho diet a pokusů o zhubnutí, včetně nepříjemných jo-jo efektů
+  </li>
+  <li>
+    chtějí změnu životního stylu, tak aby se cítili příjemně
+  </li>
+  <li>
+    si chtějí dlouhodobě udržet optimální váhu a kondici
+  </li>
+</ul>
+<h3>
+  Průběh výživového poradenství či redukce váhy:
+</h3>
+<ol>
+  <li>
+    Před úvodní konzultací Vám zašlu na e-mail tabulku, do které budete po dobu jednoho týdne zapisovat vše, co sníte a vypijete.
+  </li>
+  <li>
+    Na začátku konzultace provedu anamnézu Vašeho zdravotního stavu pomocí dotazníku (zaměřím se především na Vaše stravovací návyky, pitný režim a pohybové aktivity).
+    <p>
+      <strong>
+        Poté Vás čeká samotné měření, obsahující:
+      </strong>
+    </p>
+    <ol>
+      <li>
+        měření obvodů pomocí krejčovského metru (obvod pasu, břicha, boků, příp. nohou)
+      </li>
+      <li>
+        analýzu skladby těla na profesionální diagnostické váhy (Tanita BC-601).
+      </li>
+    </ol>
+  </li>
+  <li>
+    Na příští schůzce Vám předám nový stravovací plán, který je sestavený dle vašich požadavků tj. plán bude zahrnovat výživová doporučení uzpůsobená přímo na míru Vašim časovým a praktickým možnostem s upřednostněním jídel, které máte rádi a postupně vylučovat nezdravé varianty vašich pokrmů. Každou položku si dopodrobna vysvětlíme.
+  </li>
+</ol>
+<p>
+  Průběh programu doplním osobními konzultacemi, v rámci nichž, zhodnotím Vaše pocity, vhodnost plánu, popřípadě jeho úpravu či obměnu.
+</p>
+<h3>
+  Nový stravovací plán zahrnuje
+</h3>
+<ul>
+  <li>
+    podrobnou analýzu Vašeho jídelníčku, vyhodnocení stravovacích návyků včetně pitného režimu a pohybových aktivit,
+  </li>
+  <li>
+    optimalizaci stravovacích návyků, pitného režimu a pohybových aktivit s přihlédnutím k Vašim zvyklostem a možnostem,
+  </li>
+  <li>
+    navržení týdenního redukčního jídelníčku, který je složen z odpovídajícího množství živin, tj. sacharidů, bílkovin a tuků,  a to ve správném poměru, který je vytvořen na základě hodnot z diagnostické váhy Tanita BC-601
+  </li>
+</ul>
+`;

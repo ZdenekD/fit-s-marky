@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image match snapshot 1`] = `
+<picture data-test="component-picture">
+  <source srcset="/image.webp"
+          type="image/webp"
+  >
+  <source srcset="/image.png"
+          type="image/png"
+  >
+  <img src="/image.png"
+       alt
+  >
+</picture>
+`;

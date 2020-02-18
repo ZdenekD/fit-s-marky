@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation match snapshot 1`] = `
+<nav data-test="component-navigation">
+  <ul>
+    <li>
+      <a aria-current="page"
+         class="undefined undefined active"
+         aria-label="O mně"
+         href="/"
+      >
+        <span>
+          O mně
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="undefined undefined"
+         aria-label="Chci znát složení svého těla"
+         href="/chci-znat-slozeni-sveho-tela"
+      >
+        <span>
+          Chci znát složení svého těla
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="undefined undefined"
+         aria-label="Chci zhubnout"
+         href="/chci-zhubnout"
+      >
+        <span>
+          Chci zhubnout
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="undefined undefined"
+         aria-label="Individuální lekce pilates"
+         href="/individualni-lekce-pilates"
+      >
+        <span>
+          Individuální lekce pilates
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="undefined undefined"
+         aria-label="Osobní jídelníček po internetu"
+         href="/osobni-jidelnicek-po-internetu"
+      >
+        <span>
+          Osobní jídelníček po internetu
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="undefined undefined"
+         aria-label="Certifikáty"
+         href="/certifikaty"
+      >
+        <span>
+          Certifikáty
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="undefined undefined"
+         aria-label="Fotogalerie"
+         href="/fotogalerie"
+      >
+        <span>
+          Fotogalerie
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="undefined undefined"
+         aria-label="Ceník"
+         href="/cenik"
+      >
+        <span>
+          Ceník
+        </span>
+      </a>
+    </li>
+    <li>
+      <a class="undefined undefined"
+         aria-label="Kontakt"
+         href="/kontakt"
+      >
+        <span>
+          Kontakt
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
