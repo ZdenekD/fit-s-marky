@@ -17,7 +17,6 @@
     "test:js:watch": "jest --watch",
     "test:js:coverage": "jest --coverage",
     "test:cypress": "cypress open",
-    "test:security": "yarn test:audit && yarn test:snyk",
     "test:webhint": "hint http://fit-s-marky.src"
   },
   "engines": {
@@ -67,6 +66,7 @@
     "imagemin-webpack-plugin": "^2.4.2",
     "jest": "^25.1.0",
     "jest-enzyme": "^7.1.2",
+    "jest-serializer-html": "^7.0.0",
     "lint-staged": "^10.0.7",
     "mini-css-extract-plugin": "^0.9.0",
     "postcss-combine-media-query": "^1.0.0",
