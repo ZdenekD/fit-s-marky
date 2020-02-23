@@ -19,6 +19,6 @@ describe('Error', () => {
 
         const component = findComponent(wrapper, 'component-error');
 
-        expect(component.length).toBe(1);
+        expect(component.exists()).toBe(true);
     });
 });

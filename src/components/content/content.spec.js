@@ -16,6 +16,6 @@ describe('Content', () => {
     it('renders without error', () => {
         const component = findComponent(wrapper, 'component-content');
 
-        expect(component.length).toBe(1);
+        expect(component.exists()).toBe(true);
     });
 });

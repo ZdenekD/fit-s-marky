@@ -12,7 +12,7 @@ describe('App', () => {
     it('renders without error', () => {
         const component = findComponent(wrapper, 'component-app');
 
-        expect(component.length).toBe(1);
+        expect(component.exists()).toBe(true);
     });
 
     it('renders routes from data', () => {
