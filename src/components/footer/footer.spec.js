@@ -15,6 +15,6 @@ describe('Footer', () => {
     it('renders without error', () => {
         const component = findComponent(wrapper, 'component-footer');
 
-        expect(component.length).toBe(1);
+        expect(component.exists()).toBe(true);
     });
 });

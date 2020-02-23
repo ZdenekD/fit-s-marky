@@ -8,7 +8,7 @@ describe('Head', () => {
         const wrapper = factory(Head);
         const component = findComponent(wrapper, 'component-title');
 
-        expect(component.length).toBe(1);
+        expect(component.exists()).toBe(true);
     });
 
     it('renders title', () => {
