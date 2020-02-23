@@ -39,7 +39,6 @@
     "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-react-remove-properties": "^0.3.0",
-    "check-prop-types": "^1.1.2",
     "copy-webpack-plugin": "^5.1.1",
     "core-js": "^3.6.1",
     "css-loader": "^3.4.0",

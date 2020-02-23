@@ -19,6 +19,6 @@ describe('Navigation', () => {
         const wrapper = factory(Navigation);
         const component = findComponent(wrapper, 'component-navigation');
 
-        expect(component.length).toBe(1);
+        expect(component.exists()).toBe(true);
     });
 });
