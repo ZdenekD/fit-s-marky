@@ -23,7 +23,7 @@ const Gallery = ({id, title}) => {
     };
     const handleClose = () => setModalOpen(false);
     const [gallery] = data.galleries.filter(item => item.id === id);
-    const content = gallery.images.length > 0
+    const content = gallery?.images.length > 0
         ? gallery.images.map(item => (
             <li key={item} className={styles.item}>
                 <button type="button" onClick={() => handleOpen(item)} className={styles.button} aria-label="Obrázek galerie">
@@ -53,9 +53,11 @@ const Gallery = ({id, title}) => {
                         aria-label="Zpět na výber fotogalerie"
                     >&lt; Zpět</NavLink>
                 </div>
-                <h3>{title}</h3>
+                {title && (
+                    <h3>{title}</h3>
+                )}
             </header>
-            <section className={styles.gallery}>
+            <section className={styles.gallery} data-test="component-gallery">
                 <ul className={styles.list}>
                     {content}
                 </ul>
@@ -75,8 +77,8 @@ Gallery.propTypes = {
 };
 
 Gallery.defaultProps = {
-    id: null,
-    title: null,
+    id: '',
+    title: '',
 };
 
 export default Gallery;
