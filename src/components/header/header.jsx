@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Link, withRouter} from 'react-router-dom';
 import styles from './header.css';
-import png from '../../images/logo.png';
-import webp from '../../images/logo.webp';
+import png from '../../assets/images/logo.png';
+import webp from '../../assets/images/logo.webp';
 
 const Header = ({location}) => (
     <header className={styles.default} data-test="component-header">

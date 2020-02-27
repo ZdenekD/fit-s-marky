@@ -1,6 +1,6 @@
 import React from 'react';
-import jpg from '../../images/image_vaha.jpg';
-import webp from '../../images/image_vaha.webp';
+import jpg from '../../assets/images/image_vaha.jpg';
+import webp from '../../assets/images/image_vaha.webp';
 
 const body = () => (
     <>

@@ -1,5 +1,3 @@
-@import '../../styles/utilities/media.css';
-
 .default {
     flex: 1 1 auto;
     background-color: var(--color-gray);
@@ -140,69 +138,69 @@
 .about {
 
     &::before {
-        background-image: url('../../images/icon_about.png');
+        background-image: url('../../assets/images/icon_about.png');
     }
 }
 
 .body {
 
     &::before {
-        background-image: url('../../images/icon_body.png');
+        background-image: url('../../assets/images/icon_body.png');
     }
 }
 
 .calendar {
 
     &::before {
-        background-image: url('../../images/icon_calendar.png');
+        background-image: url('../../assets/images/icon_calendar.png');
     }
 }
 
 .calories {
 
     &::before {
-        background-image: url('../../images/icon_calories.png');
+        background-image: url('../../assets/images/icon_calories.png');
     }
 }
 
 .contact {
 
     &::before {
-        background-image: url('../../images/icon_contact.png');
+        background-image: url('../../assets/images/icon_contact.png');
     }
 }
 
 .diploma {
 
     &::before {
-        background-image: url('../../images/icon_diploma.png');
+        background-image: url('../../assets/images/icon_diploma.png');
     }
 }
 
 .gallery {
 
     &::before {
-        background-image: url('../../images/icon_gallery.png');
+        background-image: url('../../assets/images/icon_gallery.png');
     }
 }
 
 .individual {
 
     &::before {
-        background-image: url('../../images/icon_individual.png');
+        background-image: url('../../assets/images/icon_individual.png');
     }
 }
 
 .internet {
 
     &::before {
-        background-image: url('../../images/icon_internet.png');
+        background-image: url('../../assets/images/icon_internet.png');
     }
 }
 
 .pricelist {
 
     &::before {
-        background-image: url('../../images/icon_pricelist.png');
+        background-image: url('../../assets/images/icon_pricelist.png');
     }
 }

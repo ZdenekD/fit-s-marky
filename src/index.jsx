@@ -3,8 +3,8 @@ import {render} from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
 import * as Sentry from '@sentry/browser';
 import loadable from '@loadable/component';
-import './styles/variables/variables.css';
-import './styles/utilities/images.css';
+import './assets/styles/variables/variables.css';
+import './assets/styles/utilities/images.css';
 import './index.css';
 
 const app = document.getElementById('js_main');

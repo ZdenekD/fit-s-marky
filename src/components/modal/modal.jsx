@@ -17,13 +17,12 @@ const Modal = ({
         className={`${styles.default} ${className || ''}`}
         bodyOpenClassName={styles.opened}
         overlayClassName={styles.overlay}
+        appElement={document.getElementById('js_main')}
     >
         {content}
         <button type="button" className={styles.close} onClick={handleClose} aria-label="Zavřít modální okno">&times;</button>
     </ReactModal>
 ));
-
-ReactModal.setAppElement('#js_main');
 
 Modal.propTypes = {
     content: PropTypes.oneOfType([
