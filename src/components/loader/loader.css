@@ -19,7 +19,7 @@
     position: absolute;
     top: 15vh;
     left: 50%;
-    z-index: 2;
+    z-index: var(--zindex-loader);
     animation: spin 1.8s linear infinite;
     border-radius: 50%;
     border: 3px solid transparent;
@@ -33,7 +33,7 @@
     right: 2%;
     bottom: 2%;
     left: 2%;
-    z-index: 2;
+    z-index: var(--zindex-loader);
     content: '';
     animation: spin 2.4s linear infinite;
     border-radius: 50%;
@@ -47,7 +47,7 @@
     right: 5%;
     bottom: 5%;
     left: 5%;
-    z-index: 2;
+    z-index: var(--zindex-loader);
     content: '';
     animation: spin 1.2s linear infinite;
     border-radius: 50%;
