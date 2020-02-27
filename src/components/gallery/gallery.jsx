@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {NavLink} from 'react-router-dom';
 import Image from '../image';
@@ -7,8 +7,8 @@ import data from '../../data/gallery.json';
 import styles from './gallery.css';
 
 const Gallery = ({id, title}) => {
-    const [isModalOpen, setModalOpen] = useState(false);
-    const [modalContent, setModalContent] = useState('');
+    const [isModalOpen, setModalOpen] = React.useState(false);
+    const [modalContent, setModalContent] = React.useState('');
     const handleOpen = item => {
         const content = <Image
             path="/images"
@@ -26,7 +26,13 @@ const Gallery = ({id, title}) => {
     const content = gallery?.images.length > 0
         ? gallery.images.map(item => (
             <li key={item} className={styles.item}>
-                <button type="button" onClick={() => handleOpen(item)} className={styles.button} aria-label="Obrázek galerie">
+                <button
+                    type="button"
+                    onClick={() => handleOpen(item)}
+                    className={styles.button}
+                    aria-label="Obrázek galerie"
+                    data-test="component-button"
+                >
                     <Image
                         path="/images"
                         name={item}
@@ -54,7 +60,7 @@ const Gallery = ({id, title}) => {
                     >&lt; Zpět</NavLink>
                 </div>
                 {title && (
-                    <h3>{title}</h3>
+                    <h3 data-test="component-title">{title}</h3>
                 )}
             </header>
             <section className={styles.gallery} data-test="component-gallery">
