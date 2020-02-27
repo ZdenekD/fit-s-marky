@@ -8,6 +8,7 @@ module.exports = () => ({
         'postcss-normalize': {},
         'postcss-preset-env': {
             stage: 1,
+            importFrom: 'src/assets/styles/utilities/media.css',
         },
         'postcss-custom-media': {},
         'postcss-reporter': {

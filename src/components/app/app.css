@@ -1,6 +1,5 @@
-@import '../../styles/utilities/media.css';
-@import '../../styles/utilities/typography.css';
-@import '../../styles/utilities/helpers.css';
+@import '../../assets/styles/utilities/typography.css';
+@import '../../assets/styles/utilities/helpers.css';
 
 .default {
     width: 100%;

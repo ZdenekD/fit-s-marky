@@ -6,7 +6,7 @@
     "dir": "./public"
   },
   "public": {
-    "images": "src/images/gallery"
+    "images": "src/assets/images/gallery"
   },
   "production": "https://fit-s-marky.cz",
   "favicons": {

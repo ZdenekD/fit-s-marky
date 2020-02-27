@@ -1,5 +1,3 @@
-@import '../../styles/utilities/media.css';
-
 .default {
     min-height: var(--height, 100px);
     display: flex;

@@ -124,7 +124,7 @@
             display: inline-flex;
             content: '';
             background-color: transparent;
-            background-image: url('../../images/icon_content.png');
+            background-image: url('../../assets/images/icon_content.png');
             background-repeat: no-repeat;
         }
     }
