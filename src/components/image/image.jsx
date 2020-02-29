@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Image = ({
-    path, name, fallback, alt, className, pictureClassName,
+    path = '',
+    name,
+    fallback = 'png',
+    alt = '',
+    className = null,
+    pictureClassName = null,
 }) => ((
     <picture className={pictureClassName} data-test="component-picture">
         <source srcSet={`${path}/${name}.webp`} type="image/webp" />
@@ -24,14 +29,6 @@ Image.propTypes = {
     alt: PropTypes.string,
     className: PropTypes.string,
     pictureClassName: PropTypes.string,
-};
-
-Image.defaultProps = {
-    path: '',
-    fallback: 'png',
-    alt: '',
-    className: null,
-    pictureClassName: null,
 };
 
 export default Image;

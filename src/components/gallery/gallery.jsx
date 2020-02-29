@@ -6,7 +6,7 @@ import Modal from '../modal';
 import data from '../../data/gallery.json';
 import styles from './gallery.css';
 
-const Gallery = ({id, title}) => {
+const Gallery = ({id = '', title = ''}) => {
     const [isModalOpen, setModalOpen] = React.useState(false);
     const [modalContent, setModalContent] = React.useState('');
     const handleOpen = item => {
@@ -80,11 +80,6 @@ const Gallery = ({id, title}) => {
 Gallery.propTypes = {
     id: PropTypes.string,
     title: PropTypes.string,
-};
-
-Gallery.defaultProps = {
-    id: '',
-    title: '',
 };
 
 export default Gallery;
