@@ -14,6 +14,7 @@
     "build": "yarn clean && NODE_ENV=production webpack --mode production && yarn sitemap",
     "sitemap": "node ./node_scripts/sitemap.js",
     "storybook": "start-storybook",
+    "storybook:build": "build-storybook -c .storybook -o .storybook/build",
     "test:js": "jest",
     "test:js:watch": "jest --watch",
     "test:js:coverage": "jest --coverage",
