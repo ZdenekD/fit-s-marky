@@ -3,9 +3,8 @@ import {render} from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
 import * as Sentry from '@sentry/browser';
 import loadable from '@loadable/component';
-import './assets/styles/variables/variables.css';
-import './assets/styles/utilities/images.css';
 import './index.css';
+import './assets/styles/utilities/images.css';
 
 const app = document.getElementById('js_main');
 
@@ -18,17 +17,14 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const App = loadable(() => import(/* webpackPrefetch: true */ './components/app'));
-const renderApp = () => {
+
+if (app) {
     render(
         <BrowserRouter>
             <App />
         </BrowserRouter>,
         app
     );
-};
-
-if (app) {
-    renderApp();
 } else {
     console.log('There\'s no application element');
 }
