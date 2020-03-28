@@ -60,7 +60,7 @@ const Gallery = ({id = '', title = ''}) => {
                     >&lt; Zpět</NavLink>
                 </div>
                 {title && (
-                    <h3 data-test="component-title">{title}</h3>
+                    <h3 data-test="component-heading">{title}</h3>
                 )}
             </header>
             <section className={styles.gallery} data-test="component-gallery">

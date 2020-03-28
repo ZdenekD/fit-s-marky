@@ -1,13 +1,15 @@
 /* global cy */
 import data from '../../../src/data/pages.json';
 
-describe('Homepage', () => {
+describe('Page - diploma', () => {
     beforeEach(() => {
-        cy.visit('/');
+        const {slug} = data.pages.find(item => item.id === 'diploma');
+
+        cy.visit(`/${slug}`);
     });
 
     it('Load properly with title', () => {
-        const {title} = data.index;
+        const {title} = data.pages.find(item => item.id === 'diploma');
 
         cy.title().should('include', title);
     });

@@ -20,7 +20,7 @@ const Modal = ({
         appElement={document.getElementById('js_main')}
     >
         {content}
-        <button type="button" className={styles.close} onClick={handleClose} aria-label="Zavřít modální okno">&times;</button>
+        <button type="button" className={styles.close} onClick={handleClose} aria-label="Zavřít modální okno" data-test="component-close">&times;</button>
     </ReactModal>
 ));
 
