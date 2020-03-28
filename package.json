@@ -36,6 +36,8 @@
     "@hint/configuration-web-recommended": "^8.0.2",
     "@hot-loader/react-dom": "^16.11.0",
     "@loadable/babel-plugin": "^5.11.0",
+    "@storybook/addon-storysource": "^5.3.17",
+    "@storybook/addon-viewport": "^5.3.17",
     "@storybook/react": "^5.3.17",
     "babel-eslint": "8",
     "babel-jest": "^25.1.0",
