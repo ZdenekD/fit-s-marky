@@ -12,4 +12,4 @@ jobs:
         with:
           node-version: '12.x'
       - run: yarn
-      - run: yarn test:js
+      - run: npx jest
