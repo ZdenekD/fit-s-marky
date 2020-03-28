@@ -1,10 +1,12 @@
 import path from 'path';
+import chalk from 'chalk';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import HtmlReplaceWebpackPlugin from 'html-replace-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ImageminPlugin from 'imagemin-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import ProgressPlugin from 'progress-bar-webpack-plugin';
 
 require('dotenv').config();
 
@@ -80,6 +82,9 @@ const ImageminPluginConfig = new ImageminPlugin({
         quality: 90,
     },
 });
+const ProgressPluginConfig = new ProgressPlugin({
+    format: `Building [:bar] ${chalk.green.bold(':percent')} (:elapsed seconds)`,
+});
 const plugins = [
     MiniCssExtractPluginConfig,
     HtmlWebpackPluginConfig,
@@ -87,6 +92,7 @@ const plugins = [
     CopyWebpackPluginConfig,
     HtmlReplaceWebpackPluginConfig,
     ImageminPluginConfig,
+    ProgressPluginConfig,
 ];
 
 module.exports = () => ({
