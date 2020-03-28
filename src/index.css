@@ -1,5 +1,6 @@
 @import './assets/styles/base/reset.css';
 @import './assets/styles/base/normalize.css';
+@import './assets/styles/variables/variables.css';
 @import './assets/styles/utilities/media.css';
 
 html {

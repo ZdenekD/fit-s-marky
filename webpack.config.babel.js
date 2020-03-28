@@ -1,10 +1,12 @@
 import path from 'path';
+import chalk from 'chalk';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin';
 import HtmlReplaceWebpackPlugin from 'html-replace-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import ImageminPlugin from 'imagemin-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import ProgressPlugin from 'progress-bar-webpack-plugin';
 
 require('dotenv').config();
 
@@ -80,6 +82,9 @@ const ImageminPluginConfig = new ImageminPlugin({
         quality: 90,
     },
 });
+const ProgressPluginConfig = new ProgressPlugin({
+    format: `Building [:bar] ${chalk.green.bold(':percent')} (:elapsed seconds)`,
+});
 const plugins = [
     MiniCssExtractPluginConfig,
     HtmlWebpackPluginConfig,
@@ -87,6 +92,7 @@ const plugins = [
     CopyWebpackPluginConfig,
     HtmlReplaceWebpackPluginConfig,
     ImageminPluginConfig,
+    ProgressPluginConfig,
 ];
 
 module.exports = () => ({
@@ -119,7 +125,7 @@ module.exports = () => ({
             {
                 test: /\.js(x)?$/,
                 include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules|bower_components|vendor/,
+                exclude: /node_modules|vendor/,
                 use: [
                     {
                         loader: 'babel-loader?cacheDirectory',
@@ -131,7 +137,7 @@ module.exports = () => ({
             {
                 test: /\.css$/,
                 include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules|bower_components|vendor/,
+                exclude: /node_modules|vendor/,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
@@ -160,7 +166,7 @@ module.exports = () => ({
             },
             {
                 test: /\.(gif|png|jpe?g|svg|webp)$/i,
-                exclude: /node_modules|bower_components|vendor/,
+                exclude: /node_modules|vendor/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -172,7 +178,7 @@ module.exports = () => ({
             },
             {
                 test: /\.(woff|woff2)/,
-                exclude: /node_modules|bower_components|vendor/,
+                exclude: /node_modules|vendor/,
                 use: [
                     {
                         loader: 'file-loader',

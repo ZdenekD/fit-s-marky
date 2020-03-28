@@ -7,7 +7,11 @@ module.exports = {
     collectCoverage: true,
     collectCoverageFrom: ['src/**/*.{js,jsx}', '!src/index.{js,jsx}'],
     coverageDirectory: './__test__/coverage',
-    coverageReporters: ['html'],
+    coverageReporters: [
+        'html',
+        'lcov',
+        'text',
+    ],
     transform: {
         '^.+\\.(js|jsx)$': 'babel-jest',
         '^.+\\.css$': '<rootDir>/__test__/transform/css.js',
