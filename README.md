@@ -1,7 +1,8 @@
 # Fit-s-marky
 
-![Jest](https://github.com/ZdenekD/fit-s-marky/workflows/Jest/badge.svg)
-![Snyk](https://github.com/ZdenekD/fit-s-marky/workflows/Snyk/badge.svg)
+[![Jest](https://github.com/ZdenekD/fit-s-marky/workflows/Jest/badge.svg)](https://jestjs.io/en/)
+[![Snyk](https://github.com/ZdenekD/fit-s-marky/workflows/Snyk/badge.svg)](https://snyk.io)
+[![codecov](https://codecov.io/gh/ZdenekD/fit-s-marky/branch/master/graph/badge.svg?token=2WOYB5MICS)](https://codecov.io/gh/ZdenekD/fit-s-marky)
 
 [![code style: eslint](https://img.shields.io/badge/code%20style-eslint-%23463fd4)](https://eslint.org) [![code style: stylelint](https://img.shields.io/badge/code%20style-stylelint-success)](https://stylelint.io) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
