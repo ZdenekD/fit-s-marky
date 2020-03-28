@@ -5,4 +5,5 @@ doc/*
 **/dist/*
 **/public/*
 test/*
+__test__/*
 hint-report/*
