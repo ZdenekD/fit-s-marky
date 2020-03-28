@@ -15,11 +15,10 @@
     "sitemap": "node ./node_scripts/sitemap.js",
     "storybook": "start-storybook",
     "storybook:build": "build-storybook -c .storybook -o .storybook/build",
-    "test:js": "jest",
-    "test:js:watch": "jest --watch",
+    "test:js": "jest --watch",
     "test:js:coverage": "jest --coverage",
     "test:cypress": "cypress open",
-    "test:webhint": "hint http://fit-s-marky.src"
+    "test:webhint": "hint https://fit-s-marky.now.sh"
   },
   "engines": {
     "node": ">=10.13.0",
@@ -46,7 +45,7 @@
     "core-js": "^3.6.1",
     "css-loader": "^3.4.0",
     "cssnano": "^4.1.10",
-    "cypress": "^3.8.2",
+    "cypress": "^4.2.0",
     "dotenv": "^8.2.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
