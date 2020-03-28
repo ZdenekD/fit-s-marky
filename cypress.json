@@ -1,8 +1,9 @@
 {
   "projectId": "nh8uhu",
+  "baseUrl": "http://fit-s-marky.src",
   "port": 8010,
-  "pluginsFile": false,
-  "supportFile": false,
+  "pluginsFile": "__test__/cypress/plugins/index.js",
+  "supportFile": "__test__/cypress/support/index.js",
   "integrationFolder": "__test__/cypress/integration",
   "fixturesFolder": "__test__/cypress/fixtures",
   "screenshotsFolder": "__test__/cypress/screenshots",

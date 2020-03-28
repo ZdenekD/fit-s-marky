@@ -1,9 +1,18 @@
 /* global cy */
-describe('Homepage', () => {
-    it('Load properly', () => {
-        cy.visit('http://localhost:3010');
-        cy.title().should('include', 'O mně');
+import data from '../../../src/data/pages.json';
 
-        expect(true).to.equal(true);
+describe('Homepage', () => {
+    beforeEach(() => {
+        cy.visit('/');
+    });
+    it('Load properly with title', () => {
+        const {title} = data.index;
+
+        cy.title().should('include', title);
+    });
+
+    it('Match snapshot', () => {
+        cy.wait(1000);
+        cy.percySnapshot();
     });
 });
