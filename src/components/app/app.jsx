@@ -13,7 +13,7 @@ import data from '../../data/pages.json';
 import getMeta from '../../helpers/meta';
 import styles from './app.css';
 
-const Page = loadable(props => pMinDelay(import(`../pages/${props.content}`), 200), {
+const Page = loadable(props => pMinDelay(import(`../pages/${props.content}.jsx`), 200), {
     fallback: <Loader />,
 });
 const App = () => {
