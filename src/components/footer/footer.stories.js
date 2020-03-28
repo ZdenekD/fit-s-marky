@@ -2,8 +2,7 @@ import React from 'react';
 import Footer from './footer';
 
 export default {
-    component: Footer,
-    title: 'Footer',
+    title: 'Layout/Footer',
 };
 
-export const component = () => <Footer />;
+export const template = () => <Footer />;
