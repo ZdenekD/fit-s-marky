@@ -7,6 +7,7 @@ exports[`Gallery page match snapshot 1`] = `
   </h2>
   <div>
     <a aria-label="Lekce pilates a jógy"
+       data-test="component-gallery-link"
        href="/fotogalerie/lekce-pilates-a-jogy"
     >
       <figure>
@@ -29,6 +30,7 @@ exports[`Gallery page match snapshot 1`] = `
       </figure>
     </a>
     <a aria-label="Zdravá strava"
+       data-test="component-gallery-link"
        href="/fotogalerie/zdrava-strava"
     >
       <figure>

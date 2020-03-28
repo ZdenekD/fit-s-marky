@@ -12,6 +12,7 @@ const gallery = () => {
                 className={styles.link}
                 aria-label={page.title}
                 key={page.id}
+                data-test="component-gallery-link"
             >
                 <figure className={styles.figure}>
                     <Image

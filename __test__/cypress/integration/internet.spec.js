@@ -1,13 +1,15 @@
 /* global cy */
 import data from '../../../src/data/pages.json';
 
-describe('Homepage', () => {
+describe('Page - internet', () => {
     beforeEach(() => {
-        cy.visit('/');
+        const {slug} = data.pages.find(item => item.id === 'internet');
+
+        cy.visit(`/${slug}`);
     });
 
     it('Load properly with title', () => {
-        const {title} = data.index;
+        const {title} = data.pages.find(item => item.id === 'internet');
 
         cy.title().should('include', title);
     });
