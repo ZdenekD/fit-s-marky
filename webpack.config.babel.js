@@ -125,7 +125,7 @@ module.exports = () => ({
             {
                 test: /\.js(x)?$/,
                 include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules|vendor/,
+                exclude: /node_modules|vendor|__test__/,
                 use: [
                     {
                         loader: 'babel-loader?cacheDirectory',
@@ -137,7 +137,7 @@ module.exports = () => ({
             {
                 test: /\.css$/,
                 include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules|vendor/,
+                exclude: /node_modules|vendor|__test__/,
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
@@ -166,7 +166,7 @@ module.exports = () => ({
             },
             {
                 test: /\.(gif|png|jpe?g|svg|webp)$/i,
-                exclude: /node_modules|vendor/,
+                exclude: /node_modules|vendor|__test__/,
                 use: [
                     {
                         loader: 'file-loader',
@@ -178,7 +178,7 @@ module.exports = () => ({
             },
             {
                 test: /\.(woff|woff2)/,
-                exclude: /node_modules|vendor/,
+                exclude: /node_modules|vendor|__test__/,
                 use: [
                     {
                         loader: 'file-loader',
