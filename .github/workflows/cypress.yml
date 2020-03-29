@@ -1,8 +1,9 @@
-name: Jest
+name: Cypress
 on:
   push:
     branches:
       - develop
+      - 'feature/**'
   pull_request:
     branches:
       - master
@@ -14,5 +15,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - run: yarn
-      - run: npx jest
+      - uses: cypress-io/github-action@v1
+        with:
+          browser: chrome
+          headless: true
