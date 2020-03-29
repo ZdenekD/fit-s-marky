@@ -1,5 +1,24 @@
 {
     "extends": ["web-recommended"],
+    "formatters": ["stylish", "html"],
+    "ignoredUrls": [
+        {
+            "domain": ".*\\.googleapis\\.com/.*",
+            "hints": ["*"]
+        },
+        {
+            "domain": ".*\\.googletagmanager\\.com/.*",
+            "hints": ["*"]
+        },
+        {
+            "domain": ".*\\.google-analytics\\.com/.*",
+            "hints": ["*"]
+        },
+        {
+            "domain": ".*\\.gstatic\\.com/.*",
+            "hints": ["*"]
+        }
+    ],
     "hints": {
         "no-vulnerable-javascript-libraries": "off",
         "ssllabs": ["warning"],
@@ -9,6 +28,7 @@
                 "ignore": ["scroll-behavior", "-ms-text-size-adjust", "-webkit-text-size-adjust"]
             }
         ],
-        "strict-transport-security": ["warning"]
+        "strict-transport-security": ["warning"],
+        "http-compression": ["warning"]
     }
 }
