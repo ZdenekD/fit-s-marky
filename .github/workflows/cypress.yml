@@ -19,5 +19,6 @@ jobs:
         with:
           start: yarn start
           wait-on: 'http://localhost:3010'
+          command-prefix: 'percy exec -- npx'
           browser: chrome
           headless: true
