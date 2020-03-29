@@ -1,6 +1,5 @@
 {
     "extends": ["web-recommended"],
-    "formatters": ["stylish", "html"],
     "ignoredUrls": [
         {
             "domain": ".*\\.googleapis\\.com/.*",
