@@ -42,17 +42,21 @@
     },
     {
       "source": "(.*).ico",
-      "headers": {
-        "key": "Content-Type",
-        "value": "image/x-icon"
-      }
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "image/x-icon"
+        }
+      ]
     },
     {
       "source": "manifest.json",
-      "headers": {
-        "key": "Content-Type",
-        "value": "application/manifest+json"
-      }
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/manifest+json"
+        }
+      ]
     },
     {
       "source": "(.*).woff2|(.*).woff|(.*).gif|(.*).jpg|(.*).jpeg|(.*).mp4|(.*).png|(.*).webp|(.*).webm|(.*).css|(.*).json|(.*).ico",
