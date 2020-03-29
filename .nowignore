@@ -12,8 +12,6 @@
 .prettierrc
 .snyk
 .stylelintcache
-.stylelintignore
-.stylelintrc
 .storybook
 CHECKLIST.md
 README.md
