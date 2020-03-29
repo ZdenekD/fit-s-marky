@@ -25,7 +25,7 @@ describe('Gallery', () => {
     });
 
     it('show props title', () => {
-        const component = findComponent(wrapper, 'component-title');
+        const component = findComponent(wrapper, 'component-heading');
 
         expect(component.text().includes(title)).toBe(true);
     });
