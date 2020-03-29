@@ -13,6 +13,8 @@ jobs:
         with:
           node-version: '12.x'
       - uses: cypress-io/github-action@v1
+        env:
+          PERCY_TOKEN: ${{secrets.PERCY_TOKEN}}
         with:
           start: yarn start
           wait-on: 'http://localhost:3010'
