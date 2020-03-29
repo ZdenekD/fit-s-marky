@@ -41,24 +41,6 @@
       ]
     },
     {
-      "source": "(.*).ico",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "image/x-icon"
-        }
-      ]
-    },
-    {
-      "source": "(.*)manifest.json",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/manifest+json; charset=utf-8"
-        }
-      ]
-    },
-    {
       "source": "(.*).woff2|(.*).woff|(.*).gif|(.*).jpg|(.*).jpeg|(.*).mp4|(.*).png|(.*).webp|(.*).webm|(.*).css|(.*).json|(.*).ico",
       "headers": [
         {
@@ -73,6 +55,24 @@
         {
           "key": "Cache-Control",
           "value": "private, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "(.*).ico",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "image/x-icon"
+        }
+      ]
+    },
+    {
+      "source": "(.*)manifest.json",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/manifest+json; charset=utf-8"
         }
       ]
     }

@@ -19,7 +19,6 @@
         }
     ],
     "hints": {
-        "no-vulnerable-javascript-libraries": "off",
         "ssllabs": ["warning"],
         "compat-api/css": [
             "warning",
