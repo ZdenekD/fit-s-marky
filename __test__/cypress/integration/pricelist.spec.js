@@ -16,6 +16,6 @@ describe('Page - pricelist', () => {
 
     it('Match snapshot', () => {
         cy.wait(400);
-        cy.percySnapshot();
+        cy.percySnapshot('Page - pricelist');
     });
 });

@@ -28,6 +28,6 @@ describe('Page - gallery', () => {
 
     it('Match snapshot', () => {
         cy.wait(400);
-        cy.percySnapshot();
+        cy.percySnapshot('Page - gallery');
     });
 });
