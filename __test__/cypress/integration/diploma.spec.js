@@ -16,6 +16,6 @@ describe('Page - diploma', () => {
 
     it('Match snapshot', () => {
         cy.wait(400);
-        cy.percySnapshot();
+        cy.percySnapshot('Page - diploma');
     });
 });

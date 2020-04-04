@@ -16,6 +16,6 @@ describe('Page - contact', () => {
 
     it('Match snapshot', () => {
         cy.wait(400);
-        cy.percySnapshot();
+        cy.percySnapshot('Page - contact');
     });
 });
