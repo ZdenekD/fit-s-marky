@@ -15,11 +15,13 @@
     "sitemap": "node ./node_scripts/sitemap.js",
     "story": "start-storybook -s ./public -p 8020",
     "story:build": "build-storybook -c .storybook -o .storybook/build",
-    "test:js": "jest --watch",
-    "test:js:coverage": "jest --coverage",
-    "test:cy": "percy exec -- cypress run",
-    "test:cy:open": "cypress open",
-    "test:hint": "hint https://fit-s-marky.now.sh"
+    "jest": "jest --watch",
+    "jest:coverage": "jest --coverage",
+    "cypress": "cypress run",
+    "cypress:open": "cypress open",
+    "hint:local": "hint http://localhost:3010",
+    "hint:dev": "hint https://fit-s-marky.now.sh",
+    "hint:prod": "hint https://fit-s-marky.cz"
   },
   "engines": {
     "node": ">=10.13.0",
