@@ -4,6 +4,7 @@ vendor/*
 doc/*
 **/dist/*
 **/public/*
+.next
 test/*
 __test__/*
 hint-report/*

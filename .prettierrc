@@ -4,10 +4,12 @@
   "singleQuote": true,
   "trailingComma": "all",
   "bracketSpacing": false,
-  "overrides": [{
-    "files": ["*.json", "*.yml"],
-    "options": {
-      "tabWidth": 2
+  "overrides": [
+    {
+      "files": ["*.json", "*.yml", "*.*rc"],
+      "options": {
+        "tabWidth": 2
+      }
     }
-  }]
+  ]
 }

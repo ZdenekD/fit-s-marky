@@ -3,9 +3,7 @@ const {SitemapStream, streamToPromise} = require('sitemap');
 const config = require('../config.json');
 const {pages} = require('../src/data/pages.json');
 
-const sitemap = new SitemapStream({
-    hostname: config.production,
-});
+const sitemap = new SitemapStream({hostname: config.production});
 
 sitemap.write({
     url: '/',
