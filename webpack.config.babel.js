@@ -89,18 +89,8 @@ plugins.push(new ImageminPlugin({
         speed: 1,
         quality: 90,
     },
-    svgo: {
-        plugins: [
-            {
-                removeViewBox: false,
-            }, {
-                cleanupIDs: true,
-            },
-        ],
-    },
-    webp: {
-        quality: 90,
-    },
+    svgo: {plugins: [{removeViewBox: false}, {cleanupIDs: true}]},
+    webp: {quality: 90},
 }));
 
 // Favicons plugin
@@ -109,9 +99,7 @@ if (config.favicons) {
 }
 
 // Progress bar plugin
-plugins.push(new ProgressPlugin({
-    format: `Building [:bar] ${chalk.green.bold(':percent')} (:elapsed seconds)`,
-}));
+plugins.push(new ProgressPlugin({format: `Building [:bar] ${chalk.green.bold(':percent')} (:elapsed seconds)`}));
 
 module.exports = () => ({
     entry,
@@ -124,9 +112,7 @@ module.exports = () => ({
     plugins,
     resolve: {
         extensions: ['.js', '.jsx'],
-        alias: {
-            'react-dom': '@hot-loader/react-dom',
-        },
+        alias: {'react-dom': '@hot-loader/react-dom'},
     },
     devServer: {
         contentBase: path.resolve(__dirname, output),
@@ -143,27 +129,19 @@ module.exports = () => ({
             {
                 test: /\.js(x)?$/,
                 include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules|vendor|__test__/,
-                use: [
-                    {
-                        loader: 'babel-loader?cacheDirectory',
-                    },
-                ],
+                exclude: /node_modules|vendor/,
+                use: [{loader: 'babel-loader?cacheDirectory'}],
             },
             {
                 test: /\.css$/,
                 include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules|vendor|__test__/,
+                exclude: /node_modules|vendor/,
                 use: [
                     (styles.extract
                         ? {
                             loader: MiniCssExtractPlugin.loader,
-                            options: {
-                                hmr: !isProduction,
-                            },
-                        } : {
-                            loader: 'style-loader',
-                        }
+                            options: {hmr: !isProduction},
+                        } : {loader: 'style-loader'}
                     ),
                     {
                         loader: 'css-loader',
@@ -178,21 +156,17 @@ module.exports = () => ({
                     },
                     {
                         loader: 'postcss-loader',
-                        options: {
-                            sourceMap: 'inline',
-                        },
+                        options: {sourceMap: 'inline'},
                     },
                 ],
             },
             {
                 test: /\.(gif|png|jpe?g|webp)$/i,
-                exclude: /node_modules|vendor|__test__/,
+                exclude: /node_modules|vendor/,
                 use: [
                     {
                         loader: 'file-loader',
-                        options: {
-                            name: 'images/[hash:base64:8].[ext]',
-                        },
+                        options: {name: 'images/[hash:base64:8].[ext]'},
                     },
                 ],
             },
@@ -203,13 +177,11 @@ module.exports = () => ({
             },
             {
                 test: /\.(woff|woff2)/,
-                exclude: /node_modules|vendor|__test__/,
+                exclude: /node_modules|vendor/,
                 use: [
                     {
                         loader: 'file-loader',
-                        options: {
-                            name: 'fonts/[hash:base64:8].[ext]',
-                        },
+                        options: {name: 'fonts/[hash:base64:8].[ext]'},
                     },
                 ],
             },
