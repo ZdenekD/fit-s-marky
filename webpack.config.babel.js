@@ -13,12 +13,6 @@ require('dotenv').config();
 const config = require('./config.json');
 
 const isProduction = process.env.NODE_ENV === 'production';
-const favicons = {
-    cache: true,
-    logo: './favicon.png',
-    ...config.favicons,
-};
-const FaviconsWebpackPluginConfig = new FaviconsWebpackPlugin(favicons);
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
     template: path.resolve(__dirname, 'src/index.html'),
     filename: 'index.html',
@@ -30,12 +24,9 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
         removeRedundantAttributes: true,
         removeScriptTypeAttributes: true,
         removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true,
     },
     robots: isProduction ? 'index, follow' : 'noindex, nofollow',
-});
-const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
-    filename: '[name].[hash].css',
-    chunkFilename: '[id].[hash].css',
 });
 const CopyWebpackPluginConfig = new CopyWebpackPlugin([
     {
@@ -86,14 +77,23 @@ const ProgressPluginConfig = new ProgressPlugin({
     format: `Building [:bar] ${chalk.green.bold(':percent')} (:elapsed seconds)`,
 });
 const plugins = [
-    MiniCssExtractPluginConfig,
     HtmlWebpackPluginConfig,
-    FaviconsWebpackPluginConfig,
     CopyWebpackPluginConfig,
     HtmlReplaceWebpackPluginConfig,
     ImageminPluginConfig,
     ProgressPluginConfig,
 ];
+
+if (config.styles.extract) {
+    plugins.unshift(new MiniCssExtractPlugin({
+        filename: '[name].[hash].css',
+        chunkFilename: '[id].[hash].css',
+    }));
+}
+
+if (config.favicons) {
+    plugins.push(new FaviconsWebpackPlugin({...config.favicons}));
+}
 
 module.exports = () => ({
     entry: config.entry,
@@ -137,12 +137,16 @@ module.exports = () => ({
                 include: path.resolve(__dirname, 'src'),
                 exclude: /node_modules|vendor|__test__/,
                 use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            hmr: !isProduction,
-                        },
-                    },
+                    (config.styles.extract
+                        ? {
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {
+                                hmr: !isProduction,
+                            },
+                        } : {
+                            loader: 'style-loader',
+                        }
+                    ),
                     {
                         loader: 'css-loader',
                         options: {
@@ -163,7 +167,7 @@ module.exports = () => ({
                 ],
             },
             {
-                test: /\.(gif|png|jpe?g|svg|webp)$/i,
+                test: /\.(gif|png|jpe?g|webp)$/i,
                 exclude: /node_modules|vendor|__test__/,
                 use: [
                     {
@@ -173,6 +177,11 @@ module.exports = () => ({
                         },
                     },
                 ],
+            },
+            {
+                test: /\.svg$/,
+                exclude: /node_modules|vendor/,
+                use: ['@svgr/webpack'],
             },
             {
                 test: /\.(woff|woff2)/,
