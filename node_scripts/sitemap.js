@@ -3,9 +3,7 @@ const {SitemapStream, streamToPromise} = require('sitemap');
 const config = require('../config.json');
 const {pages} = require('../src/data/pages.json');
 
-const sitemap = new SitemapStream({
-    hostname: config.production,
-});
+const sitemap = new SitemapStream({hostname: config.production});
 
 sitemap.write({
     url: '/',
@@ -22,5 +20,5 @@ pages.forEach(page => sitemap.write({
 sitemap.end();
 
 streamToPromise(sitemap)
-    .then(item => fs.writeFileSync(`${config.output.dir}/sitemap.xml`, item.toString()))
+    .then(item => fs.writeFileSync(`${config.output}/sitemap.xml`, item.toString()))
     .catch(error => console.log(error));

@@ -2,16 +2,18 @@
   "entry": {
     "app": "./src/index.jsx"
   },
-  "output": {
-    "dir": "./public"
+  "output": "./public",
+  "production": "https://fit-s-marky.cz",
+  "styles": {
+    "extract": true
   },
-  "public": {
+  "assets": {
     "images": "src/assets/images/gallery"
   },
-  "production": "https://fit-s-marky.cz",
   "favicons": {
+    "cache": true,
     "logo": "./favicon.png",
-    "prefix": "favicons",
+    "prefix": "[hash:base64:8]",
     "favicons": {
       "appName": "Fit-s-marky",
       "appDescription": "Jmenuji se Markéta Dítětová a nabízím komplexní výživové poradenství, individuální lekce pilates a powerjógy.",

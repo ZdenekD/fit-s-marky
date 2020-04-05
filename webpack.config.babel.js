@@ -13,13 +13,16 @@ require('dotenv').config();
 const config = require('./config.json');
 
 const isProduction = process.env.NODE_ENV === 'production';
-const favicons = {
-    cache: true,
-    logo: './favicon.png',
-    ...config.favicons,
-};
-const FaviconsWebpackPluginConfig = new FaviconsWebpackPlugin(favicons);
-const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
+const {
+    entry,
+    output,
+    styles,
+    assets,
+} = config;
+const plugins = [];
+
+// HTML webpack plugin
+plugins.push(new HtmlWebpackPlugin({
     template: path.resolve(__dirname, 'src/index.html'),
     filename: 'index.html',
     inject: 'body',
@@ -30,32 +33,49 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
         removeRedundantAttributes: true,
         removeScriptTypeAttributes: true,
         removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true,
     },
     robots: isProduction ? 'index, follow' : 'noindex, nofollow',
-});
-const MiniCssExtractPluginConfig = new MiniCssExtractPlugin({
-    filename: '[name].[hash].css',
-    chunkFilename: '[id].[hash].css',
-});
-const CopyWebpackPluginConfig = new CopyWebpackPlugin([
-    {
-        from: config.public.images,
-        to: 'images',
-    }, {
+}));
+
+// CSS extract plugin
+if (styles.extract) {
+    plugins.unshift(new MiniCssExtractPlugin({
+        filename: '[name].[hash].css',
+        chunkFilename: '[id].[hash].css',
+    }));
+}
+
+// Copy and HTML replace webpack plugins
+if (assets) {
+    const copy = [];
+    const replace = [];
+
+    Object.keys(assets).forEach(key => {
+        copy.push({
+            from: assets[key],
+            to: key,
+        });
+
+        replace.push({
+            pattern: assets[key],
+            replacement: key,
+        });
+    });
+
+    copy.push({
         from: './robots.txt',
         to: '',
-    },
-]);
-const HtmlReplaceWebpackPluginConfig = new HtmlReplaceWebpackPlugin([
-    {
-        pattern: config.public.images,
-        replacement: 'images',
-    },
-]);
-const ImageminPluginConfig = new ImageminPlugin({
+    });
+
+    plugins.push(new CopyWebpackPlugin(copy), new HtmlReplaceWebpackPlugin(replace));
+}
+
+// Image minification plugin
+plugins.push(new ImageminPlugin({
     disable: !isProduction,
     context: 'src',
-    destination: path.resolve(__dirname, config.output.dir),
+    destination: path.resolve(__dirname, output),
     gifsicle: {
         optimizationLevel: 3,
         interlaced: true,
@@ -69,49 +89,33 @@ const ImageminPluginConfig = new ImageminPlugin({
         speed: 1,
         quality: 90,
     },
-    svgo: {
-        plugins: [
-            {
-                removeViewBox: false,
-            }, {
-                cleanupIDs: true,
-            },
-        ],
-    },
-    webp: {
-        quality: 90,
-    },
-});
-const ProgressPluginConfig = new ProgressPlugin({
-    format: `Building [:bar] ${chalk.green.bold(':percent')} (:elapsed seconds)`,
-});
-const plugins = [
-    MiniCssExtractPluginConfig,
-    HtmlWebpackPluginConfig,
-    FaviconsWebpackPluginConfig,
-    CopyWebpackPluginConfig,
-    HtmlReplaceWebpackPluginConfig,
-    ImageminPluginConfig,
-    ProgressPluginConfig,
-];
+    svgo: {plugins: [{removeViewBox: false}, {cleanupIDs: true}]},
+    webp: {quality: 90},
+}));
+
+// Favicons plugin
+if (config.favicons) {
+    plugins.push(new FaviconsWebpackPlugin({...config.favicons}));
+}
+
+// Progress bar plugin
+plugins.push(new ProgressPlugin({format: `Building [:bar] ${chalk.green.bold(':percent')} (:elapsed seconds)`}));
 
 module.exports = () => ({
-    entry: config.entry,
+    entry,
     output: {
         filename: '[name].[hash].js',
         chunkFilename: '[name].[hash].js',
-        path: path.resolve(__dirname, config.output.dir),
+        path: path.resolve(__dirname, output),
         publicPath: '/',
     },
     plugins,
     resolve: {
         extensions: ['.js', '.jsx'],
-        alias: {
-            'react-dom': '@hot-loader/react-dom',
-        },
+        alias: {'react-dom': '@hot-loader/react-dom'},
     },
     devServer: {
-        contentBase: path.resolve(__dirname, config.output.dir),
+        contentBase: path.resolve(__dirname, output),
         historyApiFallback: true,
         noInfo: true,
         port: process.env.WEBPACK_PORT || 3010,
@@ -125,24 +129,20 @@ module.exports = () => ({
             {
                 test: /\.js(x)?$/,
                 include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules|vendor|__test__/,
-                use: [
-                    {
-                        loader: 'babel-loader?cacheDirectory',
-                    },
-                ],
+                exclude: /node_modules|vendor/,
+                use: [{loader: 'babel-loader?cacheDirectory'}],
             },
             {
                 test: /\.css$/,
                 include: path.resolve(__dirname, 'src'),
-                exclude: /node_modules|vendor|__test__/,
+                exclude: /node_modules|vendor/,
                 use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            hmr: !isProduction,
-                        },
-                    },
+                    (styles.extract
+                        ? {
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {hmr: !isProduction},
+                        } : {loader: 'style-loader'}
+                    ),
                     {
                         loader: 'css-loader',
                         options: {
@@ -156,33 +156,32 @@ module.exports = () => ({
                     },
                     {
                         loader: 'postcss-loader',
-                        options: {
-                            sourceMap: 'inline',
-                        },
+                        options: {sourceMap: 'inline'},
                     },
                 ],
             },
             {
-                test: /\.(gif|png|jpe?g|svg|webp)$/i,
-                exclude: /node_modules|vendor|__test__/,
+                test: /\.(gif|png|jpe?g|webp)$/i,
+                exclude: /node_modules|vendor/,
                 use: [
                     {
                         loader: 'file-loader',
-                        options: {
-                            name: 'images/[hash:base64:8].[ext]',
-                        },
+                        options: {name: 'images/[hash:base64:8].[ext]'},
                     },
                 ],
+            },
+            {
+                test: /\.svg$/,
+                exclude: /node_modules|vendor/,
+                use: ['@svgr/webpack'],
             },
             {
                 test: /\.(woff|woff2)/,
-                exclude: /node_modules|vendor|__test__/,
+                exclude: /node_modules|vendor/,
                 use: [
                     {
                         loader: 'file-loader',
-                        options: {
-                            name: 'fonts/[hash:base64:8].[ext]',
-                        },
+                        options: {name: 'fonts/[hash:base64:8].[ext]'},
                     },
                 ],
             },
