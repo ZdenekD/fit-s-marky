@@ -22,5 +22,5 @@ pages.forEach(page => sitemap.write({
 sitemap.end();
 
 streamToPromise(sitemap)
-    .then(item => fs.writeFileSync(`${config.output.dir}/sitemap.xml`, item.toString()))
+    .then(item => fs.writeFileSync(`${config.output}/sitemap.xml`, item.toString()))
     .catch(error => console.log(error));
