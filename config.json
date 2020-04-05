@@ -2,15 +2,13 @@
   "entry": {
     "app": "./src/index.jsx"
   },
-  "output": {
-    "dir": "./public"
-  },
-  "public": {
-    "images": "src/assets/images/gallery"
-  },
+  "output": "./public",
   "production": "https://fit-s-marky.cz",
   "styles": {
     "extract": true
+  },
+  "assets": {
+    "images": "src/assets/images/gallery"
   },
   "favicons": {
     "cache": true,
