@@ -17,10 +17,12 @@
 .storybook
 CHECKLIST.md
 README.md
+apollo.config.js
 buildspec.yml
 cypress.json
 jest.config.js
 jsconfig.json
+nodemon.json
 __test__
 __snapshots__
 **/*.spec.js

@@ -1,11 +1,5 @@
 {
   "name": "Fit s Marky",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
