@@ -1,5 +1,5 @@
 import {addParameters} from '@storybook/react';
-import '../src/index.css';
+import '../src/assets/styles/index.css';
 
 const viewports = {
     320: {

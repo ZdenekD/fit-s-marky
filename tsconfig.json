@@ -23,6 +23,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "exclude": ["node_modules", "**/*.spec*", "doc", "dist"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "exclude": ["node_modules", "doc", "dist"],
+  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx"]
 }
