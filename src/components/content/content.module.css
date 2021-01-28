@@ -1,0 +1,5 @@
+.section {
+    padding: calc(2 * var(--gutter));
+    display: grid;
+    grid-area: content;
+}

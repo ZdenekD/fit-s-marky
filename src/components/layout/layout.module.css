@@ -1,0 +1,8 @@
+.main {
+    min-height: 100vh;
+    display: grid;
+    grid-template: 10vh auto minmax(4vh, 8vh) / minmax(20vw, 25vw) auto;
+    grid-template-areas: 'header header'
+        'nav content'
+        'footer footer';
+}

@@ -1,5 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
+import Header from '../header';
+import Footer from '../footer';
+import Nav from '../nav';
+import Content from '../content';
+import styles from './layout.module.css';
 
 interface ILayout {
     children: React.ReactNode
@@ -21,13 +26,18 @@ const Layout: React.FC<ILayout> = ({children}) => (
             <meta name="apple-mobile-web-app-status-bar-style" content="black" />
             <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="true" />
             <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-            <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap&subset=latin-ext" rel="stylesheet" crossOrigin="anonymous" />
+            <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap&subset=latin-ext" rel="stylesheet" crossOrigin="anonymous" />
             {process.env.NODE_ENV === 'production' && (
                 <script async defer data-domain="fit-s-marky.cz" src="https://plausible.io/js/plausible.js"></script>
             )}
         </Head>
-        <main>
-            {children}
+        <main className={styles.main}>
+            <Header />
+            <Nav />
+            <Content>
+                {children}
+            </Content>
+            <Footer />
         </main>
     </>
 );

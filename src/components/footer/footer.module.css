@@ -1,0 +1,46 @@
+.footer {
+    display: grid;
+    grid-template-columns: minmax(20vw, 25vw) auto;
+    grid-area: footer;
+    color: var(--color-black);
+    font-size: 0.8rem;
+}
+
+.rights,
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rights {
+    padding: var(--gutter);
+    border-right: 1px solid var(--color-white-darken-1);
+}
+
+.contact {
+    padding: var(--gutter) calc(2 * var(--gutter));
+}
+
+.link {
+    margin: 0 var(--gutter);
+
+    a {
+        padding-bottom: 1px;
+        color: var(--color-blue);
+        text-decoration: none;
+        transition: all var(--transition-out) var(--transition-timing);
+        border-bottom: 1px solid;
+
+        &:focus,
+        &:hover {
+            color: var(--color-red);
+            transition-duration: var(--transition-in);
+            border-bottom-color: transparent;
+        }
+    }
+
+    .social {
+        border-bottom: none;
+    }
+}
