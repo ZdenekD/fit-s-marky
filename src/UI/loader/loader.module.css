@@ -23,8 +23,8 @@
     animation: spin 1.8s linear infinite;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: var(--color-primary);
-    border-bottom-color: var(--color-primary);
+    border-top-color: var(--color-red);
+    border-bottom-color: var(--color-red);
 }
 
 .loader::before {
@@ -38,7 +38,7 @@
     animation: spin 2.4s linear infinite;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: var(--color-secondary);
+    border-top-color: var(--color-yellow);
 }
 
 .loader::after {
@@ -52,5 +52,5 @@
     animation: spin 1.2s linear infinite;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: var(--color-gray);
+    border-top-color: var(--color-blue);
 }
