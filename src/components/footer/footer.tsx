@@ -1,20 +1,28 @@
-import icons, {IconsEnum} from '../../UI/icons/icons';
+import icons, {IconsEnum} from '../../UI/icons';
+import Anchor from '../../UI/anchor';
 import styles from './footer.module.css';
 
 const Footer: React.FC = () => (
     <footer className={styles.footer} data-test="component-footer">
-        <div className={styles.rights}>&copy; Fit s Marky | All Rights Reserved</div>
+        <div className={styles.rights}>{icons[IconsEnum.copyright](16)} Fit s Marky | All Rights Reserved</div>
         <div className={styles.contact}>
             <span className={styles.link}>
-                Telefon:&nbsp;<a href="tel:728618337" title="Telefon">728 618 337</a>
+                {icons[IconsEnum.phone](20)}
+                <Anchor href="tel:728618337" title="Telefon">728 618 337</Anchor>
             </span>
             <span className={styles.link}>
-                E-mail:&nbsp;<a href="mailto:fitsmarky@seznam.cz" title="E-mail: fitsmarky@seznam.cz">fitsmarky@seznam.cz</a>
+                {icons[IconsEnum.mail](20)}
+                <Anchor href="mailto:fitsmarky@seznam.cz" title="E-mail: fitsmarky@seznam.cz">fitsmarky@seznam.cz</Anchor>
             </span>
             <span className={styles.link}>
-                <a href="https://www.facebook.com/fitsmarky" title="Facebook" className={styles.social} target="_blank" rel="noreferrer noopener">
+                <Anchor
+                    href="https://www.facebook.com/fitsmarky"
+                    title="Facebook"
+                    classname={styles.social}
+                    target="_blank"
+                >
                     {icons[IconsEnum.thumbUp]()}
-                </a>
+                </Anchor>
             </span>
         </div>
     </footer>

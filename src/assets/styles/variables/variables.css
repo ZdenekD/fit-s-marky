@@ -43,7 +43,7 @@
     --color-gray-darken-1: #7a77a6;
     --color-gray-darken-2: #646194;
     --color-gray-darken-3: #53517b;
-    --gutter: 10px;
+    --gap: 10px;
     --transition-in: 0.2s;
     --transition-out: 0.4s;
     --transition-timing: ease-in-out;

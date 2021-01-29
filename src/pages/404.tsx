@@ -1,8 +1,11 @@
 import Layout from '../components/layout';
+import Article from '../components/article';
 
 const Error: React.FC = () => (
     <Layout>
-        Error 404
+        <Article>
+            Error 404
+        </Article>
     </Layout>
 );
 

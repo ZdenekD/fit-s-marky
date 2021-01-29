@@ -5,6 +5,14 @@
 }
 
 .logo {
-    padding: var(--gutter);
+    padding: var(--gap);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: var(--color-blue-lighten-1);
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
     border-right: 1px solid var(--color-white-darken-1);
 }

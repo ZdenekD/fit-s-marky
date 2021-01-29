@@ -1,8 +1,11 @@
 import Layout from '../components/layout';
+import Article from '../components/article';
 
 const Page: React.FC = () => (
     <Layout>
-        Kontakt
+        <Article>
+            Kontaktni formular
+        </Article>
     </Layout>
 );
 

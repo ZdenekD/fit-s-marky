@@ -9,38 +9,33 @@
 .rights,
 .contact {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 .rights {
-    padding: var(--gutter);
+    padding: var(--gap) calc(2 * var(--gap));
     border-right: 1px solid var(--color-white-darken-1);
+
+    svg {
+        margin-right: calc(0.5 * var(--gap));
+    }
 }
 
 .contact {
-    padding: var(--gutter) calc(2 * var(--gutter));
+    padding: var(--gap) calc(2 * var(--gap));
+    justify-content: center;
 }
 
 .link {
-    margin: 0 var(--gutter);
-
-    a {
-        padding-bottom: 1px;
-        color: var(--color-blue);
-        text-decoration: none;
-        transition: all var(--transition-out) var(--transition-timing);
-        border-bottom: 1px solid;
-
-        &:focus,
-        &:hover {
-            color: var(--color-red);
-            transition-duration: var(--transition-in);
-            border-bottom-color: transparent;
-        }
-    }
+    margin: 0 var(--gap);
+    display: inline-flex;
 
     .social {
+        display: block;
         border-bottom: none;
+    }
+
+    svg {
+        margin-right: calc(0.5 * var(--gap));
     }
 }

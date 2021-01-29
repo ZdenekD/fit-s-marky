@@ -1,0 +1,7 @@
+.article {
+
+    strong {
+        margin-right: var(--gap);
+        color: var(--color-blue-lighten-1);
+    }
+}
