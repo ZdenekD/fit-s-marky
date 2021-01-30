@@ -2,10 +2,11 @@ import styles from './content.module.css';
 
 interface IContent {
     children: React.ReactNode
+    className?: string
 }
 
-const Content: React.FC<IContent> = ({children}) => (
-    <section className={styles.section} data-test="component-content">
+const Content: React.FC<IContent> = ({children, className}) => (
+    <section className={`${styles.section} ${className}`} data-test="component-content">
         {children}
     </section>
 );

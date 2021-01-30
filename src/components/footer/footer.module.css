@@ -1,7 +1,8 @@
 .footer {
     display: grid;
-    grid-template-columns: minmax(20vw, 25vw) auto;
+    grid-template-columns: 20vw auto;
     grid-area: footer;
+    position: relative;
     color: var(--color-black);
     font-size: 0.8rem;
 }
@@ -13,7 +14,7 @@
 }
 
 .rights {
-    padding: var(--gap) calc(2 * var(--gap));
+    padding: var(--gap) calc(3 * var(--gap));
     border-right: 1px solid var(--color-white-darken-1);
 
     svg {
@@ -33,6 +34,11 @@
     .social {
         display: block;
         border-bottom: none;
+
+        &:focus,
+        &:hover {
+            transform: scale(1.25);
+        }
     }
 
     svg {

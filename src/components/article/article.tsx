@@ -2,14 +2,14 @@ import styles from './article.module.css';
 
 interface IArticle {
     children: React.ReactNode
-    classname?: string
+    className?: string
 }
 
 const Article: React.FC<IArticle> = ({
     children,
-    classname = '',
+    className = '',
 }) => (
-    <article className={`${styles.article} ${classname}`}>
+    <article className={`${styles.article} ${className}`}>
         {children}
     </article>
 );

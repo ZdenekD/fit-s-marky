@@ -1,3 +1,4 @@
+import React from 'react';
 import icons, {IconsEnum} from '../../UI/icons';
 import Anchor from '../../UI/anchor';
 import styles from './footer.module.css';
@@ -18,13 +19,14 @@ const Footer: React.FC = () => (
                 <Anchor
                     href="https://www.facebook.com/fitsmarky"
                     title="Facebook"
-                    classname={styles.social}
+                    className={styles.social}
                     target="_blank"
                 >
                     {icons[IconsEnum.thumbUp]()}
                 </Anchor>
             </span>
         </div>
+
     </footer>
 );
 

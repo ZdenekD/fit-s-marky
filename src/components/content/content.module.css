@@ -1,5 +1,6 @@
 .section {
-    padding: calc(2 * var(--gap));
+    padding: calc(2 * var(--gap)) calc(4 * var(--gap));
     display: grid;
     grid-area: content;
+    position: relative;
 }

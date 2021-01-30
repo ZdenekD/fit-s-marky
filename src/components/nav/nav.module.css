@@ -1,7 +1,8 @@
-.nav {
+.aside {
     padding: var(--gap);
     display: grid;
     grid-area: nav;
+    grid-template-rows: auto minmax(100px, 300px);
     border-right: 1px solid var(--color-white-darken-1);
 }
 
@@ -36,11 +37,28 @@
         background-color: var(--color-white-darken-1);
         color: var(--color-black-darken-3);
 
+        &::before {
+            opacity: 1;
+            transition-duration: var(--transition-in);
+        }
+
         &,
         svg,
         .link {
             transition-duration: var(--transition-in);
         }
+    }
+
+    &::before {
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: calc((-1 * var(--gap)) - 1px);
+        content: '';
+        opacity: 0;
+        background-color: var(--color-blue-lighten-2);
+        transition: opacity var(--transition-out) var(--transition-timing);
     }
 
     & + .item {
@@ -64,12 +82,7 @@
     color: var(--color-red);
 
     &::before {
-        width: 1px;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: calc((-1 * var(--gap)) - 1px);
-        content: '';
+        opacity: 1;
         background-color: currentColor;
     }
 }
@@ -85,4 +98,11 @@
 .linkActive {
     color: var(--color-red);
     pointer-events: none;
+}
+
+.animation {
+    max-width: 240px;
+    margin-left: calc(2 * var(--gap));
+    display: flex;
+    align-items: flex-end;
 }

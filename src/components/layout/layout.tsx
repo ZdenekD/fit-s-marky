@@ -5,14 +5,16 @@ import Header from '../header';
 import Footer from '../footer';
 import Nav from '../nav';
 import Content from '../content';
+import Decoration from '../decoration';
 import pages from '../../data/pages';
 import styles from './layout.module.css';
 
 interface ILayout {
     children: React.ReactNode
+    className?: string
 }
 
-const Layout: React.FC<ILayout> = ({children}) => {
+const Layout: React.FC<ILayout> = ({children, className = ''}) => {
     const router = useRouter();
     const [item] = pages.filter(page => `/${page.slug}` === router.pathname);
 
@@ -44,8 +46,10 @@ const Layout: React.FC<ILayout> = ({children}) => {
             <main className={styles.main}>
                 <Header />
                 <Nav />
-                <Content>
+                <Content className={className}>
                     {children}
+
+                    <Decoration />
                 </Content>
                 <Footer />
             </main>
