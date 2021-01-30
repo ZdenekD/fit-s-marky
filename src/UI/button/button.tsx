@@ -1,3 +1,5 @@
+import React from 'react';
+import {motion} from 'framer-motion';
 import VariantsEnum from '../../types/VariantsEnum';
 import styles from './button.module.css';
 
@@ -7,29 +9,33 @@ interface IButton {
     variant?: VariantsEnum
     title?: string
     children: React.ReactNode
-    classname?: string
+    className?: string
     onClick?: (e: React.MouseEvent) => void,
 }
 
-const Button: React.FC<IButton> = ({
+const Button = React.forwardRef<HTMLButtonElement, IButton>(({
     type = 'button',
     disabled = false,
     variant = VariantsEnum.default,
     title = undefined,
     children,
-    classname = '',
+    className = '',
     onClick = undefined,
-}) => (
-    <button
+}, ref) => (
+    <motion.button
+        ref={ref}
         disabled={disabled}
         type={type}
-        className={`${styles.button} ${styles[variant]} ${classname}`}
+        className={`${styles.button} ${styles[variant]} ${className}`}
         aria-label={title}
         data-test="component-button"
+        whileTap={{scale: 0.98}}
         onClick={onClick}
     >
         {children}
-    </button>
-);
+    </motion.button>
+));
+
+Button.displayName = 'Button';
 
 export default Button;

@@ -1,8 +1,12 @@
 import React from 'react';
 import styles from './loader.module.css';
 
-const Loader: React.FC = () => (
-    <div className={styles.loader} data-test="component-loader" />
+interface ILoader {
+    className?: string
+}
+
+const Loader: React.FC<ILoader> = ({className = ''}) => (
+    <div className={`${styles.loader} ${className}`} data-test="component-loader" />
 );
 
 export default Loader;

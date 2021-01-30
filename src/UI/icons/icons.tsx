@@ -7,12 +7,23 @@ import {IconKarate,
     IconMessage,
     IconWoman,
     IconCopyright,
+    IconCalendarEvent,
     IconPhone,
-    IconMail} from '@tabler/icons';
+    IconMail,
+    IconCamera,
+    IconChevronLeft} from '@tabler/icons';
 import IconCobraPose from '../../assets/images/icons/yoga_01.svg';
 import IconPranayamaPose from '../../assets/images/icons/yoga_02.svg';
 import IconBoatPose from '../../assets/images/icons/yoga_03.svg';
 import IconWarriorPose from '../../assets/images/icons/yoga_04.svg';
+import IconDecoration1 from '../../assets/images/icons/decoration_01.svg';
+import IconDecoration2 from '../../assets/images/icons/decoration_02.svg';
+import IconDecoration3 from '../../assets/images/icons/decoration_03.svg';
+import IconDecoration4 from '../../assets/images/icons/decoration_04.svg';
+import IconDecoration5 from '../../assets/images/icons/decoration_05.svg';
+import IconDecoration6 from '../../assets/images/icons/decoration_06.svg';
+import IconDecoration7 from '../../assets/images/icons/decoration_07.svg';
+import IconDecoration8 from '../../assets/images/icons/decoration_08.svg';
 import IconsEnum from './types/iconsEnum';
 
 interface IIcons {
@@ -68,6 +79,12 @@ const icons: IIcons = {
             stroke={1}
         />
     ),
+    [IconsEnum.calendar]: (size = 28) => (
+        <IconCalendarEvent
+            size={size}
+            stroke={1}
+        />
+    ),
     [IconsEnum.phone]: (size = 28) => (
         <IconPhone
             size={size}
@@ -80,10 +97,30 @@ const icons: IIcons = {
             stroke={1}
         />
     ),
+    [IconsEnum.camera]: (size = 28) => (
+        <IconCamera
+            size={size}
+            stroke={1}
+        />
+    ),
+    [IconsEnum.chevronLeft]: (size = 28) => (
+        <IconChevronLeft
+            size={size}
+            stroke={1}
+        />
+    ),
     [IconsEnum.cobraPose]: () => (<IconCobraPose />),
     [IconsEnum.pranayamaPose]: () => (<IconPranayamaPose />),
     [IconsEnum.boatPose]: () => (<IconBoatPose />),
     [IconsEnum.warriorPose]: () => (<IconWarriorPose />),
+    [IconsEnum.decoration1]: () => (<IconDecoration1 />),
+    [IconsEnum.decoration2]: () => (<IconDecoration2 />),
+    [IconsEnum.decoration3]: () => (<IconDecoration3 />),
+    [IconsEnum.decoration4]: () => (<IconDecoration4 />),
+    [IconsEnum.decoration5]: () => (<IconDecoration5 />),
+    [IconsEnum.decoration6]: () => (<IconDecoration6 />),
+    [IconsEnum.decoration7]: () => (<IconDecoration7 />),
+    [IconsEnum.decoration8]: () => (<IconDecoration8 />),
 };
 
 export default icons;

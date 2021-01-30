@@ -6,13 +6,24 @@ enum IconsEnum {
     receipt = 'receipt',
     message = 'message',
     woman = 'woman',
+    calendar = 'calendar',
     copyright = 'copyright',
     mail = 'mail',
     phone = 'phone',
+    camera = 'camera',
+    chevronLeft = 'chevronLeft',
     cobraPose = 'cobraPose',
     warriorPose = 'warriorPose',
     boatPose = 'boatPose',
-    pranayamaPose = 'pranayamaPose'
+    pranayamaPose = 'pranayamaPose',
+    decoration1 = 'decoration1',
+    decoration2 = 'decoration2',
+    decoration3 = 'decoration3',
+    decoration4 = 'decoration4',
+    decoration5 = 'decoration5',
+    decoration6 = 'decoration6',
+    decoration7 = 'decoration7',
+    decoration8 = 'decoration8'
 }
 
 export default IconsEnum;
