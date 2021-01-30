@@ -4,7 +4,7 @@ import styles from './certifikaty.module.css';
 
 const Page: React.FC = () => (
     <Layout>
-        <Article classname={styles.article}>
+        <Article className={styles.article}>
             <h2>Certifikáty</h2>
             <p><strong>2011</strong> Certifikát instruktora aerobiku&nbsp;a&nbsp;fitness (FISAF)</p>
             <p><strong>2011</strong> Fitness instruktor Pilatesova metoda (Wellness school Evy Blahušové)</p>

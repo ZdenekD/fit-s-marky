@@ -1,8 +1,11 @@
 import Layout from '../components/layout';
+import Article from '../components/article';
 
 const Page: React.FC = () => (
     <Layout>
-        Fotogalerie
+        <Article>
+            Kde cvicim
+        </Article>
     </Layout>
 );
 

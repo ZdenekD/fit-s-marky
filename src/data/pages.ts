@@ -32,24 +32,31 @@ const pages: IPages[] = [
     },
     {
         id: '_5innv4',
+        icon: IconsEnum.calendar,
+        title: 'Kde a kdy cvičím',
+        slug: 'cviceni',
+        description: 'Kde a kdy můžeme cvičit',
+    },
+    {
+        id: '_5innv5',
         icon: IconsEnum.photo,
         title: 'Fotogalerie',
         slug: 'fotogalerie',
         description: 'Lekce pilates a jógy',
     },
     {
-        id: '_5innv5',
+        id: '_5innv6',
         icon: IconsEnum.receipt,
         title: 'Ceník',
         slug: 'cenik',
         description: 'Kompletní ceník nabízených služeb od tvorby správného jídelníčku přes komplexní program redukce váhy až k individuálním lekcím pilates, jógy i powerjógy přímo u Vás doma.',
     },
     {
-        id: '_5innv6',
+        id: '_5innv7',
         icon: IconsEnum.message,
         title: 'Kontakt',
         slug: 'kontakt',
-        description: 'Kontaktní e-mail: fitsmarky@seznam.cz | Kontaktní telefon: 728 778 023',
+        description: 'E-mail: fitsmarky@seznam.cz | Telefon: 728 778 023',
     },
 ];
 
