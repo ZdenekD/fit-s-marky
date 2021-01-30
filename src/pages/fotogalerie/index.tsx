@@ -3,15 +3,16 @@ import {motion} from 'framer-motion';
 import Layout from '../../components/layout';
 import Picture from '../../UI/picture';
 import icons, {IconsEnum} from '../../UI/icons';
-import {list, item} from './helpers/animation';
+import {list, item} from '../../helpers/animation/list';
 import styles from './fotogalerie.module.css';
 
 const Page: React.FC = () => (
     <Layout>
         <motion.ul
             className={styles.cards}
-            initial="hidden"
-            animate="show"
+            initial="initial"
+            animate="enter"
+            exit="exit"
             variants={list}
         >
             <Link href="/fotogalerie/venkovni-lekce">

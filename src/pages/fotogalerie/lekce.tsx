@@ -4,7 +4,7 @@ import Layout from '../../components/layout';
 import Picture from '../../UI/picture';
 import Anchor from '../../UI/anchor';
 import icons, {IconsEnum} from '../../UI/icons';
-import {list, item} from './helpers/animation';
+import {list, item} from '../../helpers/animation/list';
 import styles from './fotogalerie.module.css';
 
 const Page: React.FC = () => (
@@ -14,8 +14,9 @@ const Page: React.FC = () => (
         </Link>
         <motion.ul
             className={styles.cards}
-            initial="hidden"
-            animate="show"
+            initial="initial"
+            animate="enter"
+            exit="exit"
             variants={list}
         >
             <motion.li

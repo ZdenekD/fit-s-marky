@@ -1,5 +1,6 @@
 import React from 'react';
 import App, {AppProps} from 'next/app';
+import {AnimatePresence} from 'framer-motion';
 import * as Sentry from '@sentry/browser';
 import '../assets/styles/index.css';
 
@@ -18,9 +19,14 @@ class Application extends App {
     }
 
     render(): React.ReactElement {
-        const {Component, pageProps}: AppProps = this.props;
+        const {Component, pageProps, router}: AppProps = this.props;
 
-        return (<Component {...pageProps} />);
+        return (
+            <AnimatePresence exitBeforeEnter>
+                <Component {...pageProps} key={router.route} />
+            </AnimatePresence>
+
+        );
     }
 }
 

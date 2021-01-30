@@ -1,4 +1,8 @@
-.article {
+.item {
+
+    & + .item {
+        margin-top: var(--gap);
+    }
 
     strong {
         margin-right: var(--gap);

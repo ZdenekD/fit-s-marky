@@ -1,10 +1,19 @@
+import {motion} from 'framer-motion';
 import Layout from '../components/layout';
 import Article from '../components/article';
+import {heading} from '../helpers/animation/heading';
 
 const Page: React.FC = () => (
     <Layout>
         <Article>
-            <h2>Chci instruktora jen pro sebe = soukromá lekce&nbsp;v&nbsp;kanceláři nebo&nbsp;u&nbsp;Vás doma</h2>
+            <motion.h2
+                initial="initial"
+                animate="enter"
+                exit="exit"
+                variants={heading}
+            >
+                Chci instruktora jen pro sebe = soukromá lekce&nbsp;v&nbsp;kanceláři nebo&nbsp;u&nbsp;Vás doma
+            </motion.h2>
             <ul>
                 <li>Chcete se nejdříve správně naučit pozice&nbsp;a&nbsp;cviky, než půjdete do skupinové lekce?</li>
                 <li>Chcete cvičit pilates, ale nevyhovují Vám časy studiových hodin ve fitness centrech?</li>
