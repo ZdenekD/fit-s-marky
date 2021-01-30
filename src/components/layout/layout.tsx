@@ -4,6 +4,7 @@ import {useRouter} from 'next/router';
 import Header from '../header';
 import Footer from '../footer';
 import Nav from '../nav';
+import Aside from '../aside';
 import Content from '../content';
 import Decoration from '../decoration';
 import pages from '../../data/pages';
@@ -46,6 +47,7 @@ const Layout: React.FC<ILayout> = ({children, className = ''}) => {
             <main className={styles.main}>
                 <Header />
                 <Nav />
+                <Aside />
                 <Content className={className}>
                     {children}
 
