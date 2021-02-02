@@ -4,9 +4,24 @@ import {useRouter} from 'next/router';
 import icons from '../../UI/icons';
 import pages from '../../data/pages';
 import styles from './nav.module.css';
+import {useStateValue} from '../../state';
+import ActionsEnum from '../../state/cursor/type/actions';
+import Anchor from '../../UI/anchor';
 
 const Nav: React.FC = () => {
     const router = useRouter();
+    const {dispatch} = useStateValue();
+    const handleClick = (event: React.MouseEvent) => {
+        dispatch({
+            type: ActionsEnum.save,
+            payload: {
+                cursor: {
+                    top: event.clientY,
+                    left: event.clientX,
+                },
+            },
+        });
+    };
 
     return (
         <nav className={styles.nav} data-test="component-nav">
@@ -22,7 +37,9 @@ const Nav: React.FC = () => {
                                 </>
                             )}
                             <Link passHref href={`/${page.slug}`}>
-                                <a href={`/${page.slug}`} className={`${styles.link} ${isActive ? styles.linkActive : ''}`}>{page.title}</a>
+                                <Anchor href={`/${page.slug}`} className={`${styles.link} ${isActive ? styles.linkActive : ''}`} onClick={handleClick}>
+                                    {page.title}
+                                </Anchor>
                             </Link>
                         </li>
                     );
