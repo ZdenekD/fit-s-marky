@@ -2,7 +2,7 @@ import {motion} from 'framer-motion';
 import Layout from '../components/layout';
 import Article from '../components/article';
 import {heading} from '../helpers/animation/heading';
-import {fade} from '../helpers/animation/fade';
+import {fadeX} from '../helpers/animation/fade';
 
 const Page: React.FC = () => (
     <Layout>
@@ -19,7 +19,7 @@ const Page: React.FC = () => (
                 initial="initial"
                 animate="enter"
                 exit="exit"
-                variants={fade}
+                variants={fadeX}
             >
                 <ul>
                     <li>Chcete se nejdříve správně naučit pozice&nbsp;a&nbsp;cviky, než půjdete do skupinové lekce?</li>
@@ -47,7 +47,7 @@ const Page: React.FC = () => (
                 initial="initial"
                 animate="enter"
                 exit="exit"
-                variants={fade}
+                variants={fadeX}
             >
                 <ul>
                     <li>Cvičební program je sestaven na základě zdravotního stavu, potřeb&nbsp;a&nbsp;přání klienta.</li>
@@ -78,7 +78,7 @@ const Page: React.FC = () => (
                 initial="initial"
                 animate="enter"
                 exit="exit"
-                variants={fade}
+                variants={fadeX}
             >
                 <p>
                     Cvičební systém, který rovnoměrně posiluje tělo&nbsp;a&nbsp;zlepšuje jeho držení. Důraz je přitom kladen na správné dýchání,
@@ -99,7 +99,7 @@ const Page: React.FC = () => (
                 initial="initial"
                 animate="enter"
                 exit="exit"
-                variants={fade}
+                variants={fadeX}
             >
                 <ul>
                     <li>získáte ploché břicho&nbsp;a&nbsp;štíhlý pas</li>

@@ -1,4 +1,4 @@
-const fade = {
+const fadeX = {
     initial: {opacity: 0, translateX: 20},
     enter: {
         opacity: 1,
@@ -15,5 +15,22 @@ const fade = {
     },
 };
 
+const fadeY = {
+    initial: {opacity: 0, translateY: 20},
+    enter: {
+        opacity: 1,
+        translateY: 0,
+        transition: {
+            duration: 0.4,
+            delay: 0.2,
+        },
+    },
+    exit: {
+        opacity: 0,
+        translateY: 10,
+        transition: {duration: 0.2},
+    },
+};
+
 // eslint-disable-next-line import/prefer-default-export
-export {fade};
+export {fadeX, fadeY};

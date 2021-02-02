@@ -1,4 +1,5 @@
 import React from 'react';
+import {motion} from 'framer-motion';
 import useEventListener from '@use-it/event-listener';
 import {useStateValue} from '../../state';
 import icons, {IconsEnum} from '../../UI/icons';
@@ -56,6 +57,25 @@ const Decoration: React.FC = () => {
 
         handleIcons({top: clientY, left: clientX});
     };
+    const fade = {
+        initial: {opacity: 0},
+        enter: {
+            opacity: 0.25,
+            transition: {
+                ease: 'easeInOut',
+                duration: 0.2,
+                staggerChildren: 0.2,
+            },
+        },
+        exit: {
+            opacity: 0,
+            transition: {
+                ease: 'easeInOut',
+                duration: 0.4,
+                staggerChildren: 0.1,
+            },
+        },
+    };
 
     useEventListener('mousemove', handleMouseMove);
 
@@ -65,16 +85,38 @@ const Decoration: React.FC = () => {
     }, [state]);
 
     return (
-        <>
-            <i ref={icon1Ref} className={styles.decoration1}>{icons[IconsEnum.decoration1]()}</i>
-            <i ref={icon2Ref} className={styles.decoration2}>{icons[IconsEnum.decoration2]()}</i>
-            <i ref={icon3Ref} className={styles.decoration3}>{icons[IconsEnum.decoration3]()}</i>
-            <i ref={icon4Ref} className={styles.decoration4}>{icons[IconsEnum.decoration4]()}</i>
-            <i ref={icon5Ref} className={styles.decoration5}>{icons[IconsEnum.decoration5]()}</i>
-            <i ref={icon6Ref} className={styles.decoration6}>{icons[IconsEnum.decoration6]()}</i>
-            <i ref={icon7Ref} className={styles.decoration7}>{icons[IconsEnum.decoration7]()}</i>
-            <i ref={icon8Ref} className={styles.decoration8}>{icons[IconsEnum.decoration8]()}</i>
-        </>
+        <motion.div
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            variants={fade}
+            className={styles.wrapper}
+        >
+            <motion.i ref={icon1Ref} className={`${styles.decoration} ${styles.decoration1}`}>
+                {icons[IconsEnum.decoration1]()}
+            </motion.i>
+            <motion.i ref={icon2Ref} className={`${styles.decoration} ${styles.decoration2}`}>
+                {icons[IconsEnum.decoration2]()}
+            </motion.i>
+            <motion.i ref={icon3Ref} className={`${styles.decoration} ${styles.decoration3}`}>
+                {icons[IconsEnum.decoration3]()}
+            </motion.i>
+            <motion.i ref={icon4Ref} className={`${styles.decoration} ${styles.decoration4}`}>
+                {icons[IconsEnum.decoration4]()}
+            </motion.i>
+            <motion.i ref={icon5Ref} className={`${styles.decoration} ${styles.decoration5}`}>
+                {icons[IconsEnum.decoration5]()}
+            </motion.i>
+            <motion.i ref={icon6Ref} className={`${styles.decoration} ${styles.decoration6}`}>
+                {icons[IconsEnum.decoration6]()}
+            </motion.i>
+            <motion.i ref={icon7Ref} className={`${styles.decoration} ${styles.decoration7}`}>
+                {icons[IconsEnum.decoration7]()}
+            </motion.i>
+            <motion.i ref={icon8Ref} className={`${styles.decoration} ${styles.decoration8}`}>
+                {icons[IconsEnum.decoration8]()}
+            </motion.i>
+        </motion.div>
     );
 };
 

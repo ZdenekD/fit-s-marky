@@ -5,7 +5,7 @@ interface IContent {
     className?: string
 }
 
-const Content: React.FC<IContent> = ({children, className}) => (
+const Content: React.FC<IContent> = ({children, className = ''}) => (
     <section className={`${styles.section} ${className}`} data-test="component-content">
         {children}
     </section>

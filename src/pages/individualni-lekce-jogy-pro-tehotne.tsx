@@ -2,7 +2,7 @@ import {motion} from 'framer-motion';
 import Layout from '../components/layout';
 import Article from '../components/article';
 import {heading} from '../helpers/animation/heading';
-import {fade} from '../helpers/animation/fade';
+import {fadeX} from '../helpers/animation/fade';
 
 const Page: React.FC = () => (
     <Layout>
@@ -19,7 +19,7 @@ const Page: React.FC = () => (
                 initial="initial"
                 animate="enter"
                 exit="exit"
-                variants={fade}
+                variants={fadeX}
             >
                 <p>
                     Cvičení je vhodné od
