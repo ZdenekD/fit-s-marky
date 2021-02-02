@@ -10,15 +10,14 @@ const Page: React.FC = () => {
         ...list,
         ...{
             enter: {
-                opacity: 1,
+                ...list.enter,
                 transition: {
-                    ease: 'easeInOut',
-                    duration: 0.4,
+                    ...list.enter.transition,
                     staggerChildren: 0.1,
                 },
             },
             exit: {
-                opacity: 0,
+                ...list.exit,
                 transition: {duration: 0.1},
             },
         },

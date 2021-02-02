@@ -7,6 +7,7 @@ interface IAnchor {
     children: React.ReactNode
     target?: '_blank'
     className?: string
+    onClick?: (event: React.MouseEvent) => void
 }
 
 const Anchor = React.forwardRef<HTMLAnchorElement, IAnchor>(({
@@ -15,6 +16,7 @@ const Anchor = React.forwardRef<HTMLAnchorElement, IAnchor>(({
     children,
     target,
     className = '',
+    onClick,
 }, ref) => (
     <a
         ref={ref}
@@ -24,6 +26,7 @@ const Anchor = React.forwardRef<HTMLAnchorElement, IAnchor>(({
         target={target}
         rel={target ? 'noreferrer noopener' : undefined}
         data-test="component-anchor"
+        onClick={onClick}
     >
         {children}
     </a>

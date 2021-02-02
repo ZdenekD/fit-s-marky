@@ -2,6 +2,7 @@ import React from 'react';
 import App, {AppProps} from 'next/app';
 import {AnimatePresence} from 'framer-motion';
 import * as Sentry from '@sentry/browser';
+import {Provider} from '../state';
 import '../assets/styles/index.css';
 
 class Application extends App {
@@ -22,10 +23,11 @@ class Application extends App {
         const {Component, pageProps, router}: AppProps = this.props;
 
         return (
-            <AnimatePresence exitBeforeEnter>
-                <Component {...pageProps} key={router.route} />
-            </AnimatePresence>
-
+            <Provider>
+                <AnimatePresence exitBeforeEnter>
+                    <Component {...pageProps} key={router.route} />
+                </AnimatePresence>
+            </Provider>
         );
     }
 }

@@ -10,7 +10,7 @@ import styles from './fotogalerie.module.css';
 const Page: React.FC = () => (
     <Layout className={styles.layout}>
         <Link passHref href="/fotogalerie">
-            <Anchor href="fotogalerie" className={styles.link}>{icons[IconsEnum.chevronLeft]()}</Anchor>
+            <Anchor href="fotogalerie" className={styles.back}>{icons[IconsEnum.chevronLeft]()}</Anchor>
         </Link>
         <motion.ul
             className={styles.cards}

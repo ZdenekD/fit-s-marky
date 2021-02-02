@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import {motion} from 'framer-motion';
 import Layout from '../../components/layout';
+import Anchor from '../../UI/anchor';
 import Picture from '../../UI/picture';
 import icons, {IconsEnum} from '../../UI/icons';
 import {list, item} from '../../helpers/animation/list';
@@ -15,16 +16,18 @@ const Page: React.FC = () => (
             exit="exit"
             variants={list}
         >
-            <Link href="/fotogalerie/venkovni-lekce">
+            <Link passHref href="/fotogalerie/venkovni-lekce">
                 <motion.li
                     className={styles.card}
                     variants={item}
                 >
-                    <h2 className={styles.heading}>Venkovní lekce</h2>
-                    <Picture src="/images/image-15.jpg" className={styles.picture} />
-                    <div className={styles.icon}>
-                        {icons[IconsEnum.camera](36)}
-                    </div>
+                    <Anchor href="/fotogalerie/venkovni-lekce" className={styles.link}>
+                        <h2 className={styles.heading}>Venkovní lekce</h2>
+                        <Picture src="/images/image-15.jpg" className={styles.picture} />
+                        <div className={styles.icon}>
+                            {icons[IconsEnum.camera](36)}
+                        </div>
+                    </Anchor>
                 </motion.li>
             </Link>
             <Link href="/fotogalerie/lekce">
@@ -32,11 +35,13 @@ const Page: React.FC = () => (
                     className={styles.card}
                     variants={item}
                 >
-                    <h2 className={styles.heading}>Lekce pilates a jógy</h2>
-                    <Picture src="/images/image-06.jpg" className={styles.picture} />
-                    <div className={styles.icon}>
-                        {icons[IconsEnum.camera](36)}
-                    </div>
+                    <Anchor href="/fotogalerie/lekce" className={styles.link}>
+                        <h2 className={styles.heading}>Lekce pilates a jógy</h2>
+                        <Picture src="/images/image-06.jpg" className={styles.picture} />
+                        <div className={styles.icon}>
+                            {icons[IconsEnum.camera](36)}
+                        </div>
+                    </Anchor>
                 </motion.li>
             </Link>
             <Link href="/fotogalerie/zdrava-strava">
@@ -44,11 +49,13 @@ const Page: React.FC = () => (
                     className={styles.card}
                     variants={item}
                 >
-                    <h2 className={styles.heading}>Zdravá strava</h2>
-                    <Picture src="/images/image-13.jpg" className={styles.picture} />
-                    <div className={styles.icon}>
-                        {icons[IconsEnum.camera](36)}
-                    </div>
+                    <Anchor href="/fotogalerie/zdrava-strava" className={styles.link}>
+                        <h2 className={styles.heading}>Zdravá strava</h2>
+                        <Picture src="/images/image-13.jpg" className={styles.picture} />
+                        <div className={styles.icon}>
+                            {icons[IconsEnum.camera](36)}
+                        </div>
+                    </Anchor>
                 </motion.li>
             </Link>
         </motion.ul>

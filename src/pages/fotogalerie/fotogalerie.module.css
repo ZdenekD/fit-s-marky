@@ -3,22 +3,6 @@
     grid-gap: calc(2 * var(--gap));
 }
 
-.link {
-    padding: 0 var(--gap);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.5;
-    background-color: var(--color-white-darken-1);
-    border-radius: var(--border-radius);
-    border: none;
-
-    &:focus,
-    &:hover {
-        opacity: 1;
-    }
-}
-
 .cards {
     max-width: 120ch;
     margin: 0 auto;
@@ -88,6 +72,13 @@
     }
 }
 
+.link {
+    padding: 0;
+    color: var(--color-black);
+    line-height: 0;
+    border: none;
+}
+
 .heading {
     position: absolute;
     top: 25%;
@@ -116,4 +107,20 @@
     color: var(--color-blue-lighten-3);
     transform: translateX(0);
     transition: all var(--transition-out) var(--transition-timing);
+}
+
+.back {
+    padding: 0 var(--gap);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    background-color: var(--color-white-darken-1);
+    border-radius: var(--border-radius);
+    border: none;
+
+    &:focus,
+    &:hover {
+        opacity: 1;
+    }
 }
