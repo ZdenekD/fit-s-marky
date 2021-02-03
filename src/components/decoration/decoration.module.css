@@ -17,6 +17,8 @@
     position: absolute;
     transform: translate3d(calc(var(--clientX) * var(--friction)), calc(var(--clientY) * var(--friction)), 0);
     transform-origin: center;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
 }
 
 .decoration1 {
