@@ -52,7 +52,7 @@
     &,
     svg,
     .link {
-        transition-property: all;
+        transition-property: background-color, color, opacity;
         transition-duration: var(--transition-out);
         transition-timing-function: var(--transition-timing);
     }

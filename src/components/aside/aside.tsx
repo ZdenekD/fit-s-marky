@@ -1,6 +1,7 @@
 import React from 'react';
 import {Player} from '@lottiefiles/react-lottie-player';
 import {AnimationItem} from 'lottie-web';
+import {motion} from 'framer-motion';
 import {useStateValue} from '../../state';
 import styles from './aside.module.css';
 import ActionsEnum from '../../state/frame/type/actions';
@@ -27,7 +28,12 @@ const Aside: React.FC = () => {
     }, []);
 
     return (
-        <aside className={styles.aside}>
+        <motion.aside
+            initial={{opacity: 0}}
+            animate={{opacity: 1, transition: {duration: 0.6}}}
+            exit={{opacity: 0, transition: {duration: 0.4}}}
+            className={styles.aside}
+        >
             <div className={styles.animation}>
                 <Player
                     ref={playerRef}
@@ -36,7 +42,7 @@ const Aside: React.FC = () => {
                     src="/animation_01.json"
                 />
             </div>
-        </aside>
+        </motion.aside>
     );
 };
 
