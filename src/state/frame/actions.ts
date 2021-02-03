@@ -1,7 +1,7 @@
-import ICursor from './type/cursor';
+import IFrame from './type/frame';
 import ActionsEnum, {IAction} from './type/actions';
 
-export default function savePosition(value: ICursor): IAction {
+export default function saveFrame(value: IFrame): IAction {
     return {
         type: ActionsEnum.save,
         payload: value,

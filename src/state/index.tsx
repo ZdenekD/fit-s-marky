@@ -10,6 +10,7 @@ interface IContext {
 }
 
 const StateContext = createContext<IContext>({state: initialState, dispatch: () => null});
+
 const Provider: React.FC = ({children}) => {
     const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -19,7 +20,10 @@ const Provider: React.FC = ({children}) => {
         </StateContext.Provider>
     );
 };
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-const useStateValue = () => useContext(StateContext);
+const useStateValue = (): IContext => useContext(StateContext);
 
-export {Provider, useStateValue};
+export {
+    Provider,
+    StateContext,
+    useStateValue
+};

@@ -1,4 +1,4 @@
-interface ICursor {
+type ICursor = {
     cursor: {
         top: number
         left: number

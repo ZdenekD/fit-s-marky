@@ -1,14 +1,9 @@
 import IState from '../type/state';
 import IAction from '../type/actions';
-import ICursor from './type/cursor';
+import IFrame from './type/frame';
 import ActionsEnum from './type/actions';
 
-export const initialState: ICursor = {
-    cursor: {
-        top: 0,
-        left: 0,
-    },
-};
+export const initialState: IFrame = {frame: {current: 0}};
 
 const reducer = (state: IState, action: IAction): IState => {
     switch (action.type) {
