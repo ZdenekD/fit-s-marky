@@ -1,4 +1,4 @@
-import VariantsEnum from '../../types/VariantsEnum';
+import VariantsEnum from '../../../types/VariantsEnum';
 import Button from '.';
 
 export default {title: 'UI/Button'};

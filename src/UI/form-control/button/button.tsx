@@ -1,6 +1,6 @@
 import React from 'react';
 import {motion} from 'framer-motion';
-import VariantsEnum from '../../types/VariantsEnum';
+import VariantsEnum from '../../../types/VariantsEnum';
 import styles from './button.module.css';
 
 interface IButton {
@@ -16,7 +16,7 @@ interface IButton {
 const Button = React.forwardRef<HTMLButtonElement, IButton>(({
     type = 'button',
     disabled = false,
-    variant = VariantsEnum.default,
+    variant,
     title = undefined,
     children,
     className = '',
@@ -26,7 +26,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButton>(({
         ref={ref}
         disabled={disabled}
         type={type}
-        className={`${styles.button} ${styles[variant]} ${className}`}
+        className={`${styles.button} ${variant ? styles[variant] : ''} ${className}`}
         aria-label={title}
         data-test="component-button"
         whileTap={{scale: 0.98}}
