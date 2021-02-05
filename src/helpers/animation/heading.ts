@@ -8,7 +8,10 @@ const heading = {
     exit: {
         opacity: 0,
         translateX: 20,
-        transition: {duration: 0.1},
+        transition: {
+            duration: 0.1,
+            delay: 0.1,
+        },
     },
 };
 

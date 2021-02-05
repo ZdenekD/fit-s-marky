@@ -1,6 +1,7 @@
 import {motion} from 'framer-motion';
 import Layout from '../components/layout';
 import Article from '../components/article';
+import ContactForm from '../components/form/contact';
 import {heading} from '../helpers/animation/heading';
 
 const Page: React.FC = () => (
@@ -14,6 +15,7 @@ const Page: React.FC = () => (
             >
                 Kontaktuje mne
             </motion.h2>
+            <ContactForm />
         </Article>
     </Layout>
 );

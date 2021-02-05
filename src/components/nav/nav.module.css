@@ -27,6 +27,10 @@
         .link {
             transition-duration: var(--transition-in);
         }
+
+        svg {
+            color: var(--color-blue-darken-1);
+        }
     }
 
     &::before {
