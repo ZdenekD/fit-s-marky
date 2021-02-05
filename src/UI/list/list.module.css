@@ -1,6 +1,9 @@
-.item {
+.list {
+    margin-bottom: var(--gap);
+    list-style-type: square;
+    list-style-position: inside;
 
-    & + .item {
+    .list {
         margin-top: var(--gap);
     }
 
