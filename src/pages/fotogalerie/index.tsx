@@ -5,12 +5,12 @@ import Anchor from '../../UI/anchor';
 import Picture from '../../UI/picture';
 import icons, {IconsEnum} from '../../UI/icons';
 import {list, item} from '../../helpers/animation/list';
-import styles from './fotogalerie.module.css';
+import styles from '../../assets/styles/pages/gallery.module.css';
 
 const Page: React.FC = () => (
     <Layout>
         <motion.ul
-            className={styles.cards}
+            className={styles.list}
             initial="initial"
             animate="enter"
             exit="exit"
@@ -18,7 +18,7 @@ const Page: React.FC = () => (
         >
             <Link passHref href="/fotogalerie/venkovni-lekce">
                 <motion.li
-                    className={styles.card}
+                    className={styles.item}
                     variants={item}
                 >
                     <Anchor href="/fotogalerie/venkovni-lekce" className={styles.link}>
@@ -32,7 +32,7 @@ const Page: React.FC = () => (
             </Link>
             <Link href="/fotogalerie/lekce">
                 <motion.li
-                    className={styles.card}
+                    className={styles.item}
                     variants={item}
                 >
                     <Anchor href="/fotogalerie/lekce" className={styles.link}>
@@ -46,7 +46,7 @@ const Page: React.FC = () => (
             </Link>
             <Link href="/fotogalerie/zdrava-strava">
                 <motion.li
-                    className={styles.card}
+                    className={styles.item}
                     variants={item}
                 >
                     <Anchor href="/fotogalerie/zdrava-strava" className={styles.link}>

@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import {motion} from 'framer-motion';
+import {useStateValue} from '../state';
+import VariantsEnum from '../types/VariantsEnum';
+import ActionsEnum from '../state/cursor/type/actions';
 import Layout from '../components/layout';
 import Article from '../components/article';
-import Button from '../UI/button';
-import icons, {IconsEnum} from '../UI/icons';
-import {useStateValue} from '../state';
-import ActionsEnum from '../state/cursor/type/actions';
-import VariantsEnum from '../types/VariantsEnum';
+import Button from '../UI/form-control/button';
+import IconsEnum from '../UI/icons/types/iconsEnum';
+import icons from '../UI/icons';
 import {list, item} from '../helpers/animation/list';
-import styles from './cenik.module.css';
+import styles from '../assets/styles/pages/pricelist.module.css';
 
 const Page: React.FC = () => {
     const {dispatch} = useStateValue();
@@ -28,37 +29,37 @@ const Page: React.FC = () => {
         <Layout>
             <Article>
                 <motion.ul
-                    className={styles.cards}
+                    className={styles.list}
                     initial="initial"
                     animate="enter"
                     exit="exit"
                     variants={list}
                 >
                     <motion.li
-                        className={styles.card}
+                        className={styles.item}
                         variants={item}
                     >
-                        <div className={styles.icons}>
+                        <div className={styles.icon}>
                             {icons[IconsEnum.cobraPose]()}
                         </div>
                         <h2>Individuální lekce pilates (doma, kancelář)</h2>
                         <strong>500 Kč / hodina</strong>
                     </motion.li>
                     <motion.li
-                        className={styles.card}
+                        className={styles.item}
                         variants={item}
                     >
-                        <div className={styles.icons}>
+                        <div className={styles.icon}>
                             {icons[IconsEnum.warriorPose]()}
                         </div>
                         <h2>Individuální lekce jógy/powerjógy (doma, kancelář)</h2>
                         <strong>500 Kč / hodina</strong>
                     </motion.li>
                     <motion.li
-                        className={styles.card}
+                        className={styles.item}
                         variants={item}
                     >
-                        <div className={styles.icons}>
+                        <div className={styles.icon}>
                             {icons[IconsEnum.boatPose]()}
                             {icons[IconsEnum.boatPose]()}
                         </div>
@@ -66,10 +67,10 @@ const Page: React.FC = () => {
                         <strong>400 Kč / hodina | osoba</strong>
                     </motion.li>
                     <motion.li
-                        className={styles.card}
+                        className={styles.item}
                         variants={item}
                     >
-                        <div className={styles.icons}>
+                        <div className={styles.icon}>
                             {icons[IconsEnum.pranayamaPose]()}
                         </div>
                         <h2>Individuální lekce jógy pro těhotné</h2>
@@ -87,7 +88,9 @@ const Page: React.FC = () => {
                         }}
                         transition={{duration: 0.5, delay: 0.8}}
                     >
-                        <Button className={styles.button} variant={VariantsEnum.info} onClick={handleClick}>Kontaktujte mne</Button>
+                        <Button className={styles.button} variant={VariantsEnum.info} onClick={handleClick}>
+                            Kontaktuje mne
+                        </Button>
                     </motion.div>
                 </Link>
             </Article>

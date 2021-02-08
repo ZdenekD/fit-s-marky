@@ -1,9 +1,4 @@
 .item {
-    margin-top: var(--gap);
-
-    &:first-of-type {
-        margin-top: 0;
-    }
 
     &::marker {
         color: var(--color-red);

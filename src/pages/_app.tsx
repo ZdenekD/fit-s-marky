@@ -1,6 +1,6 @@
 import React from 'react';
 import App, {AppProps} from 'next/app';
-import {AnimatePresence} from 'framer-motion';
+import {motion} from 'framer-motion';
 import * as Sentry from '@sentry/browser';
 import {Provider} from '../state';
 import '../assets/styles/index.css';
@@ -24,9 +24,14 @@ class Application extends App {
 
         return (
             <Provider>
-                <AnimatePresence exitBeforeEnter>
+                <motion.div
+                    key={router.route}
+                    initial={{opacity: 0.75}}
+                    animate={{opacity: 1, transition: {duration: 0.4}}}
+                    exit={{opacity: 0.75, transition: {duration: 0.4}}}
+                >
                     <Component {...pageProps} key={router.route} />
-                </AnimatePresence>
+                </motion.div>
             </Provider>
         );
     }

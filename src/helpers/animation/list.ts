@@ -5,6 +5,7 @@ const list = {
         transition: {
             ease: 'easeInOut',
             duration: 0.4,
+            delay: 0.2,
             staggerChildren: 0.2,
         },
     },
@@ -31,6 +32,7 @@ const item = {
     },
     exit: {
         opacity: 0,
+        scale: 0.96,
         translateX: 10,
     },
 };

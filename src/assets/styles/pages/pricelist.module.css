@@ -1,11 +1,11 @@
-.cards {
+.list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: minmax(20vh, 1fr) minmax(20vh, 1fr);
     grid-gap: calc(2 * var(--gap));
 }
 
-.card {
+.item {
     padding: calc(2 * var(--gap));
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@
     }
 }
 
-.icons {
+.icon {
     margin: 0 auto calc(2 * var(--gap));
 
     svg {
