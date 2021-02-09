@@ -70,5 +70,12 @@
         }
       ]
     }
-  ]
+  ],
+
+  "build": {
+    "env": {
+      "SENDGRID_API_KEY": "@sendgrid-api-key-fit-s-marky",
+      "SENDGRID_TEMPLATE_ID": "@sendgrid-template-id-fit-s-marky"
+    }
+  }
 }

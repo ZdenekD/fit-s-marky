@@ -78,13 +78,6 @@ const ContactForm: React.FC = () => {
                     maxLength={90}
                     error={errors.email?.message}
                 />
-                <Input
-                    ref={register()}
-                    name="med"
-                    label="Med"
-                    autoComplete="off"
-                    className={styles.hidden}
-                />
                 <Textarea
                     ref={register({
                         pattern: {
@@ -98,6 +91,13 @@ const ContactForm: React.FC = () => {
                     disabled={isDisabled}
                     maxLength={255}
                     error={errors.message?.message}
+                />
+                <Input
+                    ref={register()}
+                    name="med"
+                    label="Med"
+                    autoComplete="off"
+                    className={styles.hidden}
                 />
                 <Button type="submit" variant={VariantsEnum.info} className={styles.submit} disabled={isDisabled}>Odeslat</Button>
             </Form>

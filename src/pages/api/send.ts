@@ -13,7 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse): void
         const {name, email, message} = req.body;
         const content = {
             to: process.env.EMAIL_RECIPIENT,
-            from: 'form@fit-s-marky.cz',
+            from: 'e-mail@fit-s-marky.cz',
             text: message,
             templateId: process.env.SENDGRID_TEMPLATE_ID,
             dynamicTemplateData: {
