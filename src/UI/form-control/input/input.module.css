@@ -5,6 +5,7 @@
 }
 
 .label {
+    width: 100%;
     margin-bottom: var(--gap);
     padding-left: calc(1px + var(--gap));
     display: inline-flex;
@@ -44,11 +45,6 @@
         opacity: 0.5;
         background: var(--color-gray-lighten-3);
         pointer-events: none;
-    }
-
-    &:required {
-        border-left-width: 2px;
-        border-left-color: var(--color-red-lighten-2);
     }
 
     &::placeholder {
@@ -92,9 +88,13 @@
     transform: translateY(-50%);
 }
 
+.maxLengthDisabled {
+    opacity: 0.25;
+}
+
 .error {
-    margin-left: calc(0.5 * var(--gap));
+    margin-left: auto;
     display: inline-block;
-    color: var(--color-gray);
+    color: var(--color-red-lighten-1);
     font-size: 0.9em;
 }

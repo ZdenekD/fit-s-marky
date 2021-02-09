@@ -35,5 +35,8 @@ export const error: React.FC = () => (
 );
 
 export const maxLength: React.FC = () => (
-    <Input name="input" label="Input" maxLength={32} />
+    <>
+        <Input name="input" label="Input" maxLength={32} />
+        <Input disabled name="input" label="Input" maxLength={32} />
+    </>
 );
