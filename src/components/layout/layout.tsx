@@ -6,8 +6,11 @@ import Footer from '../footer';
 import Nav from '../nav';
 import Aside from '../aside';
 import Content from '../content';
+import Alert from '../../UI/alert';
 import Decoration from '../decoration';
+import {useStateValue} from '../../state';
 import pages from '../../data/pages';
+import VariantsEnum from '../../types/VariantsEnum';
 import styles from './layout.module.css';
 
 interface ILayout {
@@ -17,6 +20,7 @@ interface ILayout {
 
 const Layout: React.FC<ILayout> = ({children, className = ''}) => {
     const router = useRouter();
+    const {state} = useStateValue();
     const [item] = pages.filter(page => `/${page.slug}` === router.pathname);
 
     return (
@@ -44,7 +48,7 @@ const Layout: React.FC<ILayout> = ({children, className = ''}) => {
                     <script async defer data-domain="fit-s-marky.cz" src="https://plausible.io/js/plausible.js"></script>
                 )}
             </Head>
-            <main className={styles.main}>
+            <main className={`${styles.main} ${state.message.content ? styles.alert : ''}`}>
                 <Header />
                 <Nav />
                 <Aside />
@@ -55,6 +59,9 @@ const Layout: React.FC<ILayout> = ({children, className = ''}) => {
                 </Content>
                 <Footer />
             </main>
+            <Alert isOpen={!!state.message.content} variant={VariantsEnum[state.message.variant]}>
+                {state.message.content}
+            </Alert>
         </>
     );
 };

@@ -1,9 +1,15 @@
 .main {
     min-height: 100vh;
     display: grid;
-    grid-template: 10vh auto auto minmax(4vh, 8vh) / 20vw auto;
+    grid-template: 10vh max-content auto minmax(4vh, 8vh) / 20vw auto;
     grid-template-areas: 'header header'
         'nav content'
         'aside content'
         'footer footer';
+    filter: blur(0);
+}
+
+.alert {
+    filter: blur(4px);
+    transition: filter var(--transition-in) linear;
 }

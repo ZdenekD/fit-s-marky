@@ -30,18 +30,16 @@ const Aside: React.FC = () => {
     return (
         <motion.aside
             initial={{opacity: 0}}
-            animate={{opacity: 1, transition: {duration: 0.6}}}
+            animate={{opacity: 1, transition: {duration: 2}}}
             exit={{opacity: 0, transition: {duration: 0.4}}}
             className={styles.aside}
         >
-            <div className={styles.animation}>
-                <Player
-                    ref={playerRef}
-                    loop
-                    lottieRef={handleAnimation}
-                    src="/animation_01.json"
-                />
-            </div>
+            <Player
+                ref={playerRef}
+                loop
+                lottieRef={handleAnimation}
+                src="/animation_01.json"
+            />
         </motion.aside>
     );
 };
