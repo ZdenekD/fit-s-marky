@@ -14,7 +14,7 @@
 }
 
 .rights {
-    padding: var(--gap);
+    padding: calc(2 * var(--gap));
     border-right: 1px solid var(--color-white-darken-1);
 
     svg {

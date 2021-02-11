@@ -57,4 +57,14 @@
             margin-top: var(--gap);
         }
     }
+
+    :global .icon {
+        width: calc(3 * var(--gap));
+        height: calc(3 * var(--gap));
+        position: absolute;
+        top: calc(-0.75 * var(--gap));
+        left: calc(-1 * var(--gap));
+        z-index: -1;
+        opacity: 0.5;
+    }
 }

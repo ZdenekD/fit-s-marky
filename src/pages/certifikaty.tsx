@@ -1,8 +1,8 @@
 import {motion} from 'framer-motion';
 import Layout from '../components/layout';
 import Article from '../components/article';
-import List from '../UI/list';
-import Item from '../UI/list/item';
+import icons from '../UI/icons';
+import IconsEnum from '../UI/icons/types/iconsEnum';
 import {heading} from '../helpers/animation/heading';
 import {list, item} from '../helpers/animation/list';
 import styles from '../assets/styles/pages/certificates.module.css';
@@ -16,6 +16,7 @@ const Page: React.FC = () => (
                 exit="exit"
                 variants={heading}
             >
+                <i className="icon">{icons[IconsEnum.chartBubble]()}</i>
                 Certifikáty
             </motion.h2>
             <motion.ul

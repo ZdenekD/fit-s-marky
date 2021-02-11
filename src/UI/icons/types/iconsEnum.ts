@@ -12,6 +12,8 @@ enum IconsEnum {
     phone = 'phone',
     camera = 'camera',
     chevronLeft = 'chevronLeft',
+    chartBubble = 'chartBubble',
+    borderNone = 'borderNone',
     cobraPose = 'cobraPose',
     warriorPose = 'warriorPose',
     boatPose = 'boatPose',

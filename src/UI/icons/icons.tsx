@@ -11,7 +11,9 @@ import {IconKarate,
     IconPhone,
     IconMail,
     IconCamera,
-    IconChevronLeft} from '@tabler/icons';
+    IconChevronLeft,
+    IconBorderNone,
+    IconChartBubble} from '@tabler/icons';
 import IconCobraPose from '../../assets/images/icons/yoga_01.svg';
 import IconPranayamaPose from '../../assets/images/icons/yoga_02.svg';
 import IconBoatPose from '../../assets/images/icons/yoga_03.svg';
@@ -103,8 +105,20 @@ const icons: IIcons = {
             stroke={1}
         />
     ),
+    [IconsEnum.chartBubble]: (size = 28) => (
+        <IconChartBubble
+            size={size}
+            stroke={1}
+        />
+    ),
     [IconsEnum.chevronLeft]: (size = 28) => (
         <IconChevronLeft
+            size={size}
+            stroke={1}
+        />
+    ),
+    [IconsEnum.borderNone]: (size = 28) => (
+        <IconBorderNone
             size={size}
             stroke={1}
         />

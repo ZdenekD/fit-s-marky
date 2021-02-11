@@ -13,15 +13,15 @@ const pages: IPages[] = [
     {
         id: `${prefix}_p1`,
         icon: IconsEnum.pilates,
-        title: 'Individuální lekce pilates',
-        slug: 'individualni-lekce-pilates',
+        title: 'Lekce pilates',
+        slug: 'lekce-pilates',
         description: 'Soukromé lekce pilates přímo u Vás doma. Po celou dobu individuální lekce pilates se věnuji pouze Vám. Cvičební program je plně přizpůsoben Vašim potřebám a požadavkům.',
     },
     {
         id: `${prefix}_p2`,
         icon: IconsEnum.woman,
-        title: 'Individuální lekce jógy pro těhotné',
-        slug: 'individualni-lekce-jogy-pro-tehotne',
+        title: 'Lekce jógy pro těhotné',
+        slug: 'lekce-jogy-pro-tehotne',
         description: 'Jóga pro těhotné je určena pro každou ženu, která právě zjistila, že je těhotná. Cvičení je vhodné od prvních dnů až do porodu, v jakémkoli stupni těhotenství.',
     },
     {

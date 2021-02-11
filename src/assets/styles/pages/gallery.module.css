@@ -118,14 +118,16 @@
 
 .back {
     height: 50px;
-    margin-top: calc(3 * var(--gap));
+    margin-top: var(--gap);
     padding: 0 var(--gap);
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0.5;
     background-color: var(--color-white-darken-1);
-    transition: background-color var(--transition-out) var(--transition-timing);
+    transition-property: background-color, color;
+    transition-duration: var(--transition-out);
+    transition-timing-function: var(--transition-timing);
     border-radius: var(--border-radius);
     border: none;
 
@@ -133,5 +135,6 @@
     &:hover {
         opacity: 1;
         background-color: var(--color-blue-lighten-2);
+        color: var(--color-white);
     }
 }

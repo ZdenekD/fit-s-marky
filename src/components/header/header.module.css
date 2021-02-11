@@ -7,10 +7,10 @@
 .logo {
     padding: var(--gap) calc(3 * var(--gap));
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     position: relative;
-    color: var(--color-blue-lighten-1);
+    color: var(--color-black);
     font-size: 2rem;
     text-align: center;
     text-decoration: none;

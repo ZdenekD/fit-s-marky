@@ -1,5 +1,5 @@
 .nav {
-    padding: var(--gap);
+    padding: var(--gap) calc(3 * var(--gap));
     display: grid;
     grid-area: nav;
     border-right: 1px solid var(--color-white-darken-1);
@@ -38,7 +38,7 @@
         height: 100%;
         position: absolute;
         top: 0;
-        right: calc((-1 * var(--gap)) - 1px);
+        right: calc((-3 * var(--gap)) - 1px);
         content: '';
         opacity: 0;
         background-color: var(--color-blue-lighten-2);
@@ -51,6 +51,7 @@
 
     svg {
         margin-left: var(--gap);
+        color: var(--color-red);
     }
 
     &,
@@ -63,11 +64,13 @@
 }
 
 .itemActive {
-    color: var(--color-red);
 
     &::before {
-        opacity: 1;
-        background-color: currentColor;
+        opacity: 0;
+    }
+
+    svg {
+        color: var(--color-blue-darken-2);
     }
 }
 
@@ -86,7 +89,7 @@
 }
 
 .linkActive {
-    color: var(--color-red);
+    color: var(--color-blue-lighten-1);
     pointer-events: none;
 }
 

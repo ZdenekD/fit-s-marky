@@ -3,6 +3,8 @@ import Layout from '../components/layout';
 import Article from '../components/article';
 import List from '../UI/list';
 import Item from '../UI/list/item';
+import icons from '../UI/icons';
+import IconsEnum from '../UI/icons/types/iconsEnum';
 import {heading} from '../helpers/animation/heading';
 import {fadeX} from '../helpers/animation/fade';
 
@@ -15,6 +17,7 @@ const Page: React.FC = () => (
                 exit="exit"
                 variants={heading}
             >
+                <i className="icon">{icons[IconsEnum.chartBubble]()}</i>
                 Chci instruktora jen pro sebe = soukromá lekce&nbsp;v&nbsp;kanceláři nebo&nbsp;u&nbsp;Vás doma
             </motion.h2>
             <motion.div
@@ -45,6 +48,7 @@ const Page: React.FC = () => (
                 exit="exit"
                 variants={heading}
             >
+                <i className="icon">{icons[IconsEnum.chartBubble]()}</i>
                 Další výhody individuální lekce:
             </motion.h2>
             <motion.div
@@ -76,6 +80,7 @@ const Page: React.FC = () => (
                 exit="exit"
                 variants={heading}
             >
+                <i className="icon">{icons[IconsEnum.chartBubble]()}</i>
                 Co je PILATES?
             </motion.h2>
             <motion.div
@@ -97,6 +102,7 @@ const Page: React.FC = () => (
                 exit="exit"
                 variants={heading}
             >
+                <i className="icon">{icons[IconsEnum.chartBubble]()}</i>
                 10 důvodů proč cvičit PILATES
             </motion.h2>
             <motion.div

@@ -29,9 +29,9 @@ const Aside: React.FC = () => {
 
     return (
         <motion.aside
-            initial={{opacity: 0}}
+            initial={{opacity: 0.25}}
             animate={{opacity: 1, transition: {duration: 2}}}
-            exit={{opacity: 0, transition: {duration: 0.4}}}
+            exit={{opacity: 0.25, transition: {duration: 0.4}}}
             className={styles.aside}
         >
             <Player
