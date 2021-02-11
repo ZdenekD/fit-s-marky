@@ -1,5 +1,5 @@
 .layout {
-    grid-template-columns: minmax(50px, 60px) auto;
+    grid-template-columns: 50px auto;
     grid-gap: calc(2 * var(--gap));
 }
 
@@ -28,8 +28,20 @@
 
     &:hover,
     &:focus {
-        cursor: pointer;
         box-shadow: -2px 4px 16px 0 rgba(108, 108, 229, 0.2);
+
+        .picture {
+            opacity: 0.5;
+            transform: scale(1.05);
+        }
+    }
+}
+
+.mainItem {
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
 
         &::before {
             opacity: 1;
@@ -42,7 +54,6 @@
 
         .picture {
             opacity: 0.33;
-            transform: scale(1.05);
         }
 
         .icon {
@@ -65,10 +76,6 @@
         background: linear-gradient(135deg, rgba(249, 249, 255, 0.33) 60%, rgba(249, 249, 255, 0.75));
         transition: opacity var(--transition-out) var(--transition-timing);
         border-radius: calc(3 * var(--border-radius));
-    }
-
-    h2 {
-        border: none;
     }
 }
 
@@ -110,7 +117,8 @@
 }
 
 .back {
-    height: 50%;
+    height: 50px;
+    margin-top: calc(3 * var(--gap));
     padding: 0 var(--gap);
     display: flex;
     justify-content: center;

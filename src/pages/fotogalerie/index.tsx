@@ -18,7 +18,7 @@ const Page: React.FC = () => (
         >
             <Link passHref href="/fotogalerie/venkovni-lekce">
                 <motion.li
-                    className={styles.item}
+                    className={`${styles.item} ${styles.mainItem}`}
                     variants={item}
                 >
                     <Anchor href="/fotogalerie/venkovni-lekce" className={styles.link}>
@@ -32,7 +32,7 @@ const Page: React.FC = () => (
             </Link>
             <Link href="/fotogalerie/lekce">
                 <motion.li
-                    className={styles.item}
+                    className={`${styles.item} ${styles.mainItem}`}
                     variants={item}
                 >
                     <Anchor href="/fotogalerie/lekce" className={styles.link}>
@@ -46,7 +46,7 @@ const Page: React.FC = () => (
             </Link>
             <Link href="/fotogalerie/zdrava-strava">
                 <motion.li
-                    className={styles.item}
+                    className={`${styles.item} ${styles.mainItem}`}
                     variants={item}
                 >
                     <Anchor href="/fotogalerie/zdrava-strava" className={styles.link}>

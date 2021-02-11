@@ -15,7 +15,7 @@ const Page: React.FC = () => (
                 animate="enter"
                 exit="exit"
                 variants={fadeY}
-                href="fotogalerie"
+                href="/fotogalerie"
                 className={styles.back}
             >
                 {icons[IconsEnum.chevronLeft]()}
@@ -32,31 +32,31 @@ const Page: React.FC = () => (
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-16.jpg"className={styles.picture} />
+                <Picture src="/images/image-16.jpg" className={styles.picture} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-17.jpg"className={styles.picture} />
+                <Picture src="/images/image-17.jpg" className={styles.picture} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-15.jpg"className={styles.picture} />
+                <Picture src="/images/image-15.jpg" className={styles.picture} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-18.jpg"className={styles.picture} />
+                <Picture src="/images/image-18.jpg" className={styles.picture} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-19.jpg"className={styles.picture} />
+                <Picture src="/images/image-19.jpg" className={styles.picture} />
             </motion.li>
         </motion.ul>
     </Layout>

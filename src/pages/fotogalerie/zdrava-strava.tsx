@@ -15,7 +15,7 @@ const Page: React.FC = () => (
                 animate="enter"
                 exit="exit"
                 variants={fadeY}
-                href="fotogalerie"
+                href="/fotogalerie"
                 className={styles.back}
             >
                 {icons[IconsEnum.chevronLeft]()}
@@ -32,49 +32,49 @@ const Page: React.FC = () => (
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-07.jpg"className={styles.picture} />
+                <Picture src="/images/image-07.jpg" className={styles.picture} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-08.jpg"className={styles.picture} />
+                <Picture src="/images/image-08.jpg" className={styles.picture} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-09.jpg"className={styles.picture} />
+                <Picture src="/images/image-09.jpg" className={styles.picture} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-10.jpg"className={styles.picture} />
+                <Picture src="/images/image-10.jpg" className={styles.picture} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-11.jpg"className={styles.picture} />
+                <Picture src="/images/image-11.jpg" className={styles.picture} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-12.jpg"className={styles.picture} />
+                <Picture src="/images/image-12.jpg" className={styles.picture} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-13.jpg"className={styles.picture} />
+                <Picture src="/images/image-13.jpg" className={styles.picture} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-14.jpg"className={styles.picture} />
+                <Picture src="/images/image-14.jpg" className={styles.picture} />
             </motion.li>
         </motion.ul>
     </Layout>
