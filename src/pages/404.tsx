@@ -12,7 +12,7 @@ const Error: React.FC = () => (
                 exit="exit"
                 variants={heading}
             >
-                Error 404
+                Zadaná stránka neexistuje
             </motion.h2>
         </Article>
     </Layout>

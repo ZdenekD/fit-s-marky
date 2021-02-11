@@ -13,7 +13,7 @@ const Footer: React.FC = () => (
             </span>
             <span className={styles.link}>
                 {icons[IconsEnum.mail](20)}
-                <Anchor href="mailto:fitsmarky@seznam.cz" title="E-mail: fitsmarky@seznam.cz">fitsmarky@seznam.cz</Anchor>
+                <Anchor href="mailto:fitsmarky&#64;seznam.cz" title="E-mail: fitsmarky&#64;seznam.cz">fitsmarky&#64;seznam.cz</Anchor>
             </span>
             <span className={styles.link}>
                 <Anchor
