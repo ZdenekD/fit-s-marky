@@ -59,7 +59,7 @@ const Layout: React.FC<ILayout> = ({children, className = ''}) => {
                 </Content>
                 <Footer />
             </main>
-            <Alert isOpen={!!state.message.content} variant={VariantsEnum[state.message.variant]}>
+            <Alert isOpen={!!state.message.content} variant={VariantsEnum[state.message.variant]} timeout={3000}>
                 {state.message.content}
             </Alert>
         </>

@@ -24,3 +24,7 @@ export const warning: React.FC = () => (
 export const danger: React.FC = () => (
     <Alert isOpen={true} variant={VariantsEnum.danger}>Danger message</Alert>
 );
+
+export const timeout: React.FC = () => (
+    <Alert isOpen={true} timeout={3000}>Alert hide after 3s</Alert>
+);

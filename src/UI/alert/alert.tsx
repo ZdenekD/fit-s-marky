@@ -11,6 +11,7 @@ interface IAlert {
     children: React.ReactNode
     className?: string
     variant?: VariantsEnum
+    timeout?: number
     isOpen?: boolean
 }
 
@@ -18,6 +19,7 @@ const Alert: React.FC<IAlert> = ({
     children,
     variant,
     className = '',
+    timeout,
     isOpen = false,
 }) => {
     const [isOpened, setOpened] = React.useState(isOpen);
@@ -26,6 +28,15 @@ const Alert: React.FC<IAlert> = ({
         setOpened(false);
         dispatch({type: ActionsEnum.remove});
     };
+
+    React.useEffect(() => {
+        if (timeout) {
+            setTimeout(() => {
+                setOpened(false);
+            }, timeout);
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <AnimatePresence>
