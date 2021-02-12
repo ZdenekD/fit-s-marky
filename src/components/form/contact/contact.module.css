@@ -1,3 +1,8 @@
+.form {
+    max-width: 80ch;
+    margin: 0 auto;
+}
+
 .submit {
     margin: 0 auto;
 }

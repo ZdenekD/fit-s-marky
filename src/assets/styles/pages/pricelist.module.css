@@ -1,8 +1,12 @@
 .list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax(20vh, 1fr) minmax(20vh, 1fr);
+    grid-template-columns: 1fr;
+
     grid-gap: calc(2 * var(--gap));
+
+    @media (--min-md) {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .item {
@@ -39,6 +43,8 @@
 
     svg {
         width: 25%;
+        height: 100%;
+        max-height: 100px;
         filter: drop-shadow(2px 2px 1px rgba(108, 108, 229, 0.15));
 
         & + svg {

@@ -93,6 +93,7 @@
 }
 
 .error {
+    max-width: 60%;
     margin-left: auto;
     display: inline-block;
     color: var(--color-red-lighten-1);

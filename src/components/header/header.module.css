@@ -1,18 +1,45 @@
 .header {
+    padding: var(--gap) 0;
     display: grid;
-    grid-template-columns: 20vw auto;
     grid-area: header;
+    position: relative;
+
+    @media (--max-xl) {
+        justify-content: center;
+    }
+
+    @media (--min-xl) {
+        grid-template-columns: 25vw auto;
+    }
+
+    @media (--min-xxl) {
+        grid-template-columns: 20vw auto;
+    }
 }
 
 .logo {
-    padding: var(--gap) calc(3 * var(--gap));
+    padding: var(--gap) calc(4 * var(--gap));
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
     color: var(--color-black);
-    font-size: 2rem;
+    font-size: 1.25rem;
     text-align: center;
     text-decoration: none;
-    border-right: 1px solid var(--color-white-darken-1);
+    transition-property: font-size;
+    transition-duration: var(--transition-in);
+    transition-timing-function: var(--transition-timing);
+
+    @media (--min-md) {
+        font-size: 1.5rem;
+    }
+
+    @media (--min-xl) {
+        font-size: 1.75rem;
+    }
+
+    @media (--min-xxl) {
+        font-size: 2rem;
+    }
 }

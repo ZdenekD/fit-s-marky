@@ -44,10 +44,13 @@
     --color-gray-darken-2: #646194;
     --color-gray-darken-3: #53517b;
     --gap: 10px;
+    --menu-size: 60px;
     --transition-in: 0.2s;
     --transition-out: 0.4s;
     --transition-timing: ease-in-out;
     --zindex-figure: 10;
+    --zindex-nav: 19;
+    --zindex-menu: 20;
     --zindex-modal: 100;
     --zindex-loader: 110;
     --border-radius: 8px;

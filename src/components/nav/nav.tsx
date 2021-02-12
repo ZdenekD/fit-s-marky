@@ -1,17 +1,20 @@
-/* eslint-disable react/display-name */
+import React from 'react';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
 import {motion} from 'framer-motion';
 import icons from '../../UI/icons';
 import pages from '../../data/pages';
 import styles from './nav.module.css';
+import useWindowSize from '../../hooks/useWindowSize';
 import {useStateValue} from '../../state';
 import ActionsEnum from '../../state/cursor/type/actions';
 import Anchor from '../../UI/anchor';
 
 const Nav: React.FC = () => {
     const router = useRouter();
-    const {dispatch} = useStateValue();
+    const {state, dispatch} = useStateValue();
+    const [isOpen, setOpen] = React.useState(state.menu.isOpen);
+    const {width} = useWindowSize();
     const handleClick = (event: React.MouseEvent) => {
         dispatch({
             type: ActionsEnum.save,
@@ -48,8 +51,16 @@ const Nav: React.FC = () => {
         exit: {translateX: 5},
     };
 
+    if (width >= 1100 && !isOpen) {
+        setOpen(true);
+    }
+
+    if (width < 1100 && isOpen !== state.menu.isOpen) {
+        setOpen(state.menu.isOpen);
+    }
+
     return (
-        <nav className={styles.nav} data-test="component-nav">
+        <nav className={`${styles.nav} ${isOpen ? styles.visible : styles.hidden}`} data-test="component-nav">
             <motion.ul
                 initial="initial"
                 animate="enter"

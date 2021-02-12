@@ -1,0 +1,56 @@
+.menu {
+    width: var(--menu-size);
+    height: var(--menu-size);
+    display: block;
+    position: absolute;
+    top: 50%;
+    z-index: var(--zindex-menu);
+    background-color: var(--color-blue-lighten-3);
+    transform: translateY(-50%);
+    transition-property: box-shadow, width, height;
+    transition-duration: var(--transition-out);
+    transition-timing-function: var(--transition-timing);
+    box-shadow: 2px 4px 12px 0 var(--color-blue-lighten-3);
+    border-radius: 50%;
+
+    @media (--min-xs) {
+        left: var(--gap);
+    }
+
+    @media (--min-sm) {
+        left: calc(2 * var(--gap));
+    }
+
+    @media (--min-md) {
+        left: calc(4 * var(--gap));
+    }
+
+    @media (--min-xl) {
+        display: none;
+    }
+
+    @media (--max-sm) {
+        --menu-size: 50px;
+    }
+
+    &:active {
+        transition-duration: var(--transition-in);
+    }
+}
+
+.icon {
+    width: var(--menu-size);
+    height: var(--menu-size);
+    fill: none;
+    stroke: var(--color-black-lighten-3);
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition-property: stroke, width, height;
+    transition-duration: var(--transition-out);
+    transition-timing-function: var(--transition-timing);
+
+    path {
+        transform-origin: center;
+    }
+}

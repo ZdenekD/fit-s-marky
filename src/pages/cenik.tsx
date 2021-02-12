@@ -39,9 +39,9 @@ const Page: React.FC = () => {
                         className={styles.item}
                         variants={item}
                     >
-                        <div className={styles.icon}>
+                        <i className={styles.icon}>
                             {icons[IconsEnum.cobraPose]()}
-                        </div>
+                        </i>
                         <h2>Individuální lekce pilates (doma, kancelář)</h2>
                         <strong>500 Kč / hodina</strong>
                     </motion.li>
@@ -49,9 +49,9 @@ const Page: React.FC = () => {
                         className={styles.item}
                         variants={item}
                     >
-                        <div className={styles.icon}>
+                        <i className={styles.icon}>
                             {icons[IconsEnum.warriorPose]()}
-                        </div>
+                        </i>
                         <h2>Individuální lekce jógy/powerjógy (doma, kancelář)</h2>
                         <strong>500 Kč / hodina</strong>
                     </motion.li>
@@ -59,10 +59,10 @@ const Page: React.FC = () => {
                         className={styles.item}
                         variants={item}
                     >
-                        <div className={styles.icon}>
+                        <i className={styles.icon}>
                             {icons[IconsEnum.boatPose]()}
                             {icons[IconsEnum.boatPose]()}
-                        </div>
+                        </i>
                         <h2>Individuální lekce pilates/jógy/powerjógy pro dvojice</h2>
                         <strong>400 Kč / hodina | osoba</strong>
                     </motion.li>
@@ -70,9 +70,9 @@ const Page: React.FC = () => {
                         className={styles.item}
                         variants={item}
                     >
-                        <div className={styles.icon}>
+                        <i className={styles.icon}>
                             {icons[IconsEnum.pranayamaPose]()}
-                        </div>
+                        </i>
                         <h2>Individuální lekce jógy pro těhotné</h2>
                         <strong>600 Kč / hodina</strong>
                     </motion.li>

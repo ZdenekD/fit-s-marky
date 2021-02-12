@@ -1,6 +1,13 @@
 .section {
-    padding: calc(2 * var(--gap)) calc(4 * var(--gap));
     display: grid;
     grid-area: content;
     position: relative;
+
+    @media (--min-xs) {
+        padding: calc(2 * var(--gap));
+    }
+
+    @media (--min-md) {
+        padding: calc(2 * var(--gap)) calc(4 * var(--gap));
+    }
 }

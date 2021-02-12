@@ -49,7 +49,7 @@ const ContactForm: React.FC = () => {
     return (
         <>
             {isDisabled && <Loader />}
-            <Form onSubmit={handleSubmit(onSubmit)}>
+            <Form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
                 <Input
                     ref={register({
                         pattern: {

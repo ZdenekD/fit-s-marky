@@ -1,12 +1,35 @@
 .main {
     min-height: 100vh;
     display: grid;
-    grid-template: 12vh max-content auto minmax(4vh, 8vh) / 20vw auto;
-    grid-template-areas: 'header header'
-        'nav content'
-        'aside content'
-        'footer footer';
     filter: blur(0);
+
+    @media (--min-xs) {
+        grid-template: minmax(calc(60px + (2 * var(--gap))), max-content) auto auto max-content / auto;
+        grid-template-areas: 'header'
+            'content'
+            'aside'
+            'footer';
+    }
+
+    @media (--min-md) {
+        grid-template: 12vh auto auto minmax(4vh, 8vh) / auto;
+        grid-template-areas: 'header'
+            'content'
+            'aside'
+            'footer';
+    }
+
+    @media (--min-xl) {
+        grid-template: 12vh max-content auto minmax(4vh, 8vh) / 25vw auto;
+        grid-template-areas: 'header header'
+            'nav content'
+            'aside content'
+            'footer footer';
+    }
+
+    @media (--min-xxl) {
+        grid-template-columns: 20vw auto;
+    }
 }
 
 .alert {

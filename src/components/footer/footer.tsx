@@ -5,8 +5,8 @@ import styles from './footer.module.css';
 
 const Footer: React.FC = () => (
     <footer className={styles.footer} data-test="component-footer">
-        <div className={styles.rights}>{icons[IconsEnum.copyright](16)} Fit s Marky | All Rights Reserved</div>
-        <div className={styles.contact}>
+        <section className={styles.rights}>{icons[IconsEnum.copyright](16)} Fit s Marky | All Rights Reserved</section>
+        <section className={styles.contact}>
             <span className={styles.link}>
                 {icons[IconsEnum.phone](20)}
                 <Anchor href="tel:728618337" title="Telefon">728 618 337</Anchor>
@@ -25,7 +25,7 @@ const Footer: React.FC = () => (
                     {icons[IconsEnum.thumbUp]()}
                 </Anchor>
             </span>
-        </div>
+        </section>
 
     </footer>
 );
