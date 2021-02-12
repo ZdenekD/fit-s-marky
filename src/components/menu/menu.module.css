@@ -14,10 +14,6 @@
     border-radius: 50%;
 
     @media (--min-xs) {
-        left: var(--gap);
-    }
-
-    @media (--min-sm) {
         left: calc(2 * var(--gap));
     }
 

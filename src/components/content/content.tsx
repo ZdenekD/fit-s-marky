@@ -12,8 +12,6 @@ const Content: React.FC<IContent> = ({children, className = ''}) => {
     const {dispatch} = useStateValue();
 
     React.useEffect(() => {
-        console.log('CONTENT');
-
         dispatch({
             type: ActionsEnum.set,
             payload: {menu: {isOpen: false}},

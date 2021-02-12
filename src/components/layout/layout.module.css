@@ -32,7 +32,7 @@
     }
 }
 
-.alert {
+.blur {
     filter: blur(4px);
     transition: filter var(--transition-in) linear;
 }

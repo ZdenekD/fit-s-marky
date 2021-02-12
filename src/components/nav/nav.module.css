@@ -2,11 +2,6 @@
     padding: var(--gap) calc(3 * var(--gap));
     display: grid;
     grid-area: nav;
-    visibility: hidden;
-    opacity: 0;
-    transition-property: visibility, opacity;
-    transition-duration: var(--transition-in);
-    transition-timing-function: var(--transition-timing);
 
     @media (--max-xl) {
         width: 100vw;
@@ -14,40 +9,18 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: var(--zindex-nav);
+        z-index: -1;
         overflow: hidden;
-        background: var(--color-white);
+        background: rgba(255, 255, 255, 0.95);
     }
 }
 
-.visible {
-    opacity: 1;
-    visibility: visible;
-}
-
-.hidden {
-    opacity: 0;
-    visibility: hidden;
+.isOpen {
+    z-index: var(--zindex-nav);
 }
 
 .list {
     margin: 0 auto;
-
-    @media (--min-xs) {
-        width: 80vw;
-    }
-
-    @media (--min-sm) {
-        width: 70vw;
-    }
-
-    @media (--min-md) {
-        width: 60vw;
-    }
-
-    @media (--min-lg) {
-        width: 50vw;
-    }
 
     @media (--min-xl) {
         width: 100%;

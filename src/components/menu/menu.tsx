@@ -29,7 +29,7 @@ const Menu: React.FC = () => {
                 <Path
                     d="M30,40 L70,40 Z"
                     variants={{
-                        open: {d: 'M35,60 L65,40 Z'},
+                        open: {d: 'M38,60 L62,40 Z'},
                         close: {d: 'M30,40 L70,40 Z'},
                     }}
                 />
@@ -44,7 +44,7 @@ const Menu: React.FC = () => {
                 <Path
                     d="M30,60 L70,60 Z"
                     variants={{
-                        open: {d: 'M35,40 L65,60 Z'},
+                        open: {d: 'M38,40 L62,60 Z'},
                         close: {d: 'M30,60 L70,60 Z'},
                     }}
                 />

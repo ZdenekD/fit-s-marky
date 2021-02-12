@@ -48,7 +48,7 @@ const Layout: React.FC<ILayout> = ({children, className = ''}) => {
                     <script async defer data-domain="fit-s-marky.cz" src="https://plausible.io/js/plausible.js"></script>
                 )}
             </Head>
-            <main className={`${styles.main} ${state.message.content ? styles.alert : ''}`}>
+            <main className={`${styles.main} ${state.message.content ? styles.blur : ''}`}>
                 <Header />
                 <Nav />
                 <Aside />
