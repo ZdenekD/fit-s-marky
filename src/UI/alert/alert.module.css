@@ -7,6 +7,7 @@
     top: 2vw;
     right: 5vw;
     z-index: var(--zindex-modal);
+    overflow: hidden;
     background: var(--alert-background, var(--color-white-darken-1));
     color: var(--alert-color, currentColor);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -59,4 +60,12 @@
     font-size: 2rem;
     font-weight: 400;
     border-radius: 0 var(--border-radius) 0 calc(var(--border-radius) / 2);
+}
+
+.progress {
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.33);
 }

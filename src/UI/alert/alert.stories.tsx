@@ -26,5 +26,5 @@ export const danger: React.FC = () => (
 );
 
 export const timeout: React.FC = () => (
-    <Alert isOpen={true} timeout={3000}>Alert hide after 3s</Alert>
+    <Alert isOpen={true} timeout={3}>Alert hide after 3s</Alert>
 );

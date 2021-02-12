@@ -24,16 +24,19 @@ const Alert: React.FC<IAlert> = ({
 }) => {
     const [isOpened, setOpened] = React.useState(isOpen);
     const {dispatch} = useStateValue();
-    const handleClick = () => {
+    const remove = () => {
         setOpened(false);
         dispatch({type: ActionsEnum.remove});
+    };
+    const handleClick = () => {
+        remove();
     };
 
     React.useEffect(() => {
         if (timeout) {
             setTimeout(() => {
-                setOpened(false);
-            }, timeout);
+                remove();
+            }, timeout * 1000);
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -57,6 +60,13 @@ const Alert: React.FC<IAlert> = ({
                         className={`${styles.alert} ${variant ? styles[variant] : ''} ${className}`}
                         data-test="component-alert"
                     >
+                        {timeout && (
+                            <motion.div
+                                initial={{width: 0}}
+                                animate={{width: '100%', transition: {duration: (timeout)}}}
+                                className={styles.progress}
+                            />
+                        )}
                         <Button aria-label="Zavřít" className={styles.button} onClick={handleClick}>&times;</Button>
                         {children}
                     </motion.div>
