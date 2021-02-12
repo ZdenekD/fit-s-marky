@@ -23,12 +23,18 @@ cd fit-s-marky/
 yarn
 ```
 
+### CSS Modules fix
+
+Because of problems with NextJS CSS modules and Framer-motion (if is used <AnimatePresence exitBeforeEnter>, NextJS change styles immediately and animation `before unmount` is unstyled).
+Solution is use @zeit/next-css package, but there is invalid configuration for postcss, so edit files are in folder **next-css**. For proper work it's necessary use @zeit/next-css package
+and edited files from folder 'next-css'.
+
 ### Development
 
 It's automatically pushed to [Zeit.co](https://zeit.co/dashboard). Production branch is **master**, other branches for development (every pushed branch is build)
 
 ```
-master branch - production
+master branch - **production**
 develop branch - stage/development preview
 ```
 
