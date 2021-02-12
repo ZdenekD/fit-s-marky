@@ -73,8 +73,9 @@
   ],
   "build": {
     "env": {
-      "SENDGRID_API_KEY": "@sendgrid_api_key_fit_s_marky",
-      "SENDGRID_TEMPLATE_ID": "@sendgrid_template_id_fit_s_marky"
+      "EMAIL_RECIPIENT": "@email-recipient-fit-s-marky",
+      "SENDGRID_API_KEY": "@sendgrid-api-key-fit-s-marky",
+      "SENDGRID_TEMPLATE_ID": "@sendgrid-template-id-fit-s-marky"
     }
   }
 }
