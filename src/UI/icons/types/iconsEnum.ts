@@ -17,15 +17,7 @@ enum IconsEnum {
     cobraPose = 'cobraPose',
     warriorPose = 'warriorPose',
     boatPose = 'boatPose',
-    pranayamaPose = 'pranayamaPose',
-    decoration1 = 'decoration1',
-    decoration2 = 'decoration2',
-    decoration3 = 'decoration3',
-    decoration4 = 'decoration4',
-    decoration5 = 'decoration5',
-    decoration6 = 'decoration6',
-    decoration7 = 'decoration7',
-    decoration8 = 'decoration8'
+    pranayamaPose = 'pranayamaPose'
 }
 
 export default IconsEnum;
