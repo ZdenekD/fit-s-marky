@@ -23,7 +23,7 @@
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    color: var(--color-black);
+    color: var(--color-blue);
     font-size: 1.25rem;
     text-align: center;
     text-decoration: none;
@@ -42,4 +42,9 @@
     @media (--min-xxl) {
         font-size: 2rem;
     }
+}
+
+.strong {
+    color: var(--color-red);
+    font-weight: 400;
 }

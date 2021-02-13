@@ -1,7 +1,7 @@
 .alert {
     width: 75vw;
     max-width: 600px;
-    min-height: calc(var(--gap) + 40px);
+    min-height: 40px;
     padding: var(--gap) calc(var(--gap) + 40px) var(--gap) var(--gap);
     position: fixed;
     top: 2vw;
@@ -10,6 +10,7 @@
     overflow: hidden;
     background: var(--alert-background, var(--color-white-darken-1));
     color: var(--alert-color, currentColor);
+    line-height: 1.2;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: var(--border-radius);
 }
@@ -57,9 +58,16 @@
     position: absolute;
     top: 0;
     right: 0;
+    color: var(--color-black);
     font-size: 2rem;
+    line-height: 1.2;
     font-weight: 400;
-    border-radius: 0 var(--border-radius) 0 calc(var(--border-radius) / 2);
+    border-radius: 0 var(--border-radius) calc(var(--border-radius) / 2) 0;
+
+    &:focus,
+    &:hover {
+        box-shadow: none;
+    }
 }
 
 .progress {

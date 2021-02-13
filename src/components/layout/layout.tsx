@@ -7,7 +7,6 @@ import Nav from '../nav';
 import Aside from '../aside';
 import Content from '../content';
 import Alert from '../../UI/alert';
-import Decoration from '../decoration';
 import {useStateValue} from '../../state';
 import pages from '../../data/pages';
 import VariantsEnum from '../../types/VariantsEnum';
@@ -61,8 +60,6 @@ const Layout: React.FC<ILayout> = ({children, className = ''}) => {
                 <Aside />
                 <Content className={className}>
                     {children}
-
-                    <Decoration />
                 </Content>
                 <Footer />
             </main>
