@@ -1,4 +1,5 @@
 import {motion} from 'framer-motion';
+import {Player} from '@lottiefiles/react-lottie-player';
 import Layout from '../components/layout';
 import Article from '../components/article';
 import {heading} from '../helpers/animation/heading';
@@ -14,6 +15,11 @@ const Error: React.FC = () => (
             >
                 Zadaná stránka neexistuje
             </motion.h2>
+            <Player
+                loop
+                autoplay
+                src="/animation_02.json"
+            />
         </Article>
     </Layout>
 );
