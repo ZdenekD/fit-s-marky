@@ -34,9 +34,9 @@ const pages: IPages[] = [
     {
         id: `${prefix}_p4`,
         icon: IconsEnum.calendar,
-        title: 'Kde a kdy cvičím',
+        title: 'Kdy a kde cvičím',
         slug: 'cviceni',
-        description: 'Kde a kdy můžeme cvičit',
+        description: 'Kdy a kde můžeme cvičit',
     },
     {
         id: `${prefix}_p5`,

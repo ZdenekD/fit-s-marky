@@ -74,6 +74,7 @@ const ContactForm: React.FC = () => {
                     required
                     name="email"
                     label="E-mail"
+                    type="email"
                     disabled={isDisabled}
                     maxLength={90}
                     error={errors.email?.message}
