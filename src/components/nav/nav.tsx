@@ -7,7 +7,6 @@ import pages from '../../data/pages';
 import styles from './nav.module.css';
 import useWindowSize from '../../hooks/useWindowSize';
 import {useStateValue} from '../../state';
-import ActionsEnum from '../../state/cursor/type/actions';
 import Anchor from '../../UI/anchor';
 
 const Nav: React.FC = () => {
@@ -16,17 +15,6 @@ const Nav: React.FC = () => {
     const [isOpen, setOpen] = React.useState(state.menu.isOpen);
     const [isMobile, setMobile] = React.useState(false);
     const {width} = useWindowSize();
-    const handleClick = (event: React.MouseEvent) => {
-        dispatch({
-            type: ActionsEnum.save,
-            payload: {
-                cursor: {
-                    top: event.clientY,
-                    left: event.clientX,
-                },
-            },
-        });
-    };
     const nav = {
         initial: {opacity: isOpen ? 1 : 0},
         enter: {
@@ -119,7 +107,7 @@ const Nav: React.FC = () => {
                                     </>
                                 )}
                                 <Link passHref href={`/${page.slug}`}>
-                                    <Anchor href={`/${page.slug}`} className={`${styles.link} ${isActive ? styles.linkActive : ''}`} onClick={handleClick}>
+                                    <Anchor href={`/${page.slug}`} className={`${styles.link} ${isActive ? styles.linkActive : ''}`}>
                                         {page.title}
                                     </Anchor>
                                 </Link>

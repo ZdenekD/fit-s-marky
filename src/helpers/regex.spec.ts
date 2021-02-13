@@ -1,6 +1,18 @@
 import regex from './regex';
 
 describe('Helper - regex', () => {
+    it('returns `true` if name contains only valid characters', () => {
+        const value = 'Jméno a příjmení';
+
+        expect(regex.name.test(value)).toBe(true);
+    });
+
+    it('returns `false` if name contains forbidden characters', () => {
+        const value = 'Jméno a příjmení!';
+
+        expect(regex.name.test(value)).toBe(false);
+    });
+
     it('returns `true` if text contains only valid characters', () => {
         const value = 'Toto je nejneobhospodařovávanější útočná puška! Je to tak?';
 

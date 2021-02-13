@@ -53,7 +53,7 @@ const ContactForm: React.FC = () => {
                 <Input
                     ref={register({
                         pattern: {
-                            value: regex.text,
+                            value: regex.name,
                             message: 'Jsou zadány nepovolené znaky.',
                         },
                     })}

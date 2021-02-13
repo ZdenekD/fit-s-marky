@@ -29,14 +29,14 @@ const Layout: React.FC<ILayout> = ({children, className = ''}) => {
                 <meta name="viewport" content="width=device-width, initial-scale = 1.0, shrink-to-fit=no" />
                 <meta name="author" content="ZdenekD, zdenekd.cz" />
                 <title>{item?.title || 'Fit s Marky'}</title>
-                <meta name="description" content={item?.description} />
-                <meta property="og:title" content={item?.title} />
+                <meta name="description" content={item?.description || 'Jmenuji se Markéta Hříbalová a jsem zkušenou instruktorkou pilates, jemné jógy, office jógy a jógy pro těhotné.'} />
+                <meta property="og:title" content={item?.title || 'Fit s Marky'} />
                 <meta property="og:type" content="fitness.course" />
-                <meta property="og:description" content={item?.description} />
+                <meta property="og:description" content={item?.description || 'Jmenuji se Markéta Hříbalová a jsem zkušenou instruktorkou pilates, jemné jógy, office jógy a jógy pro těhotné.'} />
                 <meta property="og:url" content="https://fit-s-marky.cz/" />
                 <meta name="twitter:card" content="summary" />
-                <meta name="twitter:title" content={item?.title} />
-                <meta name="twitter:description" content={item?.description} />
+                <meta name="twitter:title" content={item?.title || 'Fit s Marky'} />
+                <meta name="twitter:description" content={item?.description || 'Jmenuji se Markéta Hříbalová a jsem zkušenou instruktorkou pilates, jemné jógy, office jógy a jógy pro těhotné.'} />
                 <meta name="twitter:site" content="https://fit-s-marky.cz/" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-status-bar-style" content="black" />

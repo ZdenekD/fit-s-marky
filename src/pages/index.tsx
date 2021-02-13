@@ -32,7 +32,7 @@ const Page: React.FC = () => (
                     a&nbsp;zdravý životní styl, až se&nbsp;tato záliba stala nejen mým koníčkem, ale i&nbsp;zaměstnáním.
                 </p>
                 <p>
-                    Stala jsem se&nbsp;zkušenou instruktorkou pilates, jemné jogy, office jogy a&nbsp;jogy pro těhotné.
+                    Stala jsem se&nbsp;zkušenou instruktorkou pilates, jemné jógy, office jógy a&nbsp;jógy pro těhotné.
                 </p>
             </motion.div>
         </Article>
