@@ -28,7 +28,7 @@ const Layout: React.FC<ILayout> = ({children, className = ''}) => {
                 <meta charSet="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale = 1.0, shrink-to-fit=no" />
                 <meta name="author" content="ZdenekD, zdenekd.cz" />
-                <title>{item?.title}</title>
+                <title>{item?.title || 'Fit s Marky'}</title>
                 <meta name="description" content={item?.description} />
                 <meta property="og:title" content={item?.title} />
                 <meta property="og:type" content="fitness.course" />
@@ -51,7 +51,7 @@ const Layout: React.FC<ILayout> = ({children, className = ''}) => {
                 <meta name="msapplication-TileColor" content="#6c6ce5" />
                 <meta name="theme-color" content="#ffffff" />
                 {process.env.NODE_ENV === 'production' && (
-                    <script async defer data-domain="fit-s-marky.cz" src="https://plausible.io/js/plausible.js"></script>
+                    <script async defer data-domain="fit-s-marky.cz" src="https://plausible.io/js/plausible.js" />
                 )}
             </Head>
             <main className={`${styles.main} ${state.message.content ? styles.blur : ''}`}>

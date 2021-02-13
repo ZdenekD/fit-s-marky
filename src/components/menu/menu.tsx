@@ -20,6 +20,7 @@ const Menu: React.FC = () => {
             animate={state.menu.isOpen ? 'open' : 'closed'}
             className={styles.menu}
             aria-label='menu'
+            type="button"
             onClick={handleClick}
         >
             <svg

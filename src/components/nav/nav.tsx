@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
 import {motion} from 'framer-motion';
-import {createSemanticDiagnosticsBuilderProgram} from 'typescript';
 import icons from '../../UI/icons';
 import pages from '../../data/pages';
 import styles from './nav.module.css';
