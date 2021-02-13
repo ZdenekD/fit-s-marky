@@ -23,7 +23,7 @@
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    color: var(--color-blue);
+    color: var(--color-blue-darken-1);
     font-size: 1.25rem;
     text-align: center;
     text-decoration: none;
