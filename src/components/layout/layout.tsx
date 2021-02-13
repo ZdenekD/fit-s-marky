@@ -49,9 +49,8 @@ const Layout: React.FC<ILayout> = ({children, className = ''}) => {
                 <link rel="manifest" href="/site.webmanifest" />
                 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
                 <meta name="msapplication-TileColor" content="#6c6ce5" />
-                <meta name="theme-color" content="#ffffff" />
                 {process.env.NODE_ENV === 'production' && (
-                    <script async defer data-domain="fit-s-marky.cz" src="https://plausible.io/js/plausible.js" />
+                    <script async defer data-domain="fit-s-marky.cz" src="https://plausible.io/js/plausible.js" crossOrigin="anonymous" />
                 )}
             </Head>
             <main className={`${styles.main} ${state.message.content ? styles.blur : ''}`}>
