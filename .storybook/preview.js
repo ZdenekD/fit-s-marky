@@ -1,4 +1,5 @@
-import {addParameters} from '@storybook/react';
+import {addParameters, addDecorator} from '@storybook/react';
+import {withNextRouter} from 'storybook-addon-next-router';
 import '../src/assets/styles/index.css';
 
 const viewports = {
@@ -30,6 +31,7 @@ const viewports = {
             height: '1024px'
         }
     }
-}
+};
 
-addParameters({viewport: {viewports}})
+addDecorator(withNextRouter());
+addParameters({viewport: {viewports}});

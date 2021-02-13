@@ -7,10 +7,10 @@ exports[`Alert match snapshot 1`] = `
 </div>
 <div class="alert  "
      data-test="component-alert"
-     style="opacity:0"
+     style="opacity:0;transform:scale(0.75) translateZ(0)"
 >
   <button type="button"
-          class="button  "
+          class="button  button"
           data-test="component-button"
   >
     ×

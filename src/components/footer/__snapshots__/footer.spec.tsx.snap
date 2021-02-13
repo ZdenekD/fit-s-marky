@@ -4,7 +4,7 @@ exports[`Footer match snapshot 1`] = `
 <footer class="footer"
         data-test="component-footer"
 >
-  <div class="rights">
+  <section class="rights">
     <svg class="icon icon-tabler icon-tabler-copyright"
          width="16"
          height="16"
@@ -29,8 +29,8 @@ exports[`Footer match snapshot 1`] = `
       </path>
     </svg>
     Fit s Marky | All Rights Reserved
-  </div>
-  <div class="contact">
+  </section>
+  <section class="contact">
     <span class="link">
       <svg class="icon icon-tabler icon-tabler-phone"
            width="20"
@@ -120,6 +120,6 @@ exports[`Footer match snapshot 1`] = `
         </svg>
       </a>
     </span>
-  </div>
+  </section>
 </footer>
 `;

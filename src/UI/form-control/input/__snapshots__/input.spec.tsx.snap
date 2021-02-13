@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input match snapshot 1`] = `
-<div class="control">
+<div class="control ">
   <label for="_5innv1"
          class="label "
   >
@@ -11,7 +11,7 @@ exports[`Input match snapshot 1`] = `
     <input type="text"
            id="_5innv1"
            name="input"
-           class="input   "
+           class="input  "
            data-test="component-input"
     >
   </div>

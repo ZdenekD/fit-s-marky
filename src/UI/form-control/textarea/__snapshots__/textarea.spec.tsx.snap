@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Textarea match snapshot 1`] = `
-<div class="control">
+<div class="control ">
   <label for="_5innv1"
          class="label "
   >
@@ -10,7 +10,7 @@ exports[`Textarea match snapshot 1`] = `
   <div class="wrapper">
     <textarea id="_5innv1"
               name="textarea"
-              class="textarea    "
+              class="textarea   "
               data-test="component-textarea"
     >
     </textarea>
