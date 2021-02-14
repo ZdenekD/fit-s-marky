@@ -40,7 +40,7 @@ const Layout: React.FC<ILayout> = ({children, className = ''}) => {
                 <meta name="twitter:site" content="https://fit-s-marky.cz/" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-                <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="true" />
+                <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="anonymous" />
                 <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
                 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap&subset=latin-ext" rel="stylesheet" crossOrigin="anonymous" />
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />

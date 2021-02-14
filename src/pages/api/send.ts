@@ -17,7 +17,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse): void
             text: message,
             templateId: process.env.SENDGRID_TEMPLATE_ID,
             dynamicTemplateData: {
-                subject: '🎈🎉 Formulář z webu 🧘',
+                subject: '🎉 Zpráva z webu fit-🎈-marky.cz 🧘',
                 name,
                 email,
                 message,

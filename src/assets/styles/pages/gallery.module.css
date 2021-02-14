@@ -56,10 +56,6 @@
     &:focus {
         cursor: pointer;
 
-        &::before {
-            opacity: 1;
-        }
-
         .heading {
             opacity: 1;
             transform: translateX(0);
@@ -76,8 +72,23 @@
             transition-delay: 0.1s;
         }
     }
+}
 
-    &::before {
+.link {
+    padding: 0;
+    color: var(--color-black);
+    line-height: 0;
+    border: none;
+
+    &:focus,
+    &:hover {
+
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &::after {
         position: absolute;
         top: var(--gap);
         right: var(--gap);
@@ -90,13 +101,6 @@
         transition: opacity var(--transition-out) var(--transition-timing);
         border-radius: calc(3 * var(--border-radius));
     }
-}
-
-.link {
-    padding: 0;
-    color: var(--color-black);
-    line-height: 0;
-    border: none;
 }
 
 .heading {
