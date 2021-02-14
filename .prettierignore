@@ -9,3 +9,4 @@ doc/*
 test/*
 __test__/*
 hint-report/*
+*.html
