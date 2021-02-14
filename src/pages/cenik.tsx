@@ -61,22 +61,24 @@ const Page: React.FC = () => (
                     <strong>600 Kč / hodina</strong>
                 </motion.li>
             </motion.ul>
-            <Link passHref href="/kontakt">
-                <motion.div
-                    initial={{opacity: 0, scale: 0.96}}
-                    animate={{opacity: 1, scale: 1}}
-                    exit={{
-                        opacity: 0,
-                        scale: 0.96,
-                        transition: {duration: 0.5, delay: 0.2},
-                    }}
-                    transition={{duration: 0.5, delay: 0.8}}
-                >
+
+            <motion.div
+                initial={{opacity: 0, scale: 0.96}}
+                animate={{opacity: 1, scale: 1}}
+                exit={{
+                    opacity: 0,
+                    scale: 0.96,
+                    transition: {duration: 0.5, delay: 0.2},
+                }}
+                transition={{duration: 0.5, delay: 0.8}}
+            >
+                <Link passHref href="/kontakt">
                     <Button className={styles.button} variant={VariantsEnum.info}>
                         Kontaktuje mne
                     </Button>
-                </motion.div>
-            </Link>
+                </Link>
+            </motion.div>
+
         </Article>
     </Layout>
 );
