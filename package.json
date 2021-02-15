@@ -8,7 +8,6 @@
   "homepage": "git@github.com:ZdenekD/fit-s-marky.git#readme",
   "repository": "git@github.com:ZdenekD/fit-s-marky.git",
   "scripts": {
-    "clean": "rm -rf ./public/*",
     "reinstall": "rm -rf 'yarn.lock' 'node_modules' && yarn",
     "dev": "next dev",
     "start": "next start",
@@ -24,8 +23,8 @@
     "hint:prod": "hint https://fit-s-marky.cz"
   },
   "engines": {
-    "node": ">=10.13.0",
-    "npm": ">=6.4.1"
+    "node": ">=12.0.0",
+    "npm": ">=6.9.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -95,7 +94,6 @@
     "react-dom": "^17.0.1",
     "react-hook-form": "^6.15.1",
     "react-id-generator": "^3.0.1",
-    "react-modal": "^3.11.1",
     "typescript": "^4.1.3"
   }
 }
