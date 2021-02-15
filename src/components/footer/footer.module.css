@@ -13,7 +13,8 @@
 
     @media (--min-md) {
         grid-template-columns: auto auto;
-        grid-template-areas: 'rights contact';
+        grid-template-areas: 'clients clients'
+        'rights contact';
     }
 
     @media (--min-xl) {

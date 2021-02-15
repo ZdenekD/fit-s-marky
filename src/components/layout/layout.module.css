@@ -12,7 +12,7 @@
     }
 
     @media (--min-md) {
-        grid-template: 12vh auto auto minmax(4vh, 8vh) / auto;
+        grid-template: 12vh auto auto max-content / auto;
         grid-template-areas: 'header'
             'content'
             'aside'
@@ -20,7 +20,7 @@
     }
 
     @media (--min-xl) {
-        grid-template: 12vh max-content auto minmax(4vh, 8vh) / 25vw auto;
+        grid-template: 12vh max-content auto max-content / 25vw auto;
         grid-template-areas: 'header header'
             'nav content'
             'aside content'
