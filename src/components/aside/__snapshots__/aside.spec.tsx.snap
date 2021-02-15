@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Aside match snapshot 1`] = `
+<aside class="aside"
+       data-test="component-aside"
+       style="opacity:0.25"
+>
+  <div>
+    <div id="lottie"
+         style="background:transparent;margin:0 auto;outline:none;overflow:hidden"
+    >
+    </div>
+  </div>
+</aside>
+`;

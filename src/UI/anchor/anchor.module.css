@@ -1,0 +1,14 @@
+.anchor {
+    padding-bottom: 1px;
+    color: var(--color-blue);
+    text-decoration: none;
+    transition: all var(--transition-out) var(--transition-timing);
+    border-bottom: 1px solid;
+
+    &:focus,
+    &:hover {
+        color: var(--color-red);
+        transition-duration: var(--transition-in);
+        border-bottom-color: transparent;
+    }
+}

@@ -1,6 +1,6 @@
-import {addDecorator, addParameters} from '@storybook/react';
-import React from 'react';
-import '../src/index.css';
+import {addParameters, addDecorator} from '@storybook/react';
+import {withNextRouter} from 'storybook-addon-next-router';
+import '../src/assets/styles/index.css';
 
 const viewports = {
     320: {
@@ -31,7 +31,7 @@ const viewports = {
             height: '1024px'
         }
     }
-}
+};
 
-addDecorator(storyFn => <>{storyFn()}</>)
-addParameters({viewport: {viewports}})
+addDecorator(withNextRouter());
+addParameters({viewport: {viewports}});

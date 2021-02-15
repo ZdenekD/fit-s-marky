@@ -1,0 +1,75 @@
+@keyframes line-in {
+    0% {
+        opacity: 0;
+        transform: translateX(25vw);
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.article {
+    width: 100%;
+    max-width: 90ch;
+    margin: 0 auto;
+
+    h2 {
+        margin-top: calc(3 * var(--gap));
+        margin-bottom: calc(2 * var(--gap));
+        padding-bottom: calc(0.5 * var(--gap));
+        position: relative;
+        font-size: 1rem;
+
+        @media (--min-md) {
+            font-size: 1.2rem;
+        }
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+
+        &::after {
+            width: 100%;
+            height: 2px;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: '';
+            opacity: 0;
+            background: var(--color-red-lighten-3);
+
+            @media (prefers-reduced-motion: reduce) {
+                opacity: 1;
+            }
+
+            @media (prefers-reduced-motion: no-preference) {
+                animation: line-in 0.15s var(--transition-timing) forwards 0.2s;
+            }
+        }
+    }
+
+    p {
+        line-height: 1.5;
+
+        & + p {
+            margin-top: var(--gap);
+        }
+    }
+
+    :global .icon {
+        width: calc(3 * var(--gap));
+        height: calc(3 * var(--gap));
+        position: absolute;
+        top: calc(-0.75 * var(--gap));
+        left: calc(-1 * var(--gap));
+        z-index: -1;
+        opacity: 0.33;
+    }
+}

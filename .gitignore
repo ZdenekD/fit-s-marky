@@ -1,15 +1,14 @@
 # Dependency directories
-/vendor
-/node_modules
-/bower_components
-/jspm_packages
-/.pnp
+vendor
+node_modules
+bower_components
+jspm_packages
+.pnp
 .pnp.js
 
 # Build
 dist/
 build/
-public/
 
 # Database
 /db

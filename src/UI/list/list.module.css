@@ -1,0 +1,14 @@
+.list {
+    margin-bottom: var(--gap);
+    list-style-type: square;
+    list-style-position: inside;
+
+    .list {
+        margin-top: var(--gap);
+    }
+
+    strong {
+        margin-right: var(--gap);
+        color: var(--color-blue-lighten-1);
+    }
+}

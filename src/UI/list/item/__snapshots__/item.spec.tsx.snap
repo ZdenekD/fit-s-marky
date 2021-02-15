@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item match snapshot 1`] = `
+<li class="item "
+    data-test="component-item"
+>
+</li>
+`;

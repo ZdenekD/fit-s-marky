@@ -1,0 +1,112 @@
+.nav {
+    padding: var(--gap) calc(3 * var(--gap));
+    display: grid;
+    grid-area: nav;
+
+    @media (--max-xl) {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.95);
+    }
+}
+
+.isOpen {
+    z-index: var(--zindex-nav);
+}
+
+.list {
+    margin: 0 auto;
+
+    @media (--min-xl) {
+        width: 100%;
+    }
+
+    @media (--max-xl) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    border-radius: var(--border-radius);
+
+    &:focus:not(.itemActive),
+    &:hover:not(.itemActive) {
+        background-color: var(--color-white-darken-1);
+        color: var(--color-black-darken-3);
+
+        &,
+        svg,
+        .link {
+            transition-duration: var(--transition-in);
+        }
+
+        svg {
+            color: var(--color-blue-darken-1);
+        }
+    }
+
+    & + .item {
+        margin-top: var(--gap);
+    }
+
+    svg {
+        margin-left: var(--gap);
+        color: var(--color-red);
+    }
+
+    &,
+    svg,
+    .link {
+        transition-property: background-color, color, opacity;
+        transition-duration: var(--transition-out);
+        transition-timing-function: var(--transition-timing);
+    }
+}
+
+.itemActive {
+
+    &::before {
+        opacity: 0;
+    }
+
+    svg {
+        color: var(--color-blue-darken-2);
+    }
+}
+
+.link {
+    width: 100%;
+    padding: var(--gap);
+    color: var(--color-black);
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+
+    &:focus,
+    &:hover {
+        color: currentColor;
+    }
+}
+
+.linkActive {
+    color: var(--color-blue-lighten-1);
+    pointer-events: none;
+}
+
+.animation {
+    max-width: 240px;
+    margin-left: calc(2 * var(--gap));
+    display: flex;
+    align-items: flex-end;
+}

@@ -1,0 +1,10 @@
+.item {
+
+    &::marker {
+        color: var(--color-red);
+    }
+
+    .item {
+        padding-left: calc(2 * var(--gap));
+    }
+}
