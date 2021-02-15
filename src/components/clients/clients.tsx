@@ -11,6 +11,7 @@ const Clients: React.FC = () => (
         }}
         exit={{opacity: 0}}
         className={styles.section}
+        data-test="component-clients"
     >
         <h3 className={styles.heading}>Spokojení klienti:</h3>
         <ul className={styles.list}>

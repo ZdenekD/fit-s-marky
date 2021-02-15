@@ -1,12 +1,12 @@
 import {shallow, ShallowWrapper} from 'enzyme';
 import findComponent from '../../__test__/utils/helpers';
-import Content from '.';
+import Menu from '.';
 
-describe('Content', () => {
+describe('Menu', () => {
     let wrapper: ShallowWrapper;
 
     beforeEach(() => {
-        wrapper = shallow(<Content>Content</Content>);
+        wrapper = shallow(<Menu />);
     });
 
     it('match snapshot', () => {
@@ -14,7 +14,7 @@ describe('Content', () => {
     });
 
     it('renders without error', () => {
-        const component = findComponent(wrapper, 'component-content');
+        const component = findComponent(wrapper, 'component-menu');
 
         expect(component.exists()).toBe(true);
     });

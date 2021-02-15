@@ -1,12 +1,14 @@
 import {shallow, ShallowWrapper} from 'enzyme';
 import findComponent from '../../__test__/utils/helpers';
-import Content from '.';
+import Layout from '.';
 
-describe('Content', () => {
+jest.mock('next/router', () => ({useRouter: jest.fn().mockImplementation(() => ({pathname: '/'}))}));
+
+describe('Layout', () => {
     let wrapper: ShallowWrapper;
 
     beforeEach(() => {
-        wrapper = shallow(<Content>Content</Content>);
+        wrapper = shallow(<Layout>Layout content</Layout>);
     });
 
     it('match snapshot', () => {
@@ -14,7 +16,7 @@ describe('Content', () => {
     });
 
     it('renders without error', () => {
-        const component = findComponent(wrapper, 'component-content');
+        const component = findComponent(wrapper, 'component-layout');
 
         expect(component.exists()).toBe(true);
     });

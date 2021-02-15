@@ -1,3 +1,4 @@
+import React from 'react';
 import {shallow, ShallowWrapper} from 'enzyme';
 import findComponent from '../../__test__/utils/helpers';
 import Alert from '.';
@@ -17,5 +18,18 @@ describe('Alert', () => {
         const component = findComponent(wrapper, 'component-alert');
 
         expect(component.exists()).toBe(true);
+    });
+
+    it('remove component on click remove button', () => {
+        const setState = jest.fn();
+
+        React.useState = jest.fn(() => [true, setState]);
+
+        const container = shallow(<Alert>message</Alert>);
+        const component = findComponent(container, 'component-alert');
+
+        component.find('Button').simulate('click');
+
+        expect(setState).toHaveBeenCalledTimes(1);
     });
 });

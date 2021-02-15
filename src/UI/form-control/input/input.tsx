@@ -43,7 +43,7 @@ const Input: React.FC<IInput> = forwardRef(({
             <label htmlFor={id} className={`${styles.label} ${disabled ? styles.labelDisabled : ''}`}>
                 {label}
                 {required && (<sup className={styles.required}>*</sup>)}
-                {error && (<span className={styles.error}>{error}</span>)}
+                {error && (<span className={styles.error} data-test="component-input-error">{error}</span>)}
             </label>
 
             <div className={styles.wrapper}>

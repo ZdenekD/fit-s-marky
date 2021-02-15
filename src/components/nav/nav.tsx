@@ -11,7 +11,7 @@ import Anchor from '../../UI/anchor';
 
 const Nav: React.FC = () => {
     const router = useRouter();
-    const {state, dispatch} = useStateValue();
+    const {state} = useStateValue();
     const [isOpen, setOpen] = React.useState(state.menu.isOpen);
     const [isMobile, setMobile] = React.useState(false);
     const {width} = useWindowSize();
@@ -101,11 +101,7 @@ const Nav: React.FC = () => {
                                 variants={item}
                                 className={`${styles.item} ${isActive ? styles.itemActive : ''}`}
                             >
-                                {page.icon && (
-                                    <>
-                                        {icons[page.icon]()}
-                                    </>
-                                )}
+                                {page.icon && (<>{icons[page.icon]()}</>)}
                                 <Link passHref href={`/${page.slug}`}>
                                     <Anchor href={`/${page.slug}`} className={`${styles.link} ${isActive ? styles.linkActive : ''}`}>
                                         {page.title}

@@ -1,12 +1,12 @@
 import {shallow, ShallowWrapper} from 'enzyme';
 import findComponent from '../../__test__/utils/helpers';
-import Content from '.';
+import Aside from '.';
 
-describe('Content', () => {
+describe('Aside', () => {
     let wrapper: ShallowWrapper;
 
     beforeEach(() => {
-        wrapper = shallow(<Content>Content</Content>);
+        wrapper = shallow(<Aside />);
     });
 
     it('match snapshot', () => {
@@ -14,7 +14,7 @@ describe('Content', () => {
     });
 
     it('renders without error', () => {
-        const component = findComponent(wrapper, 'component-content');
+        const component = findComponent(wrapper, 'component-aside');
 
         expect(component.exists()).toBe(true);
     });

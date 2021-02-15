@@ -48,8 +48,8 @@ const ContactForm: React.FC = () => {
 
     return (
         <>
-            {isDisabled && <Loader />}
-            <Form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+            {isDisabled && <Loader data-test="component-loader" />}
+            <Form className={styles.form} data-test="component-contact" onSubmit={handleSubmit(onSubmit)}>
                 <Input
                     ref={register({
                         pattern: {

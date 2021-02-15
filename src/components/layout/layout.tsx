@@ -53,7 +53,7 @@ const Layout: React.FC<ILayout> = ({children, className = ''}) => {
                     <script async defer data-domain="fit-s-marky.cz" src="https://plausible.io/js/plausible.js" crossOrigin="anonymous" />
                 )}
             </Head>
-            <main className={`${styles.main} ${state.message.content ? styles.blur : ''}`}>
+            <main className={`${styles.main} ${state.message.content ? styles.blur : ''}`} data-test="component-layout">
                 <Header />
                 <Nav />
                 <Aside />

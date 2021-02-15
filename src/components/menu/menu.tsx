@@ -21,6 +21,7 @@ const Menu: React.FC = () => {
             className={styles.menu}
             aria-label='menu'
             type="button"
+            data-test="component-menu"
             onClick={handleClick}
         >
             <svg

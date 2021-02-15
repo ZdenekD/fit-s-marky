@@ -9,7 +9,7 @@ const Article: React.FC<IArticle> = ({
     children,
     className = '',
 }) => (
-    <article className={`${styles.article} ${className}`}>
+    <article className={`${styles.article} ${className}`} data-test="component-article">
         {children}
     </article>
 );

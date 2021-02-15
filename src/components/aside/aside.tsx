@@ -33,6 +33,7 @@ const Aside: React.FC = () => {
             animate={{opacity: 1, transition: {duration: 2}}}
             exit={{opacity: 0.25, transition: {duration: 0.4}}}
             className={styles.aside}
+            data-test="component-aside"
         >
             <Player
                 ref={playerRef}
