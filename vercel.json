@@ -31,15 +31,6 @@
       ]
     },
     {
-      "source": "(.*).html",
-      "headers": [
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'"
-        }
-      ]
-    },
-    {
       "source": "(.*).woff2|(.*).woff|(.*).gif|(.*).jpg|(.*).jpeg|(.*).mp4|(.*).png|(.*).svg|(.*).webp|(.*).webm|(.*).css|(.*).json|(.*).ico|(.*).webmanifest",
       "headers": [
         {
