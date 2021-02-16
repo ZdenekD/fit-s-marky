@@ -1,0 +1,230 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer match snapshot 1`] = `
+<footer class="footer"
+        data-test="component-footer"
+>
+  <section class="section"
+           data-test="component-clients"
+           style="opacity:0"
+  >
+    <h3 class="heading">
+      Spokojení klienti:
+    </h3>
+    <ul class="list">
+      <li class="item">
+        <img src="/clients/johnson&amp;johnson.png"
+             alt="Johnson&amp;Johnson"
+             class="image"
+        >
+        <br>
+        <span class="title">
+          Johnson&amp;Johnson
+        </span>
+      </li>
+      <li class="item">
+        <img src="/clients/caerus_im.png"
+             alt="Caerus IM"
+             class="image"
+        >
+        <br>
+        <span class="title">
+          Caerus IM
+        </span>
+      </li>
+      <li class="item">
+        <img src="/clients/vodafone.png"
+             alt="Vodafone"
+             class="image"
+        >
+        <br>
+        <span class="title">
+          Vodafone
+        </span>
+      </li>
+      <li class="item">
+        <img src="/clients/paralelni_polis.png"
+             alt="Paralelní Polis"
+             class="image"
+        >
+        <br>
+        <span class="title">
+          Paralelní Polis
+        </span>
+      </li>
+      <li class="item">
+        <img src="/clients/form_factory.png"
+             alt="Form Factory"
+             class="image"
+        >
+        <br>
+        <span class="title">
+          Form Factory
+        </span>
+      </li>
+      <li class="item">
+        <img src="/clients/pilates&amp;flow.png"
+             alt="Pilates &amp; Flow"
+             class="image"
+        >
+        <br>
+        <span class="title">
+          Pilates &amp; Flow
+        </span>
+      </li>
+      <li class="item">
+        <img src="/clients/joga_letna.png"
+             alt="Joga Letná"
+             class="image"
+        >
+        <br>
+        <span class="title">
+          Joga Letná
+        </span>
+      </li>
+      <li class="item">
+        <img src="/clients/fitness_flora.png"
+             alt="HitFit Flora"
+             class="image"
+        >
+        <br>
+        <span class="title">
+          HitFit Flora
+        </span>
+      </li>
+      <li class="item">
+        <img src="/clients/k6.png"
+             alt="Pohybové studio K6"
+             class="image"
+        >
+        <br>
+        <span class="title">
+          Pohybové studio K6
+        </span>
+      </li>
+      <li class="item">
+        <strong class="title">
+          TJ Sokol Jahodnice
+        </strong>
+      </li>
+    </ul>
+  </section>
+  <section class="rights">
+    <svg class="icon icon-tabler icon-tabler-copyright"
+         width="16"
+         height="16"
+         viewbox="0 0 24 24"
+         stroke-width="1"
+         stroke="currentColor"
+         fill="none"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+    >
+      <path stroke="none"
+            d="M0 0h24v24H0z"
+            fill="none"
+      >
+      </path>
+      <circle cx="12"
+              cy="12"
+              r="9"
+      >
+      </circle>
+      <path d="M14.5 9a3.5 4 0 1 0 0 6">
+      </path>
+    </svg>
+    Fit s Marky | All Rights Reserved
+  </section>
+  <section class="contact">
+    <span class="link">
+      <svg class="icon icon-tabler icon-tabler-phone"
+           width="20"
+           height="20"
+           viewbox="0 0 24 24"
+           stroke-width="1"
+           stroke="currentColor"
+           fill="none"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+      >
+        <path stroke="none"
+              d="M0 0h24v24H0z"
+              fill="none"
+        >
+        </path>
+        <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2">
+        </path>
+      </svg>
+      <a href="tel:728618337"
+         title="Telefon"
+         class="anchor "
+         data-test="component-anchor"
+      >
+        728 618 337
+      </a>
+    </span>
+    <span class="link">
+      <svg class="icon icon-tabler icon-tabler-mail"
+           width="20"
+           height="20"
+           viewbox="0 0 24 24"
+           stroke-width="1"
+           stroke="currentColor"
+           fill="none"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+      >
+        <path stroke="none"
+              d="M0 0h24v24H0z"
+              fill="none"
+        >
+        </path>
+        <rect x="3"
+              y="5"
+              width="18"
+              height="14"
+              rx="2"
+        >
+        </rect>
+        <polyline points="3 7 12 13 21 7">
+        </polyline>
+      </svg>
+      <a href="mailto:fitsmarky@seznam.cz"
+         title="E-mail: fitsmarky@seznam.cz"
+         class="anchor "
+         data-test="component-anchor"
+      >
+        fitsmarky@seznam.cz
+      </a>
+    </span>
+    <span class="link">
+      <a href="https://www.facebook.com/fitsmarky"
+         title="Facebook"
+         class="anchor social"
+         target="_blank"
+         rel="noreferrer noopener"
+         data-test="component-anchor"
+      >
+        <svg class="icon icon-tabler icon-tabler-thumb-up"
+             width="28"
+             height="28"
+             viewbox="0 0 24 24"
+             stroke-width="1"
+             stroke="currentColor"
+             fill="none"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+        >
+          <path stroke="none"
+                d="M0 0h24v24H0z"
+                fill="none"
+          >
+          </path>
+          <path d="M7 11v8a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-7a1 1 0 0 1 1 -1h3a4 4 0 0 0 4 -4v-1a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1 -2 2h-7a3 3 0 0 1 -3 -3">
+          </path>
+        </svg>
+      </a>
+    </span>
+  </section>
+</footer>
+`;

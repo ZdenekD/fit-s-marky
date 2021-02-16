@@ -1,3 +1,5 @@
+@charset 'utf-8';
+
 a,
 abbr,
 address,
@@ -122,6 +124,22 @@ video {
 ol,
 ul {
     list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: '';
+}
+
+table {
+    border-spacing: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {

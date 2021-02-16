@@ -2,10 +2,8 @@
 
 [![Jest](https://github.com/ZdenekD/fit-s-marky/workflows/Jest/badge.svg)](https://jestjs.io/en/)
 [![Snyk](https://github.com/ZdenekD/fit-s-marky/workflows/Snyk/badge.svg)](https://snyk.io)
-[![Cypress](https://github.com/ZdenekD/fit-s-marky/workflows/Cypress/badge.svg)](https://www.cypress.io)
 
 [![code style: eslint](https://img.shields.io/badge/code%20style-eslint-%23463fd4)](https://eslint.org) [![code style: stylelint](https://img.shields.io/badge/code%20style-stylelint-success)](https://stylelint.io) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![Percy](https://percy.io/static/images/percy-badge.svg)](https://percy.io)
 
 ## Installing / Getting started
 
@@ -23,12 +21,18 @@ cd fit-s-marky/
 yarn
 ```
 
+### CSS Modules fix
+
+Because of problems with NextJS CSS modules and Framer-motion (if is used `<AnimatePresence exitBeforeEnter>`, NextJS change styles immediately and animation `before unmount` is unstyled).
+Solution is use @zeit/next-css package, but there is invalid configuration for postcss, so edit files are in folder **next-css**. For proper work it's necessary use @zeit/next-css package
+and edited files from folder 'next-css'.
+
 ### Development
 
-It's automatically pushed to [Zeit.co](https://zeit.co/dashboard). Production branch is **master**, other branches for development (every pushed branch is build)
+It's automatically pushed to [Zeit.co](https://zeit.co/dashboard). Production branch is **master**, other branches for development (every pushed branch is built)
 
 ```
-master branch - production
+master branch - **production**
 develop branch - stage/development preview
 ```
 
@@ -49,9 +53,13 @@ How to run and write tests
 [Yarn Outdated](https://yarnpkg.com/lang/en/docs/cli/outdated/) - check for outdated project packages
 
 ```
-yarn test:snyk
-yarn test:webhint
-yarn test:packages
+snyk wizard
+yarn jest
+yarn jest:coverage
+yarn hint:local
+yarn hint:dev
+yarn hint:prod
+yarn outdated
 ```
 
 ## Deploying

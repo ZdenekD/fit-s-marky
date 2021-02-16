@@ -1,0 +1,33 @@
+@import '/base/reset.css';
+@import '/variables/variables.css';
+@import '/utilities/media.css';
+
+html {
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    background: linear-gradient(225deg, #f2f2f2, var(--color-white) 75%, var(--color-white-darken-1));
+    color: var(--color-black);
+    font-family: Rubik, Ubuntu, Tahoma, Nimbus Sans L, Free Sans, sans-serif;
+    font-size: var(--font-size, 13px);
+    line-height: 1.4;
+    font-weight: 400;
+
+    @media (--min-md) {
+        --font-size: 14px;
+    }
+
+    @media (--min-lg) {
+        --font-size: 15px;
+    }
+
+    @media (--min-xl) {
+        --font-size: 16px;
+    }
+}
+
+strong {
+    font-weight: 700;
+}

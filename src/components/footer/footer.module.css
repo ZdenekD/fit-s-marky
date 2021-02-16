@@ -1,0 +1,99 @@
+.footer {
+    display: grid;
+    grid-area: footer;
+    position: relative;
+    color: var(--color-black);
+    font-size: 0.8rem;
+
+    @media (--max-md) {
+        grid-template-rows: auto auto;
+        grid-template-areas: 'contact'
+            'rights';
+    }
+
+    @media (--min-md) {
+        grid-template-columns: auto auto;
+        grid-template-areas: 'clients clients'
+            'rights contact';
+    }
+
+    @media (--min-xl) {
+        grid-template-columns: 25vw auto;
+    }
+
+    @media (--min-xxl) {
+        grid-template-columns: 20vw auto;
+    }
+}
+
+.rights,
+.contact {
+    padding: var(--gap);
+    display: flex;
+    align-items: center;
+}
+
+.rights {
+    grid-area: rights;
+
+    @media (--max-md) {
+        justify-content: center;
+    }
+
+    @media (--min-xxl) {
+        padding: var(--gap) calc(2 * var(--gap));
+    }
+
+    svg {
+        margin-right: calc(0.5 * var(--gap));
+    }
+}
+
+.contact {
+    grid-area: contact;
+    justify-content: flex-end;
+
+    @media (--min-xs) {
+        flex-direction: column-reverse;
+    }
+
+    @media (--min-sm) {
+        flex-direction: row;
+    }
+
+    @media (--max-md) {
+        justify-content: center;
+    }
+
+    @media (--min-xl) {
+        justify-content: flex-end;
+    }
+}
+
+.link {
+    display: inline-flex;
+
+    @media (--min-xs) {
+        margin: calc(var(--gap) / 2) var(--gap);
+    }
+
+    @media (--min-sm) {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .social {
+        display: block;
+        border-bottom: none;
+
+        &:focus,
+        &:hover {
+            transform: scale(1.25);
+        }
+    }
+
+    svg {
+        margin-right: calc(0.5 * var(--gap));
+        color: var(--color-blue);
+    }
+}
