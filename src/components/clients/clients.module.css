@@ -24,10 +24,10 @@
 }
 
 .item {
-    min-width: 180px;
+    min-width: 150px;
     max-width: 10%;
     max-height: 80px;
-    padding: var(--gap) 0;
+    padding: var(--gap) calc(2 * var(--gap));
     opacity: 0.25;
     cursor: crosshair;
     transition: opacity var(--transition-in) var(--transition-timing);

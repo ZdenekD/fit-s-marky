@@ -1,6 +1,6 @@
 import {NextApiRequest, NextApiResponse} from 'next';
 import sendgrid from '@sendgrid/mail';
-import APIEnum from '../../types/APIEnum';
+import APIEnum from '../../enums/APIEnum';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse): void {
     const {method} = req;

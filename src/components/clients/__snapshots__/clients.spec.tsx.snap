@@ -100,9 +100,24 @@ exports[`Clients match snapshot 1`] = `
       </span>
     </li>
     <li class="item">
-      <strong class="title">
+      <img src="/clients/obvodni_soud.png"
+           alt="Obvodní soud pro Prahu 1"
+           class="image"
+      >
+      <br>
+      <span class="title">
+        Obvodní soud pro Prahu 1
+      </span>
+    </li>
+    <li class="item">
+      <img src="/clients/sokol_jahodnice.png"
+           alt="TJ Sokol Jahodnice"
+           class="image"
+      >
+      <br>
+      <span class="title">
         TJ Sokol Jahodnice
-      </strong>
+      </span>
     </li>
   </ul>
 </section>

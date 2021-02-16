@@ -1,6 +1,6 @@
 import React, {forwardRef} from 'react';
 import {useId} from 'react-id-generator';
-import VariantsEnum from '../../../types/VariantsEnum';
+import VariantsEnum from '../../../enums/VariantsEnum';
 import prefix from '../../../helpers/prefix';
 import styles from './textarea.module.css';
 

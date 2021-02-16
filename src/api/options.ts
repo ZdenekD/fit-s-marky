@@ -1,5 +1,5 @@
 import {IData} from './types/IApi';
-import APIEnum from '../types/APIEnum';
+import APIEnum from '../enums/APIEnum';
 
 const headers = {
     Accept: 'application/json',

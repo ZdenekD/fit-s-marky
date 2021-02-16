@@ -9,7 +9,7 @@ import Content from '../content';
 import Alert from '../../UI/alert';
 import {useStateValue} from '../../state';
 import pages from '../../data/pages';
-import VariantsEnum from '../../types/VariantsEnum';
+import VariantsEnum from '../../enums/VariantsEnum';
 import styles from './layout.module.css';
 
 interface ILayout {
