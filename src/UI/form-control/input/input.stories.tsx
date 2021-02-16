@@ -1,4 +1,4 @@
-import VariantsEnum from '../../../types/VariantsEnum';
+import VariantsEnum from '../../../enums/VariantsEnum';
 import Input from '.';
 
 export default {title: 'UI/Input'};

@@ -10,7 +10,7 @@ import Loader from '../../../UI/loader';
 import {useStateValue} from '../../../state';
 import ActionsEnum from '../../../state/message/type/actions';
 import regex from '../../../helpers/regex';
-import VariantsEnum from '../../../types/VariantsEnum';
+import VariantsEnum from '../../../enums/VariantsEnum';
 import styles from './contact.module.css';
 
 interface IValues {

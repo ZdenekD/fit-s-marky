@@ -1,6 +1,6 @@
 import React from 'react';
 import {motion} from 'framer-motion';
-import VariantsEnum from '../../../types/VariantsEnum';
+import VariantsEnum from '../../../enums/VariantsEnum';
 import styles from './button.module.css';
 
 interface IButton {

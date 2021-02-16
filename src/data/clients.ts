@@ -53,8 +53,14 @@ const clients: IClients[] = [
         src: 'k6.png',
     },
     {
+        id: `${prefix}_c11`,
+        title: 'Obvodní soud pro Prahu 1',
+        src: 'obvodni_soud.png',
+    },
+    {
         id: `${prefix}_c10`,
         title: 'TJ Sokol Jahodnice',
+        src: 'sokol_jahodnice.png',
     },
 ];
 
