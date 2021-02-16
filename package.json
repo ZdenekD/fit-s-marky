@@ -16,8 +16,6 @@
     "story:build": "build-storybook -c .storybook -o .storybook/build",
     "jest": "jest --watch",
     "jest:coverage": "jest --coverage",
-    "cypress": "cypress run",
-    "cypress:open": "cypress open",
     "hint:local": "hint http://localhost:3000",
     "hint:dev": "hint https://fit-s-marky.now.sh",
     "hint:prod": "hint https://fit-s-marky.cz"
@@ -29,7 +27,6 @@
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@hint/configuration-web-recommended": "^8.1.0",
-    "@percy/cypress": "^2.3.4",
     "@storybook/addon-a11y": "^6.1.15",
     "@storybook/addon-actions": "^6.1.15",
     "@storybook/addon-docs": "^6.1.15",
@@ -50,7 +47,6 @@
     "babel-plugin-react-remove-properties": "^0.3.0",
     "css-loader": "^5.0.2",
     "cssnano": "^4.1.10",
-    "cypress": "^6.3.0",
     "dotenv": "^8.2.0",
     "enzyme": "^3.11.0",
     "eslint": "^7.5.0",
