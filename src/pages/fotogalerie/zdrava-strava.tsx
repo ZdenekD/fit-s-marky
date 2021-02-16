@@ -17,6 +17,7 @@ const Page: React.FC = () => (
                 variants={fadeY}
                 href="/fotogalerie"
                 className={styles.back}
+                aria-label="Zpět"
             >
                 {icons[IconsEnum.chevronLeft]()}
             </motion.a>

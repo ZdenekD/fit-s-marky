@@ -17,7 +17,7 @@ const Page: React.FC = () => (
                 variants={heading}
             >
                 <i className="icon">{icons[IconsEnum.chartBubble]()}</i>
-                Kde cvicim
+                Kde cvicim (pravidelné hodiny)
             </motion.h2>
             <motion.ul
                 className={styles.list}
