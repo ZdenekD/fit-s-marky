@@ -35,6 +35,11 @@
     &:focus,
     &:hover {
         opacity: 0.5;
+
+        .image {
+            filter: grayscale(0);
+            transition: filter var(--transition-in) var(--transition-timing);
+        }
     }
 }
 
