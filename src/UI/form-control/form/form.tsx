@@ -1,7 +1,7 @@
-import styles from './form.module.css';
+import styles from './form.css';
 
 interface IForm {
-    className: string
+    className?: string
     onSubmit?: () => void
 }
 

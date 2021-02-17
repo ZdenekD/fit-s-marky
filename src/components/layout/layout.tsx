@@ -7,10 +7,11 @@ import Nav from '../nav';
 import Aside from '../aside';
 import Content from '../content';
 import Alert from '../../UI/alert';
+import Anchor from '../../UI/anchor';
 import {useStateValue} from '../../state';
 import pages from '../../data/pages';
 import VariantsEnum from '../../enums/VariantsEnum';
-import styles from './layout.module.css';
+import styles from './layout.css';
 
 interface ILayout {
     children: React.ReactNode
@@ -30,6 +31,9 @@ const Layout: React.FC<ILayout> = ({children, className = ''}) => {
                 <meta name="author" content="ZdenekD, zdenekd.cz" />
                 <title>{item?.title || 'Fit s Marky'}</title>
                 <meta name="description" content={item?.description || 'Jmenuji se Markéta Hříbalová a jsem zkušenou instruktorkou pilates, jemné jógy, office jógy a jógy pro těhotné.'} />
+                <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="anonymous" />
+                <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+                <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap&subset=latin-ext" rel="stylesheet" crossOrigin="anonymous" />
                 <meta property="og:title" content={item?.title || 'Fit s Marky'} />
                 <meta property="og:type" content="fitness.course" />
                 <meta property="og:description" content={item?.description || 'Jmenuji se Markéta Hříbalová a jsem zkušenou instruktorkou pilates, jemné jógy, office jógy a jógy pro těhotné.'} />
@@ -40,9 +44,6 @@ const Layout: React.FC<ILayout> = ({children, className = ''}) => {
                 <meta name="twitter:site" content="https://fit-s-marky.cz/" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-                <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="anonymous" />
-                <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-                <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap&subset=latin-ext" rel="stylesheet" crossOrigin="anonymous" />
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -54,12 +55,22 @@ const Layout: React.FC<ILayout> = ({children, className = ''}) => {
                 )}
             </Head>
             <main className={`${styles.main} ${state.message.content ? styles.blur : ''}`} data-test="component-layout">
-                <Header />
+                <Header title={item?.title || 'Fit s Marky'} />
                 <Nav />
-                <Aside />
                 <Content className={className}>
+                    <noscript>
+                        <strong>
+                            Nemáte zapnutý Javascript
+                        </strong>
+                        <p>
+                            Některé součásti stránek Vám nemusí fungovat správně.<br />
+                            Zde jsou <Anchor href="https://www.enable-javascript.com/cz/" target="_blank">instrukce</Anchor> jak povolit JavaScript ve
+                            Vašem webovém prohlížeči.
+                        </p>
+                    </noscript>
                     {children}
                 </Content>
+                <Aside />
                 <Footer />
             </main>
             <Alert isOpen={!!state.message.content} variant={VariantsEnum[state.message.variant]} timeout={3}>

@@ -4,6 +4,7 @@ import Article from '../components/article';
 import Anchor from '../UI/anchor';
 import {heading} from '../helpers/animation/heading';
 import {fadeX} from '../helpers/animation/fade';
+import '../assets/styles/index.css';
 
 const Error: React.FC = () => (
     <Layout>

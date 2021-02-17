@@ -1,11 +1,10 @@
 import {NextApiRequest, NextApiResponse} from 'next';
 import sendgrid from '@sendgrid/mail';
-import APIEnum from '../../enums/APIEnum';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse): void {
     const {method} = req;
 
-    if (method !== APIEnum.post) {
+    if (method !== 'POST') {
         res.status(405).end(`Method ${method} is not allowed.`);
     } else {
         sendgrid.setApiKey(process.env.SENDGRID_API_KEY || '');

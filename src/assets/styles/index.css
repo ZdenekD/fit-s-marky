@@ -1,6 +1,9 @@
 @import '/base/reset.css';
+@import '/variables/colors.css';
+@import '/variables/easing.css';
 @import '/variables/variables.css';
 @import '/utilities/media.css';
+@import '/utilities/helpers.css';
 
 html {
     min-height: 100%;
