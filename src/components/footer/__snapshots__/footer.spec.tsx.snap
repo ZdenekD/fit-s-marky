@@ -8,9 +8,9 @@ exports[`Footer match snapshot 1`] = `
            data-test="component-clients"
            style="opacity:0"
   >
-    <h3 class="heading">
+    <h2 class="heading">
       Spokojení klienti:
-    </h3>
+    </h2>
     <ul class="list">
       <li class="item">
         <img src="/clients/johnson&amp;johnson.png"
