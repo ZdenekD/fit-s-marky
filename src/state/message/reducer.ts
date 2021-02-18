@@ -1,10 +1,7 @@
 import IState from '../type/state';
 import IAction from '../type/actions';
-import IMessage from './type/message';
 import ActionsEnum from './type/actions';
-import VariantsEnum from '../../enums/VariantsEnum';
-
-export const initialState: IMessage = {message: {variant: VariantsEnum.info, content: undefined}};
+import {initialState} from './type';
 
 const reducer = (state: IState, action: IAction): IState => {
     switch (action.type) {

@@ -1,4 +1,4 @@
-import IMenu from './menu';
+import IMenu from '.';
 
 enum ActionsEnum {
     set = 'SET_MENU'

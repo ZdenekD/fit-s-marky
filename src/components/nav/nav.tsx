@@ -3,11 +3,11 @@ import Link from 'next/link';
 import {useRouter} from 'next/router';
 import {motion} from 'framer-motion';
 import icons from '../../UI/icons';
+import Anchor from '../../UI/anchor';
 import pages from '../../data/pages';
-import styles from './nav.module.css';
 import useWindowSize from '../../hooks/useWindowSize';
 import {useStateValue} from '../../state';
-import Anchor from '../../UI/anchor';
+import styles from './nav.css';
 
 const Nav: React.FC = () => {
     const router = useRouter();

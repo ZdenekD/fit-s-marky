@@ -1,4 +1,4 @@
-import IFrame from './frame';
+import IFrame from '.';
 
 enum ActionsEnum {
     save = 'SAVE_FRAME'

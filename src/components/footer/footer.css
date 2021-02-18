@@ -36,16 +36,16 @@
 .rights {
     grid-area: rights;
 
+    svg {
+        margin-right: calc(0.5 * var(--gap));
+    }
+
     @media (--max-md) {
         justify-content: center;
     }
 
     @media (--min-xxl) {
         padding: var(--gap) calc(2 * var(--gap));
-    }
-
-    svg {
-        margin-right: calc(0.5 * var(--gap));
     }
 }
 
@@ -73,15 +73,6 @@
 .link {
     display: inline-flex;
 
-    @media (--min-xs) {
-        margin: calc(var(--gap) / 2) var(--gap);
-    }
-
-    @media (--min-sm) {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
     .social {
         display: block;
         border-bottom: none;
@@ -95,5 +86,14 @@
     svg {
         margin-right: calc(0.5 * var(--gap));
         color: var(--color-blue);
+    }
+
+    @media (--min-xs) {
+        margin: calc(var(--gap) / 2) var(--gap);
+    }
+
+    @media (--min-sm) {
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }

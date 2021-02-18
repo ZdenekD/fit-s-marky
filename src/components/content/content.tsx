@@ -1,7 +1,7 @@
 import React from 'react';
 import {useStateValue} from '../../state';
 import ActionsEnum from '../../state/menu/type/actions';
-import styles from './content.module.css';
+import styles from './content.css';
 
 interface IContent {
     children: React.ReactNode

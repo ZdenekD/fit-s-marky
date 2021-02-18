@@ -1,5 +1,5 @@
 import Picture from '../../UI/picture';
-import styles from './logo.module.css';
+import styles from './logo.css';
 
 const Logo: React.FC = () => (
     <div className={styles.logo} data-test="component-logo">

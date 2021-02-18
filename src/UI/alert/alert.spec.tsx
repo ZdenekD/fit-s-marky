@@ -21,15 +21,15 @@ describe('Alert', () => {
     });
 
     it('remove component on click remove button', () => {
-        const setState = jest.fn();
+        const mockSetState = jest.fn();
 
-        React.useState = jest.fn(() => [true, setState]);
+        React.useState = jest.fn(() => [true, mockSetState]);
 
         const container = shallow(<Alert>message</Alert>);
         const component = findComponent(container, 'component-alert');
 
         component.find('Button').simulate('click');
 
-        expect(setState).toHaveBeenCalledTimes(1);
+        expect(mockSetState).toHaveBeenCalledTimes(1);
     });
 });

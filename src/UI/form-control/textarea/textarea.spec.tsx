@@ -21,17 +21,17 @@ describe('Textarea', () => {
     });
 
     it('set length on change', () => {
-        const setState = jest.fn();
+        const mockSetState = jest.fn();
         const value = 'value';
         const mockEvent = {target: {value}};
 
-        React.useState = jest.fn(() => [0, setState]);
+        React.useState = jest.fn(() => [0, mockSetState]);
 
         const container = shallow(<Textarea name="textarea" label="textarea" />);
         const component = findComponent(container, 'component-textarea');
 
         component.simulate('change', mockEvent);
 
-        expect(setState).toHaveBeenCalledWith(value.length);
+        expect(mockSetState).toHaveBeenCalledWith(value.length);
     });
 });

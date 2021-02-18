@@ -1,6 +1,6 @@
 import {motion, Variants} from 'framer-motion';
 import {list} from '../../helpers/animation/list';
-import styles from './list.module.css';
+import styles from './list.css';
 
 interface IList {
     variants?: Variants

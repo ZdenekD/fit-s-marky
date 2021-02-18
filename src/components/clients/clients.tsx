@@ -1,6 +1,6 @@
 import {motion} from 'framer-motion';
 import clients from '../../data/clients';
-import styles from './clients.module.css';
+import styles from './clients.css';
 
 const Clients: React.FC = () => (
     <motion.section
@@ -22,7 +22,7 @@ const Clients: React.FC = () => (
                 >
                     {client.src ? (
                         <>
-                            <img src={`/clients/${client.src}`} alt={client.title} className={styles.image} /><br />
+                            <img src={`/clients/${client.src}`} alt="" className={styles.image} /><br />
                             <span className={styles.title}>{client.title}</span>
                         </>
                     ) : (

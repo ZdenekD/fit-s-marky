@@ -1,4 +1,4 @@
-import IMessage from './message';
+import IMessage from '.';
 
 enum ActionsEnum {
     save = 'SAVE_MESSAGE',

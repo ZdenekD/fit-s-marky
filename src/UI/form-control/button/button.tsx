@@ -1,7 +1,7 @@
 import React from 'react';
 import {motion} from 'framer-motion';
 import VariantsEnum from '../../../enums/VariantsEnum';
-import styles from './button.module.css';
+import styles from './button.css';
 
 interface IButton {
     type?: 'button' | 'submit'

@@ -7,7 +7,7 @@ import Button from '../UI/form-control/button';
 import IconsEnum from '../UI/icons/types/iconsEnum';
 import icons from '../UI/icons';
 import {list, item} from '../helpers/animation/list';
-import styles from '../assets/styles/pages/pricelist.module.css';
+import styles from '../assets/styles/pages/pricelist.css';
 
 const Page: React.FC = () => (
     <Layout>

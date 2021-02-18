@@ -26,10 +26,6 @@
         position: relative;
         font-size: 1rem;
 
-        @media (--min-md) {
-            font-size: 1.2rem;
-        }
-
         &:first-of-type {
             margin-top: 0;
         }
@@ -52,6 +48,10 @@
             @media (prefers-reduced-motion: no-preference) {
                 animation: line-in 0.15s var(--transition-timing) forwards 0.2s;
             }
+        }
+
+        @media (--min-md) {
+            font-size: 1.2rem;
         }
     }
 
