@@ -11,7 +11,7 @@ exports[`Clients match snapshot 1`] = `
   <ul class="list">
     <li class="item">
       <img src="/clients/johnson&amp;johnson.png"
-           alt="Johnson&amp;Johnson"
+           alt
            class="image"
       >
       <br>
@@ -21,7 +21,7 @@ exports[`Clients match snapshot 1`] = `
     </li>
     <li class="item">
       <img src="/clients/caerus_im.png"
-           alt="Caerus IM"
+           alt
            class="image"
       >
       <br>
@@ -31,7 +31,7 @@ exports[`Clients match snapshot 1`] = `
     </li>
     <li class="item">
       <img src="/clients/vodafone.png"
-           alt="Vodafone"
+           alt
            class="image"
       >
       <br>
@@ -41,7 +41,7 @@ exports[`Clients match snapshot 1`] = `
     </li>
     <li class="item">
       <img src="/clients/paralelni_polis.png"
-           alt="Paralelní Polis"
+           alt
            class="image"
       >
       <br>
@@ -51,7 +51,7 @@ exports[`Clients match snapshot 1`] = `
     </li>
     <li class="item">
       <img src="/clients/form_factory.png"
-           alt="Form Factory"
+           alt
            class="image"
       >
       <br>
@@ -61,7 +61,7 @@ exports[`Clients match snapshot 1`] = `
     </li>
     <li class="item">
       <img src="/clients/pilates&amp;flow.png"
-           alt="Pilates &amp; Flow"
+           alt
            class="image"
       >
       <br>
@@ -71,7 +71,7 @@ exports[`Clients match snapshot 1`] = `
     </li>
     <li class="item">
       <img src="/clients/joga_letna.png"
-           alt="Joga Letná"
+           alt
            class="image"
       >
       <br>
@@ -81,7 +81,7 @@ exports[`Clients match snapshot 1`] = `
     </li>
     <li class="item">
       <img src="/clients/fitness_flora.png"
-           alt="HitFit Flora"
+           alt
            class="image"
       >
       <br>
@@ -91,7 +91,7 @@ exports[`Clients match snapshot 1`] = `
     </li>
     <li class="item">
       <img src="/clients/k6.png"
-           alt="Pohybové studio K6"
+           alt
            class="image"
       >
       <br>
@@ -101,7 +101,7 @@ exports[`Clients match snapshot 1`] = `
     </li>
     <li class="item">
       <img src="/clients/obvodni_soud.png"
-           alt="Obvodní soud pro Prahu 1"
+           alt
            class="image"
       >
       <br>
@@ -111,7 +111,7 @@ exports[`Clients match snapshot 1`] = `
     </li>
     <li class="item">
       <img src="/clients/sokol_jahodnice.png"
-           alt="TJ Sokol Jahodnice"
+           alt
            class="image"
       >
       <br>
