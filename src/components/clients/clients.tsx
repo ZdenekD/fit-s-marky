@@ -13,7 +13,7 @@ const Clients: React.FC = () => (
         className={styles.section}
         data-test="component-clients"
     >
-        <h3 className={styles.heading}>Spokojení klienti:</h3>
+        <h2 className={styles.heading}>Spokojení klienti:</h2>
         <ul className={styles.list}>
             {clients.map(client => (
                 <li
