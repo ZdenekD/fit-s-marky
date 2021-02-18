@@ -3,8 +3,8 @@ import {Player} from '@lottiefiles/react-lottie-player';
 import {AnimationItem} from 'lottie-web';
 import {motion} from 'framer-motion';
 import {useStateValue} from '../../state';
-import styles from './aside.module.css';
 import ActionsEnum from '../../state/frame/type/actions';
+import styles from './aside.css';
 
 const Aside: React.FC = () => {
     const {state, dispatch} = useStateValue();
@@ -28,7 +28,7 @@ const Aside: React.FC = () => {
     }, []);
 
     return (
-        <motion.aside
+        <motion.div
             initial={{opacity: 0.25}}
             animate={{opacity: 1, transition: {duration: 2}}}
             exit={{opacity: 0.25, transition: {duration: 0.4}}}
@@ -41,7 +41,7 @@ const Aside: React.FC = () => {
                 lottieRef={handleAnimation}
                 src="/animation_01.json"
             />
-        </motion.aside>
+        </motion.div>
     );
 };
 

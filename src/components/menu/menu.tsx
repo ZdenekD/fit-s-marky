@@ -2,7 +2,7 @@ import React from 'react';
 import {motion, SVGMotionProps} from 'framer-motion';
 import {useStateValue} from '../../state';
 import ActionsEnum from '../../state/menu/type/actions';
-import styles from './menu.module.css';
+import styles from './menu.css';
 
 const Menu: React.FC = () => {
     const {state, dispatch} = useStateValue();

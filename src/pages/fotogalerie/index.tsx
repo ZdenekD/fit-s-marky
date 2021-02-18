@@ -5,7 +5,7 @@ import Anchor from '../../UI/anchor';
 import Picture from '../../UI/picture';
 import icons, {IconsEnum} from '../../UI/icons';
 import {list, item} from '../../helpers/animation/list';
-import styles from '../../assets/styles/pages/gallery.module.css';
+import styles from '../../assets/styles/pages/gallery.css';
 
 const Page: React.FC = () => (
     <Layout>

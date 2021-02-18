@@ -2,7 +2,7 @@ import React from 'react';
 import icons, {IconsEnum} from '../../UI/icons';
 import Anchor from '../../UI/anchor';
 import Clients from '../clients';
-import styles from './footer.module.css';
+import styles from './footer.css';
 
 const Footer: React.FC = () => (
     <footer className={styles.footer} data-test="component-footer">

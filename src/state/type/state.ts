@@ -1,6 +1,6 @@
-import IFrame from '../frame/type/frame';
-import IMessage from '../message/type/message';
-import IMenu from '../menu/type/menu';
+import IFrame from '../frame/type';
+import IMessage from '../message/type';
+import IMenu from '../menu/type';
 
 type IState = IFrame & IMessage & IMenu;
 

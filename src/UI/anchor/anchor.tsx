@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './anchor.module.css';
+import styles from './anchor.css';
 
 interface IAnchor {
     href: string

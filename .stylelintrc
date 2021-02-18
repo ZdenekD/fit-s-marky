@@ -111,7 +111,7 @@
       "custom-properties",
       "declarations",
       {
-        "type": "at-rule",
+        "type": "rule",
         "selector": "^@apply[\\w-]+"
       },
       {

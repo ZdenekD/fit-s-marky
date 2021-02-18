@@ -3,9 +3,9 @@ import {motion, AnimatePresence} from 'framer-motion';
 import Button from '../form-control/button';
 import VariantsEnum from '../../enums/VariantsEnum';
 import {fade, fadeScale} from '../../helpers/animation/fade';
-import styles from './alert.module.css';
 import {useStateValue} from '../../state';
 import ActionsEnum from '../../state/message/type/actions';
+import styles from './alert.css';
 
 interface IAlert {
     children: React.ReactNode

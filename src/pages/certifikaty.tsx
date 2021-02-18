@@ -5,7 +5,7 @@ import icons from '../UI/icons';
 import IconsEnum from '../UI/icons/types/iconsEnum';
 import {heading} from '../helpers/animation/heading';
 import {list, item} from '../helpers/animation/list';
-import styles from '../assets/styles/pages/certificates.module.css';
+import styles from '../assets/styles/pages/certificates.css';
 
 const Page: React.FC = () => (
     <Layout className={styles.certificates}>

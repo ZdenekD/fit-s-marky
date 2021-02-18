@@ -1,5 +1,4 @@
 import {IData} from './types/IApi';
-import APIEnum from '../enums/APIEnum';
 
 const headers = {
     Accept: 'application/json',
@@ -7,7 +6,7 @@ const headers = {
 };
 const options = {
     post: (data: IData): RequestInit => ({
-        method: APIEnum.post,
+        method: 'POST',
         headers,
         body: JSON.stringify(data),
     }),

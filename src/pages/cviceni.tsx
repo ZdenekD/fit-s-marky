@@ -5,7 +5,7 @@ import icons from '../UI/icons';
 import IconsEnum from '../UI/icons/types/iconsEnum';
 import {heading} from '../helpers/animation/heading';
 import {list, item} from '../helpers/animation/list';
-import styles from '../assets/styles/pages/excercises.module.css';
+import styles from '../assets/styles/pages/excercises.css';
 
 const Page: React.FC = () => (
     <Layout>

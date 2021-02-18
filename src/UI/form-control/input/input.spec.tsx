@@ -28,17 +28,17 @@ describe('Input', () => {
     });
 
     it('set length on change', () => {
-        const setState = jest.fn();
+        const mockSetState = jest.fn();
         const value = 'value';
         const mockEvent = {target: {value}};
 
-        React.useState = jest.fn(() => [0, setState]);
+        React.useState = jest.fn(() => [0, mockSetState]);
 
         const container = shallow(<Input name="input" label="Input" />);
         const component = findComponent(container, 'component-input');
 
         component.simulate('change', mockEvent);
 
-        expect(setState).toHaveBeenCalledWith(value.length);
+        expect(mockSetState).toHaveBeenCalledWith(value.length);
     });
 });

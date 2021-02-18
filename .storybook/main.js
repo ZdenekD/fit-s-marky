@@ -26,7 +26,13 @@ module.exports = {
                 {loader: 'style-loader'},
                 {
                     loader: 'css-loader',
-                    options: {sourceMap: !isProduction},
+                    options: {
+                        modules: {
+                            mode: 'local',
+                            localIdentName: !isProduction ? '[name]-[local]--[hash:base64:6]' : '[hash:base64:8]',
+                        },
+                        sourceMap: !isProduction,
+                    },
                 },
                 {
                     loader: 'postcss-loader',
