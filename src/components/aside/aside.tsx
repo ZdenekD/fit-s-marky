@@ -3,7 +3,7 @@ import {Player} from '@lottiefiles/react-lottie-player';
 import {AnimationItem} from 'lottie-web';
 import {motion} from 'framer-motion';
 import {useStateValue} from '../../state';
-import ActionsEnum from '../../state/frame/type/actions';
+import saveFrame from '../../state/frame/actions';
 import styles from './aside.css';
 
 const Aside: React.FC = () => {
@@ -20,10 +20,7 @@ const Aside: React.FC = () => {
     frameRef.current = state.frame.current;
 
     React.useEffect(() => () => {
-        dispatch({
-            type: ActionsEnum.save,
-            payload: {frame: {current: (animationRef.current as AnimationItem).currentFrame || 0}},
-        });
+        dispatch(saveFrame({frame: {current: (animationRef.current as AnimationItem).currentFrame || 0}}));
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 

@@ -1,16 +1,13 @@
 import React from 'react';
 import {motion, SVGMotionProps} from 'framer-motion';
 import {useStateValue} from '../../state';
-import ActionsEnum from '../../state/menu/type/actions';
+import setMenu from '../../state/menu/actions';
 import styles from './menu.css';
 
 const Menu: React.FC = () => {
     const {state, dispatch} = useStateValue();
     const handleClick = () => {
-        dispatch({
-            type: ActionsEnum.set,
-            payload: {menu: {isOpen: !state.menu.isOpen}},
-        });
+        dispatch(setMenu({menu: {isOpen: !state.menu.isOpen}}));
     };
     const Path = (props: SVGMotionProps<SVGPathElement>) => (<motion.path {...props} />);
 
