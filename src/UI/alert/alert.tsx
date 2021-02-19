@@ -4,7 +4,7 @@ import Button from '../form-control/button';
 import VariantsEnum from '../../enums/VariantsEnum';
 import {fade, fadeScale} from '../../helpers/animation/fade';
 import {useStateValue} from '../../state';
-import ActionsEnum from '../../state/message/type/actions';
+import {removeMessage} from '../../state/message/actions';
 import styles from './alert.css';
 
 interface IAlert {
@@ -26,7 +26,7 @@ const Alert: React.FC<IAlert> = ({
     const {dispatch} = useStateValue();
     const remove = () => {
         setOpened(false);
-        dispatch({type: ActionsEnum.remove});
+        dispatch(removeMessage());
     };
     const handleClick = () => {
         remove();
