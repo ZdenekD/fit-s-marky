@@ -12,7 +12,7 @@ interface ITextarea {
     variant?: VariantsEnum
     required?: boolean
     disabled?: boolean
-    maxLength?: number
+    maxlength?: number
     autoComplete?: 'on' | 'off'
     className?: string
     error?: string
@@ -25,7 +25,7 @@ const Textarea: React.FC<ITextarea> = forwardRef(({
     variant,
     required,
     disabled,
-    maxLength,
+    maxlength,
     autoComplete,
     className = '',
     error,
@@ -49,17 +49,17 @@ const Textarea: React.FC<ITextarea> = forwardRef(({
                     ref={ref}
                     id={id}
                     name={name}
-                    className={`${styles.textarea} ${variant ? styles[variant] : ''} ${error ? styles[VariantsEnum.danger] : ''} ${maxLength ? styles.textareaMaxlength : ''}`}
+                    className={`${styles.textarea} ${variant ? styles[variant] : ''} ${error ? styles[VariantsEnum.danger] : ''} ${maxlength ? styles.textareaMaxlength : ''}`}
                     placeholder={placeholder}
                     required={required}
                     disabled={disabled}
-                    maxLength={maxLength}
+                    maxLength={maxlength}
                     autoComplete={autoComplete}
                     data-test="component-textarea"
-                    onChange={handleInput}
+                    onChange={maxlength ? handleInput : undefined}
                 />
 
-                {maxLength && (<span className={`${styles.maxlength} ${disabled ? styles.maxLengthDisabled : ''}`}>{length} / {maxLength}</span>)}
+                {maxlength && (<span className={`${styles.maxlength} ${disabled ? styles.maxlengthDisabled : ''}`}>{length} / {maxlength}</span>)}
             </div>
         </div>
     );
