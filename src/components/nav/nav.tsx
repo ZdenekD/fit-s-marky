@@ -12,8 +12,8 @@ import styles from './nav.css';
 const Nav: React.FC = () => {
     const router = useRouter();
     const {state} = useStateValue();
-    const [isOpen, setOpen] = React.useState(state.menu.isOpen);
-    const [isMobile, setMobile] = React.useState(false);
+    const [isOpen, setOpen] = React.useState<boolean>(state.menu.isOpen);
+    const [isMobile, setMobile] = React.useState<boolean>(false);
     const {width} = useWindowSize();
     const nav = {
         initial: {opacity: isOpen ? 1 : 0},

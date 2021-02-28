@@ -30,7 +30,7 @@ const Textarea: React.FC<ITextarea> = forwardRef(({
     className = '',
     error,
 }, ref: React.Ref<HTMLTextAreaElement>) => {
-    const [length, setLength] = React.useState(0);
+    const [length, setLength] = React.useState<number>(0);
     const [id] = useId(1, prefix);
     const handleInput = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
         setLength(event.target.value.length);

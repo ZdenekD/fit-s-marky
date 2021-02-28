@@ -22,7 +22,8 @@ const Alert: React.FC<IAlert> = ({
     timeout,
     isOpen = false,
 }) => {
-    const [isOpened, setOpened] = React.useState(isOpen);
+    const [isOpened, setOpened] = React.useState<boolean>(isOpen);
+    const timer = React.useRef<NodeJS.Timeout>();
     const {dispatch} = useStateValue();
     const remove = () => {
         setOpened(false);
@@ -34,10 +35,16 @@ const Alert: React.FC<IAlert> = ({
 
     React.useEffect(() => {
         if (timeout) {
-            setTimeout(() => {
+            timer.current = setTimeout(() => {
                 remove();
             }, timeout * 1000);
         }
+
+        return () => {
+            if (timer.current) {
+                clearTimeout(timer.current);
+            }
+        };
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 

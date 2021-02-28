@@ -1,5 +1,6 @@
 import {NextApiRequest, NextApiResponse} from 'next';
 import sendgrid from '@sendgrid/mail';
+import VariantsEnum from '../../enums/VariantsEnum';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse): void {
     const {method} = req;
@@ -27,9 +28,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse): void
             try {
                 await sendgrid.send(content);
 
-                res.status(200).json({message: 'Zpráva byla úspěšně odeslána.'});
+                res.status(200).json({
+                    message: 'Zpráva byla úspěšně odeslána.',
+                    variant: VariantsEnum.success,
+                });
             } catch (error) {
-                res.status(400).json({message: 'Něco se pravděpodobně po@#$&lo.'});
+                res.status(400).json({
+                    message: 'Něco se pravděpodobně po@#$&lo.',
+                    variant: VariantsEnum.danger,
+                });
             }
         })();
     }

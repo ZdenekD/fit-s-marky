@@ -18,7 +18,7 @@ interface IValues {
 }
 
 const ContactForm: React.FC = () => {
-    const [isDisabled, setDisabled] = React.useState(false);
+    const [isDisabled, setDisabled] = React.useState<boolean>(false);
     const router = useRouter();
     const {dispatch} = useStateValue();
     const {register, errors, handleSubmit} = useForm({mode: 'onBlur'});
@@ -34,7 +34,7 @@ const ContactForm: React.FC = () => {
         if (response.message) {
             dispatch(saveMessage({
                 message: {
-                    variant: VariantsEnum.success,
+                    variant: response.variant,
                     content: response.message,
                 },
             }));
