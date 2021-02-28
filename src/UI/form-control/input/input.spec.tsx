@@ -34,7 +34,7 @@ describe('Input', () => {
 
         React.useState = jest.fn(() => [0, mockSetState]);
 
-        const container = shallow(<Input name="input" label="Input" />);
+        const container = shallow(<Input name="input" label="Input" maxlength={10} />);
         const component = findComponent(container, 'component-input');
 
         component.simulate('change', mockEvent);

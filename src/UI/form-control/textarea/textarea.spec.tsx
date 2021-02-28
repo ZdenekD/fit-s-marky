@@ -27,7 +27,7 @@ describe('Textarea', () => {
 
         React.useState = jest.fn(() => [0, mockSetState]);
 
-        const container = shallow(<Textarea name="textarea" label="textarea" />);
+        const container = shallow(<Textarea name="textarea" label="textarea" maxlength={10} />);
         const component = findComponent(container, 'component-textarea');
 
         component.simulate('change', mockEvent);
