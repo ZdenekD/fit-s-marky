@@ -10,7 +10,7 @@ const initialState: ISize = {
     height: 0,
 };
 const useWindowSize = (): ISize => {
-    const [size, setSize] = React.useState(initialState);
+    const [size, setSize] = React.useState<ISize>(initialState);
     const handleResize = () => {
         setSize({
             width: window.innerWidth,

@@ -18,7 +18,7 @@ interface IValues {
 }
 
 const ContactForm: React.FC = () => {
-    const [isDisabled, setDisabled] = React.useState(false);
+    const [isDisabled, setDisabled] = React.useState<boolean>(false);
     const router = useRouter();
     const {dispatch} = useStateValue();
     const {register, errors, handleSubmit} = useForm({mode: 'onBlur'});
@@ -34,7 +34,7 @@ const ContactForm: React.FC = () => {
         if (response.message) {
             dispatch(saveMessage({
                 message: {
-                    variant: VariantsEnum.success,
+                    variant: response.variant,
                     content: response.message,
                 },
             }));
@@ -58,7 +58,7 @@ const ContactForm: React.FC = () => {
                     name="name"
                     label="Jméno"
                     disabled={isDisabled}
-                    maxLength={30}
+                    maxlength={30}
                     error={errors.name?.message}
                 />
                 <Input
@@ -73,7 +73,7 @@ const ContactForm: React.FC = () => {
                     label="E-mail"
                     type="email"
                     disabled={isDisabled}
-                    maxLength={90}
+                    maxlength={90}
                     error={errors.email?.message}
                 />
                 <Textarea
@@ -87,7 +87,7 @@ const ContactForm: React.FC = () => {
                     name="message"
                     label="Zpráva"
                     disabled={isDisabled}
-                    maxLength={255}
+                    maxlength={255}
                     error={errors.message?.message}
                 />
                 <Input

@@ -13,7 +13,7 @@ interface IInput {
     variant?: VariantsEnum
     required?: boolean
     disabled?: boolean
-    maxLength?: number
+    maxlength?: number
     autoComplete?: 'on' | 'off'
     className?: string
     error?: string
@@ -27,12 +27,12 @@ const Input: React.FC<IInput> = forwardRef(({
     variant,
     required,
     disabled,
-    maxLength,
+    maxlength,
     autoComplete,
     className = '',
     error,
 }, ref: React.Ref<HTMLInputElement>) => {
-    const [length, setLength] = React.useState(0);
+    const [length, setLength] = React.useState<number>(0);
     const [id] = useId(1, prefix);
     const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
         setLength(event.target.value.length);
@@ -56,13 +56,13 @@ const Input: React.FC<IInput> = forwardRef(({
                     placeholder={placeholder}
                     required={required}
                     disabled={disabled}
-                    maxLength={maxLength}
+                    maxLength={maxlength}
                     autoComplete={autoComplete}
                     data-test="component-input"
-                    onChange={handleInput}
+                    onChange={maxlength ? handleInput : undefined}
                 />
 
-                {maxLength && (<span className={`${styles.maxlength} ${disabled ? styles.maxLengthDisabled : ''}`}>{length} / {maxLength}</span>)}
+                {maxlength && (<span className={`${styles.maxlength} ${disabled ? styles.maxlengthDisabled : ''}`}>{length} / {maxlength}</span>)}
             </div>
         </div>
     );
