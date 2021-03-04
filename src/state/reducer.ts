@@ -5,9 +5,9 @@ import messageReducer from './message/reducer';
 import menuReducer from './menu/reducer';
 
 const reducer = (state: IState, action: IAction): IState => ({
-    frame: {...frameReducer(state, action).frame},
-    message: {...messageReducer(state, action).message},
-    menu: {...menuReducer(state, action).menu},
+    ...frameReducer({frame: state.frame}, action),
+    ...messageReducer({message: state.message}, action),
+    ...menuReducer({menu: state.menu}, action),
 });
 
 export default reducer;
