@@ -1,8 +1,8 @@
-import IState from '../type/state';
 import IAction from '../type/actions';
+import IFrame from './type';
 import ActionsEnum from './type/actions';
 
-const reducer = (state: IState, action: IAction): IState => {
+const reducer = (state: IFrame, action: IAction): IFrame => {
     switch (action.type) {
         case ActionsEnum.save:
             return ({
