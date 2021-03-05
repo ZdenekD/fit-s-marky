@@ -23,7 +23,7 @@ const Page: React.FC = () => (
                 <Link passHref href="/fotogalerie/venkovni-lekce">
                     <Anchor href="/fotogalerie/venkovni-lekce" className={styles.link}>
                         <h2 className={styles.heading}>Venkovní lekce</h2>
-                        <Picture src="/images/image-15.jpg" className={styles.picture} />
+                        <Picture src="/images/image-15" className={styles.picture} width={500} height={333} />
                         <i className={styles.icon}>
                             {icons[IconsEnum.camera](36)}
                         </i>
@@ -37,7 +37,7 @@ const Page: React.FC = () => (
                 <Link href="/fotogalerie/lekce">
                     <Anchor href="/fotogalerie/lekce" className={styles.link}>
                         <h2 className={styles.heading}>Lekce pilates a jógy</h2>
-                        <Picture src="/images/image-06.jpg" className={styles.picture} />
+                        <Picture src="/images/image-06" className={styles.picture} width={500} height={333} />
                         <i className={styles.icon}>
                             {icons[IconsEnum.camera](36)}
                         </i>
@@ -51,7 +51,7 @@ const Page: React.FC = () => (
                 <Link href="/fotogalerie/zdrava-strava">
                     <Anchor href="/fotogalerie/zdrava-strava" className={styles.link}>
                         <h2 className={styles.heading}>Zdravá strava</h2>
-                        <Picture src="/images/image-13.jpg" className={styles.picture} />
+                        <Picture src="/images/image-13" className={styles.picture} width={500} height={333} />
                         <i className={styles.icon}>
                             {icons[IconsEnum.camera](36)}
                         </i>

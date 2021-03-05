@@ -1,0 +1,17 @@
+.picture {
+    display: block;
+    line-height: 0;
+    filter: sepia(0.2) brightness(1.15) saturate(1.4);
+
+    &::before {
+        content: '';
+        background: rgba(125, 105, 24, 0.1);
+        mix-blend-mode: multiply;
+    }
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    content-visibility: auto;
+}

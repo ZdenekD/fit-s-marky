@@ -15,7 +15,6 @@
 .item {
     padding: calc(4 * var(--gap));
     opacity: 0.5;
-    cursor: crosshair;
     transition: opacity var(--transition-in) var(--transition-timing);
 
     &:focus,

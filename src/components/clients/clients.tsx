@@ -21,7 +21,12 @@ const Clients: React.FC = () => (
                 >
                     {client.src ? (
                         <>
-                            <img src={`/clients/${client.src}`} alt="" className={styles.image} /><br />
+                            <img
+                                src={`/clients/${client.src}`}
+                                alt="" className={styles.image}
+                                loading="lazy"
+                                decoding="async"
+                            /><br />
                             <span className={styles.title}>{client.title}</span>
                         </>
                     ) : (
