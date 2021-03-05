@@ -26,22 +26,11 @@ exports[`Layout match snapshot 1`] = `
     <div class="logo"
          data-test="component-logo"
     >
-      <div style="display:inline-block;max-width:100%;overflow:hidden;position:relative;box-sizing:border-box;margin:0">
-        <div style="box-sizing:border-box;display:block;max-width:100%">
-          <img style="max-width:100%;display:block;margin:0;border:none;padding:0"
-               alt
-               aria-hidden="true"
-               role="presentation"
-               src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAxIiBoZWlnaHQ9IjUwNyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
-          >
-        </div>
-        <img alt
-             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-             decoding="async"
-             class
-             style="visibility:hidden;position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
-        >
-      </div>
+      <img src="/logo.png"
+           width="901"
+           height="507"
+           alt
+      >
     </div>
     <h1 href="/">
       <span class="_visuallyhidden">
