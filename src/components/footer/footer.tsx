@@ -1,12 +1,10 @@
 import React from 'react';
 import icons, {IconsEnum} from '../../UI/icons';
 import Anchor from '../../UI/anchor';
-import Clients from '../clients';
 import styles from './footer.css';
 
 const Footer: React.FC = () => (
     <footer className={styles.footer} data-test="component-footer">
-        <Clients />
         <section className={styles.rights}>{icons[IconsEnum.copyright](16)} Fit s Marky | All Rights Reserved</section>
         <section className={styles.contact}>
             <span className={styles.link}>
@@ -28,7 +26,6 @@ const Footer: React.FC = () => (
                 </Anchor>
             </span>
         </section>
-
     </footer>
 );
 

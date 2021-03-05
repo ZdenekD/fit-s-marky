@@ -54,6 +54,13 @@ const pages: IPages[] = [
     },
     {
         id: `${prefix}_p7`,
+        icon: IconsEnum.physotherapist,
+        title: 'Klienti',
+        slug: 'klienti',
+        description: 'Spokojení klienti',
+    },
+    {
+        id: `${prefix}_p8`,
         icon: IconsEnum.message,
         title: 'Kontakt',
         slug: 'kontakt',
