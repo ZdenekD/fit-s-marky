@@ -5,9 +5,6 @@ exports[`Clients match snapshot 1`] = `
          data-test="component-clients"
          style="opacity:0"
 >
-  <h2 class="heading">
-    Spokojení klienti:
-  </h2>
   <ul class="list">
     <li class="item">
       <img src="/clients/johnson&amp;johnson.png"
