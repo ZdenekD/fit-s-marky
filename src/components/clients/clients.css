@@ -1,17 +1,6 @@
 .section {
     padding: calc(4 * var(--gap)) calc(2 * var(--gap)) calc(2 * var(--gap));
-    display: none;
     grid-area: clients;
-
-    @media (--min-md) {
-        display: block;
-    }
-}
-
-.heading {
-    padding: var(--gap) 0;
-    opacity: 0.5;
-    text-align: center;
 }
 
 .list {
@@ -24,12 +13,8 @@
 }
 
 .item {
-    min-width: 150px;
-    max-width: 10%;
-    max-height: 80px;
-    padding: var(--gap) calc(2 * var(--gap));
-    opacity: 0.25;
-    cursor: crosshair;
+    padding: calc(4 * var(--gap));
+    opacity: 0.5;
     transition: opacity var(--transition-in) var(--transition-timing);
 
     &:focus,

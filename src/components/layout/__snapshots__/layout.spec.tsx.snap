@@ -26,22 +26,11 @@ exports[`Layout match snapshot 1`] = `
     <div class="logo"
          data-test="component-logo"
     >
-      <div style="display:inline-block;max-width:100%;overflow:hidden;position:relative;box-sizing:border-box;margin:0">
-        <div style="box-sizing:border-box;display:block;max-width:100%">
-          <img style="max-width:100%;display:block;margin:0;border:none;padding:0"
-               alt
-               aria-hidden="true"
-               role="presentation"
-               src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAxIiBoZWlnaHQ9IjUwNyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
-          >
-        </div>
-        <img alt
-             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-             decoding="async"
-             class
-             style="visibility:hidden;position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%"
-        >
-      </div>
+      <img src="/logo.png"
+           width="901"
+           height="507"
+           alt
+      >
     </div>
     <h1 href="/">
       <span class="_visuallyhidden">
@@ -101,126 +90,6 @@ exports[`Layout match snapshot 1`] = `
   <footer class="footer"
           data-test="component-footer"
   >
-    <section class="section"
-             data-test="component-clients"
-             style="opacity:0"
-    >
-      <h2 class="heading">
-        Spokojení klienti:
-      </h2>
-      <ul class="list">
-        <li class="item">
-          <img src="/clients/johnson&amp;johnson.png"
-               alt
-               class="image"
-          >
-          <br>
-          <span class="title">
-            Johnson&amp;Johnson
-          </span>
-        </li>
-        <li class="item">
-          <img src="/clients/caerus_im.png"
-               alt
-               class="image"
-          >
-          <br>
-          <span class="title">
-            Caerus IM
-          </span>
-        </li>
-        <li class="item">
-          <img src="/clients/vodafone.png"
-               alt
-               class="image"
-          >
-          <br>
-          <span class="title">
-            Vodafone
-          </span>
-        </li>
-        <li class="item">
-          <img src="/clients/paralelni_polis.png"
-               alt
-               class="image"
-          >
-          <br>
-          <span class="title">
-            Paralelní Polis
-          </span>
-        </li>
-        <li class="item">
-          <img src="/clients/form_factory.png"
-               alt
-               class="image"
-          >
-          <br>
-          <span class="title">
-            Form Factory
-          </span>
-        </li>
-        <li class="item">
-          <img src="/clients/pilates&amp;flow.png"
-               alt
-               class="image"
-          >
-          <br>
-          <span class="title">
-            Pilates &amp; Flow
-          </span>
-        </li>
-        <li class="item">
-          <img src="/clients/joga_letna.png"
-               alt
-               class="image"
-          >
-          <br>
-          <span class="title">
-            Joga Letná
-          </span>
-        </li>
-        <li class="item">
-          <img src="/clients/fitness_flora.png"
-               alt
-               class="image"
-          >
-          <br>
-          <span class="title">
-            HitFit Flora
-          </span>
-        </li>
-        <li class="item">
-          <img src="/clients/k6.png"
-               alt
-               class="image"
-          >
-          <br>
-          <span class="title">
-            Pohybové studio K6
-          </span>
-        </li>
-        <li class="item">
-          <img src="/clients/obvodni_soud.png"
-               alt
-               class="image"
-          >
-          <br>
-          <span class="title">
-            Obvodní soud pro Prahu 1
-          </span>
-        </li>
-        <li class="item">
-          <img src="/clients/sokol_jahodnice.png"
-               alt
-               class="image"
-          >
-          <br>
-          <span class="title">
-            TJ Sokol Jahodnice
-          </span>
-        </li>
-      </ul>
-    </section>
     <section class="rights">
       <svg class="icon icon-tabler icon-tabler-copyright"
            width="16"

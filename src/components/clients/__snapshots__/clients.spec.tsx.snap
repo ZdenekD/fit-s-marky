@@ -5,14 +5,13 @@ exports[`Clients match snapshot 1`] = `
          data-test="component-clients"
          style="opacity:0"
 >
-  <h2 class="heading">
-    Spokojení klienti:
-  </h2>
   <ul class="list">
     <li class="item">
       <img src="/clients/johnson&amp;johnson.png"
            alt
            class="image"
+           loading="lazy"
+           decoding="async"
       >
       <br>
       <span class="title">
@@ -23,6 +22,8 @@ exports[`Clients match snapshot 1`] = `
       <img src="/clients/caerus_im.png"
            alt
            class="image"
+           loading="lazy"
+           decoding="async"
       >
       <br>
       <span class="title">
@@ -33,6 +34,8 @@ exports[`Clients match snapshot 1`] = `
       <img src="/clients/vodafone.png"
            alt
            class="image"
+           loading="lazy"
+           decoding="async"
       >
       <br>
       <span class="title">
@@ -43,6 +46,8 @@ exports[`Clients match snapshot 1`] = `
       <img src="/clients/paralelni_polis.png"
            alt
            class="image"
+           loading="lazy"
+           decoding="async"
       >
       <br>
       <span class="title">
@@ -53,6 +58,8 @@ exports[`Clients match snapshot 1`] = `
       <img src="/clients/form_factory.png"
            alt
            class="image"
+           loading="lazy"
+           decoding="async"
       >
       <br>
       <span class="title">
@@ -63,6 +70,8 @@ exports[`Clients match snapshot 1`] = `
       <img src="/clients/pilates&amp;flow.png"
            alt
            class="image"
+           loading="lazy"
+           decoding="async"
       >
       <br>
       <span class="title">
@@ -73,6 +82,8 @@ exports[`Clients match snapshot 1`] = `
       <img src="/clients/joga_letna.png"
            alt
            class="image"
+           loading="lazy"
+           decoding="async"
       >
       <br>
       <span class="title">
@@ -83,6 +94,8 @@ exports[`Clients match snapshot 1`] = `
       <img src="/clients/fitness_flora.png"
            alt
            class="image"
+           loading="lazy"
+           decoding="async"
       >
       <br>
       <span class="title">
@@ -93,6 +106,8 @@ exports[`Clients match snapshot 1`] = `
       <img src="/clients/k6.png"
            alt
            class="image"
+           loading="lazy"
+           decoding="async"
       >
       <br>
       <span class="title">
@@ -103,6 +118,8 @@ exports[`Clients match snapshot 1`] = `
       <img src="/clients/obvodni_soud.png"
            alt
            class="image"
+           loading="lazy"
+           decoding="async"
       >
       <br>
       <span class="title">
@@ -113,6 +130,8 @@ exports[`Clients match snapshot 1`] = `
       <img src="/clients/sokol_jahodnice.png"
            alt
            class="image"
+           loading="lazy"
+           decoding="async"
       >
       <br>
       <span class="title">

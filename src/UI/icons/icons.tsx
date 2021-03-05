@@ -13,7 +13,8 @@ import {IconKarate,
     IconCamera,
     IconChevronLeft,
     IconBorderNone,
-    IconChartBubble} from '@tabler/icons';
+    IconChartBubble,
+    IconPhysotherapist} from '@tabler/icons';
 import IconCobraPose from '../../assets/images/icons/yoga_01.svg';
 import IconPranayamaPose from '../../assets/images/icons/yoga_02.svg';
 import IconBoatPose from '../../assets/images/icons/yoga_03.svg';
@@ -93,6 +94,12 @@ const icons: IIcons = {
     ),
     [IconsEnum.camera]: (size = 28) => (
         <IconCamera
+            size={size}
+            stroke={1}
+        />
+    ),
+    [IconsEnum.physotherapist]: (size = 28) => (
+        <IconPhysotherapist
             size={size}
             stroke={1}
         />

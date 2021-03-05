@@ -13,7 +13,6 @@ const Clients: React.FC = () => (
         className={styles.section}
         data-test="component-clients"
     >
-        <h2 className={styles.heading}>Spokojení klienti:</h2>
         <ul className={styles.list}>
             {clients.map(client => (
                 <li
@@ -22,7 +21,12 @@ const Clients: React.FC = () => (
                 >
                     {client.src ? (
                         <>
-                            <img src={`/clients/${client.src}`} alt="" className={styles.image} /><br />
+                            <img
+                                src={`/clients/${client.src}`}
+                                alt="" className={styles.image}
+                                loading="lazy"
+                                decoding="async"
+                            /><br />
                             <span className={styles.title}>{client.title}</span>
                         </>
                     ) : (

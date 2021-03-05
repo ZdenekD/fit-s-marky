@@ -33,43 +33,43 @@ const Page: React.FC = () => (
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-00.jpg" className={styles.picture} />
+                <Picture src="/images/image-00" className={styles.picture} width={500} height={333} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-01.jpg" className={styles.picture} />
+                <Picture src="/images/image-01" className={styles.picture} width={500} height={333} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-02.jpg" className={styles.picture} />
+                <Picture src="/images/image-02" className={styles.picture} width={500} height={333} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-03.jpg" className={styles.picture} />
+                <Picture src="/images/image-03" className={styles.picture} width={500} height={333} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-04.jpg" className={styles.picture} />
+                <Picture src="/images/image-04" className={styles.picture} width={500} height={333} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-05.jpg" className={styles.picture} />
+                <Picture src="/images/image-05" className={styles.picture} width={500} height={333} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-06.jpg" className={styles.picture} />
+                <Picture src="/images/image-06" className={styles.picture} width={500} height={333} />
             </motion.li>
         </motion.ul>
     </Layout>

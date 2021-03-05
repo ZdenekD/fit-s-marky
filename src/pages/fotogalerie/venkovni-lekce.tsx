@@ -33,31 +33,31 @@ const Page: React.FC = () => (
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-16.jpg" className={styles.picture} />
+                <Picture src="/images/image-16" className={styles.picture} width={500} height={333} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-17.jpg" className={styles.picture} />
+                <Picture src="/images/image-17" className={styles.picture} width={500} height={333} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-15.jpg" className={styles.picture} />
+                <Picture src="/images/image-15" className={styles.picture} width={500} height={333} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-18.jpg" className={styles.picture} />
+                <Picture src="/images/image-18" className={styles.picture} width={500} height={333} />
             </motion.li>
             <motion.li
                 className={styles.item}
                 variants={item}
             >
-                <Picture src="/images/image-19.jpg" className={styles.picture} />
+                <Picture src="/images/image-19" className={styles.picture} width={500} height={333} />
             </motion.li>
         </motion.ul>
     </Layout>
