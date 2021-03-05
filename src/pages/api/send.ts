@@ -1,5 +1,5 @@
 import {NextApiRequest, NextApiResponse} from 'next';
-import sendgrid from '@sendgrid/mail';
+import sendgrid, {MailDataRequired} from '@sendgrid/mail';
 import VariantsEnum from '../../enums/VariantsEnum';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse): void {
@@ -11,7 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse): void
         sendgrid.setApiKey(process.env.SENDGRID_API_KEY || '');
 
         const {name, email, message} = req.body;
-        const content = {
+        const content: MailDataRequired = {
             to: process.env.EMAIL_RECIPIENT,
             from: 'e-mail@fit-s-marky.cz',
             text: message,
