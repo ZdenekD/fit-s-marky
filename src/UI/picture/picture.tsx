@@ -15,7 +15,7 @@ const Picture: React.FC<IPicture> = ({
     alt = '',
     className = '',
 }) => (
-    <picture className={styles.picture}>
+    <picture className={styles.picture} data-test="component-picture">
         <source srcSet={`${src}.avif`} type="image/avif" />
         <source srcSet={`${src}.webp`} type="image/webp" />
         <img
