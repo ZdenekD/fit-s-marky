@@ -4,6 +4,4 @@ type IFrame = {
     }
 }
 
-export const initialState: IFrame = {frame: {current: 0}};
-
 export default IFrame;

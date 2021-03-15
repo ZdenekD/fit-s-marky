@@ -3,7 +3,7 @@ import {motion, AnimatePresence} from 'framer-motion';
 import Button from '../form-control/button';
 import VariantsEnum from '../../enums/VariantsEnum';
 import {fade, fadeScale} from '../../helpers/animation/fade';
-import {useStateValue} from '../../state';
+import {useGlobalState} from '../../state';
 import {removeMessage} from '../../state/message/actions';
 import styles from './alert.css';
 
@@ -24,7 +24,7 @@ const Alert: React.FC<IAlert> = ({
 }) => {
     const [isOpened, setOpened] = React.useState<boolean>(isOpen);
     const timer = React.useRef<NodeJS.Timeout>();
-    const {dispatch} = useStateValue();
+    const [, dispatch] = useGlobalState();
     const remove = () => {
         setOpened(false);
         dispatch(removeMessage());

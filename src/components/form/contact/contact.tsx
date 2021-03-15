@@ -7,7 +7,7 @@ import Input from '../../../UI/form-control/input';
 import Textarea from '../../../UI/form-control/textarea';
 import Button from '../../../UI/form-control/button';
 import Loader from '../../../UI/loader';
-import {useStateValue} from '../../../state';
+import {useGlobalState} from '../../../state';
 import {saveMessage} from '../../../state/message/actions';
 import regex from '../../../helpers/regex';
 import VariantsEnum from '../../../enums/VariantsEnum';
@@ -20,7 +20,7 @@ interface IValues {
 const ContactForm: React.FC = () => {
     const [isDisabled, setDisabled] = React.useState<boolean>(false);
     const router = useRouter();
-    const {dispatch} = useStateValue();
+    const [, dispatch] = useGlobalState();
     const {register, errors, handleSubmit} = useForm({mode: 'onBlur'});
     const onSubmit = async (values: IValues) => {
         setDisabled(true);

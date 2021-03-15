@@ -1,9 +1,9 @@
-import {initialState as frameState} from './frame/type';
-import {initialState as messageState} from './message/type';
-import {initialState as menuState} from './menu/type';
+import frameState from './frame/initialState';
+import menuState from './menu/initialState';
+import messageState from './message/initialState';
 
 export default {
     ...frameState,
-    ...messageState,
     ...menuState,
+    ...messageState,
 };

@@ -1,5 +1,6 @@
 import reducer from './reducer';
-import IFrame, {initialState} from './type';
+import IFrame from './type';
+import initialState from './initialState';
 import setFrame from './actions';
 
 describe('Frame reducer', () => {

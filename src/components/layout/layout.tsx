@@ -8,7 +8,7 @@ import Aside from '../aside';
 import Content from '../content';
 import Alert from '../../UI/alert';
 import Anchor from '../../UI/anchor';
-import {useStateValue} from '../../state';
+import {useGlobalState} from '../../state';
 import pages from '../../data/pages';
 import VariantsEnum from '../../enums/VariantsEnum';
 import styles from './layout.css';
@@ -20,7 +20,7 @@ interface ILayout {
 
 const Layout: React.FC<ILayout> = ({children, className = ''}) => {
     const router = useRouter();
-    const {state} = useStateValue();
+    const [state] = useGlobalState();
     const [item] = pages.filter(page => `/${page.slug}` === router.pathname);
 
     return (

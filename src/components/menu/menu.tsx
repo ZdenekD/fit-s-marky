@@ -1,11 +1,11 @@
 import React from 'react';
 import {motion, SVGMotionProps} from 'framer-motion';
-import {useStateValue} from '../../state';
+import {useGlobalState} from '../../state';
 import setMenu from '../../state/menu/actions';
 import styles from './menu.css';
 
 const Menu: React.FC = () => {
-    const {state, dispatch} = useStateValue();
+    const [state, dispatch] = useGlobalState();
     const handleClick = () => {
         dispatch(setMenu({menu: {isOpen: !state.menu.isOpen}}));
     };
