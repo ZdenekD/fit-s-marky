@@ -6,12 +6,12 @@ import icons from '../../UI/icons';
 import Anchor from '../../UI/anchor';
 import pages from '../../data/pages';
 import useWindowSize from '../../hooks/useWindowSize';
-import {useStateValue} from '../../state';
+import {useGlobalState} from '../../state';
 import styles from './nav.css';
 
 const Nav: React.FC = () => {
     const router = useRouter();
-    const {state} = useStateValue();
+    const [state] = useGlobalState();
     const [isOpen, setOpen] = React.useState<boolean>(state.menu.isOpen);
     const [isMobile, setMobile] = React.useState<boolean>(false);
     const {width} = useWindowSize();

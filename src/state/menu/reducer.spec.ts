@@ -1,5 +1,6 @@
 import reducer from './reducer';
-import IMenu, {initialState} from './type';
+import IMenu from './type';
+import initialState from './initialState';
 import setMenu from './actions';
 
 describe('Menu reducer', () => {

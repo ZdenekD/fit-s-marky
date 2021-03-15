@@ -1,5 +1,5 @@
 import React from 'react';
-import {useStateValue} from '../../state';
+import {useGlobalState} from '../../state';
 import setMenu from '../../state/menu/actions';
 import styles from './content.css';
 
@@ -9,7 +9,7 @@ interface IContent {
 }
 
 const Content: React.FC<IContent> = ({children, className = ''}) => {
-    const {dispatch} = useStateValue();
+    const [, dispatch] = useGlobalState();
 
     React.useEffect(() => {
         dispatch(setMenu({menu: {isOpen: false}}));

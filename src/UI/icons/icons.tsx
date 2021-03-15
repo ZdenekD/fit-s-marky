@@ -1,5 +1,6 @@
 /* eslint-disable react/display-name */
-import {IconKarate,
+import {
+    IconKarate,
     IconThumbUp,
     IconCertificate,
     IconPhoto,
@@ -14,7 +15,8 @@ import {IconKarate,
     IconChevronLeft,
     IconBorderNone,
     IconChartBubble,
-    IconPhysotherapist} from '@tabler/icons';
+    IconPhysotherapist
+} from '@tabler/icons';
 import IconCobraPose from '../../assets/images/icons/yoga_01.svg';
 import IconPranayamaPose from '../../assets/images/icons/yoga_02.svg';
 import IconBoatPose from '../../assets/images/icons/yoga_03.svg';

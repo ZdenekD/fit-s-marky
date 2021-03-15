@@ -2,12 +2,12 @@ import React from 'react';
 import {Player} from '@lottiefiles/react-lottie-player';
 import {AnimationItem} from 'lottie-web';
 import {motion} from 'framer-motion';
-import {useStateValue} from '../../state';
+import {useGlobalState} from '../../state';
 import saveFrame from '../../state/frame/actions';
 import styles from './aside.css';
 
 const Aside: React.FC = () => {
-    const {state, dispatch} = useStateValue();
+    const [state, dispatch] = useGlobalState();
     const playerRef = React.useRef(null);
     const frameRef = React.useRef(0);
     const animationRef = React.useRef({});
