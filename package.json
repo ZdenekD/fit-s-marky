@@ -1,28 +1,27 @@
 {
-  "author": "zdenekd",
+  "author": "ZdenekD",
   "name": "fit-s-marky",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "license": "ISC",
-  "homepage": "git@github.com:ZdenekD/fit-s-marky.git#readme",
-  "repository": "git@github.com:ZdenekD/fit-s-marky.git",
+  "description": "Web",
+  "license": "MIT",
+  "homepage": "git@github.com:zdenekd/fit-s-marky.git#readme",
+  "repository": "git@github.com:zdenekd/fit-s-marky.git",
   "scripts": {
     "reinstall": "rm -rf 'yarn.lock' 'node_modules' && yarn",
     "dev": "next dev",
     "start": "next start",
     "build": "next build",
-    "story": "start-storybook -s ./public -p 8020",
-    "story:build": "build-storybook -c .storybook -o .storybook/build",
     "jest": "jest --watch",
     "jest:coverage": "jest --coverage",
+    "story": "start-storybook -s ./public -p 8020",
+    "story:build": "build-storybook -c .storybook -o .storybook/build",
     "hint:local": "hint http://localhost:3000",
     "hint:dev": "hint https://fit-s-marky.now.sh",
     "hint:prod": "hint https://fit-s-marky.cz"
   },
   "engines": {
-    "node": ">=12.0.0",
-    "npm": ">=6.9.0"
+    "node": ">=14.16.1",
+    "npm": ">=6.14.12"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
