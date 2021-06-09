@@ -5,7 +5,7 @@ exports[`Aside match snapshot 1`] = `
      data-test="component-aside"
      style="opacity:0.25"
 >
-  <div>
+  <div class="lf-player-container">
     <div id="lottie"
          style="background:transparent;margin:0 auto;outline:none;overflow:hidden"
     >
