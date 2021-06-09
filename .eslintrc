@@ -10,7 +10,7 @@
       "jsx": true
     }
   },
-  "extends": ["airbnb-base", "plugin:react/recommended", "plugin:@typescript-eslint/recommended"],
+  "extends": ["airbnb-base", "plugin:react/recommended", "plugin:jest/recommended", "plugin:jsx-a11y/recommended", "plugin:@typescript-eslint/recommended"],
   "plugins": ["react", "react-hooks", "@typescript-eslint"],
   "settings": {
     "import/resolver": {
@@ -93,7 +93,7 @@
     "no-console": [
       "error",
       {
-        "allow": ["info", "log", "warn", "error", "assert", "dir"]
+        "allow": ["info", "log", "warn", "error", "table", "assert", "dir"]
       }
     ],
     // This rule aims to reduce the scrolling required when reading through your code. It will warn when the maximum amount of empty lines has been exceeded.
@@ -210,6 +210,20 @@
     "react-hooks/rules-of-hooks": "error",
     // Checks effect dependencies
     "react-hooks/exhaustive-deps": "warn",
+    // Enforce that a label tag has a text label and an associated control.
+    "jsx-a11y/label-has-associated-control": 1,
+    "jsx-a11y/label-has-for": [
+      1,
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ],
+    // Enforce valid expect() usage (valid-expect)
+    "jest/valid-expect": 1,
+    // When there is only a single export from a module, prefer using default export over named export.
+    "import/prefer-default-export": 0,
     // Off import errors (becauseof webpack config)
     "import/no-extraneous-dependencies": 0,
     "import/no-unresolved": 0,
