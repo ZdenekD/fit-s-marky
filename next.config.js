@@ -20,6 +20,8 @@ module.exports = styles({
 
         return config;
     },
+    images: {disableStaticImages: true},
+    eslint: {ignoreDuringBuilds: true},
+    reactStrictMode: true,
     poweredByHeader: false,
-    future: {webpack5: true},
 });
