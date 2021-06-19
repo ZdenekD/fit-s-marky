@@ -1,8 +1,9 @@
-import {NextApiRequest, NextApiResponse} from 'next';
 import sendgrid, {MailDataRequired} from '@sendgrid/mail';
+import {NextApiRequest, NextApiResponse} from 'next';
+import {withSentry} from '@sentry/nextjs';
 import VariantsEnum from '../../enums/VariantsEnum';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse): void {
+const handler = async (req: NextApiRequest, res: NextApiResponse): Promise<void> => {
     const {method} = req;
 
     if (method !== 'POST') {
@@ -23,20 +24,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse): void
             },
         };
 
-        (async () => {
-            try {
-                await sendgrid.send(content as MailDataRequired);
+        try {
+            await sendgrid.send(content as MailDataRequired);
 
-                res.status(200).json({
-                    message: 'Zpráva byla úspěšně odeslána.',
-                    variant: VariantsEnum.success,
-                });
-            } catch (error) {
-                res.status(400).json({
-                    message: 'Něco se pravděpodobně po@#$&lo.',
-                    variant: VariantsEnum.danger,
-                });
-            }
-        })();
+            res.status(200).json({
+                message: 'Zpráva byla úspěšně odeslána.',
+                variant: VariantsEnum.success,
+            });
+        } catch (error) {
+            res.status(400).json({
+                message: 'Něco se pravděpodobně po@#$&lo.',
+                variant: VariantsEnum.danger,
+            });
+        }
     }
-}
+};
+
+export default withSentry(handler);
